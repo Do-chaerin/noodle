@@ -1,0 +1,99 @@
+@charset "utf-8";
+@import url(variable.css);
+
+.item{
+  display: none;
+}
+
+/* 축제 소개 */
+.title {
+  font-size: 3rem;
+  padding: 50px 0;
+  color: var(--gumi--sub-green);
+}
+.festival .info {
+  display: flex;
+  justify-content: space-between;
+}
+.infoPoster{
+  width: 40%;
+}
+.infoPoster img {
+width: 100%;
+}
+.festival .infoText {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.festival .infoText ul li {
+  font-size: 1.4rem;
+  padding: 10px 0;
+  color: #333;
+}
+.festival .infoText p {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+.festival .infoText p span {
+  color: var(--gumi--main);
+}
+
+/* 히스토리 */
+.poster {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.posterline {
+  margin-bottom: 30px;
+  border-top: 1px solid #d5d5d5;
+}
+.posterline:first-child {
+  border-top: 1px solid #fff;
+}
+.historyPoster{
+  width: 30%;
+}
+.historyPoster img {
+  width: 100%;
+}
+/* 히스토리 축제정보 */
+.poster .infoText {
+  width: 50%;
+  gap: 50px;
+}
+.poster .infoText ul li p {
+  font-size: 1.7rem;
+  padding-bottom: 20px;
+  color: var(--gumi--main);
+}
+.poster .infoText ul li {
+  font-size: 1.2rem;
+  padding: 10px 0;
+  color: #333;
+}
+/* 진행했던 프로그램 */
+.textline {
+  margin-top: 30px;
+  border-top: 1px solid #ffef97;
+}
+.programText h2 {
+  font-size: 1.2rem;
+  padding: 30px 0 20px 0;
+  color: var(--gumi--sub-green);
+}
+.programText dl {
+  line-height: 2;
+  color: #444;
+}
+.programText dt {
+  color: #222;
+}
+.programText dd {
+  font-size: 0.8rem;
+  padding-bottom: 20px;
+}

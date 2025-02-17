@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+/* 탭 */
+.tab {
+  font-size: 1.01rem;
+  text-align: center;
+  gap: 5px !important;
+}
+
+.tab li {
+  width: 110%;
+  /* background: url(/images/favicon.ico) no-repeat 10%; */
+  /* display: none; */
+}
+
+.tab li.active {
+  font-size: 16px;
+  font-weight: bold;
+  background: url(/images/favicon.ico) no-repeat 20% 25%;
+}
+
+.tab li:hover {
+  font-weight: bold;
+}
+
+.tab li:last-child a {
+  letter-spacing: 0.3rem;
+}
+
+/* 프로그램상세페이지 메인전체*/
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* 프로그램1 */
+.program {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  /* justify-content: center; */
+}
+
+/* 이미지 */
+.infoul,
+.infoul1 {
+  width: 100%;
+}
+
+.infoul>li,
+.infoul1>li {
+  width: 100%;
+}
+
+.infoul>li:hover img,
+.infoul1>li:hover img {
+  opacity: .7;
+}
+
+.middle1 li {
+  width: 100%;
+}
+
+@media screen and (max-width : 1120px) {
+  .tab li.active {
+    font-size: 16px;
+    font-weight: bold;
+    background: url(/images/favicon.ico) no-repeat 10% 25%;
+  }
+}
+
+@media screen and (max-width : 830px) {
+  .nav {
+    transform: translateX(-90%);
+  }
+
+  .tab {
+    display: block;
+    font-size: 18px;
+  }
+
+  .tab li.active {
+    font-size: 16px;
+    font-weight: bold;
+    background: url(/images/favicon.ico) no-repeat 100% 25%;
+  }
+
+  .infoul img,
+  .infoul1 img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width : 740px) {
+  .tab {
+    font-size: 16px;
+  }
+
+  .tab li.active {
+    font-size: 16px;
+    font-weight: bold;
+    background: url(/images/favicon.ico) no-repeat 100% 25%;
+  }
+
+  .program {
+    display: block;
+
+  }
+
+  .infoul,
+  .infoul1 {
+    display: none;
+  }
+
+  .jump1 {
+    position: relative;
+  }
+
+  .middle1 {
+    width: 400px;
+    justify-content: center;
+  }
+
+  .middle1 {}
+}
+
+@media screen and (max-width : 630px) {
+  .tab li {
+    width: 83px;
+  }
+
+  .tab li a {
+    width: 100%;
+  }
+
+  .tab li.active {
+    font-size: 16px;
+    font-weight: bold;
+    background: url(/images/favicon.ico) no-repeat 100% 25%;
+  }
+
+  .tab li:last-child a {
+    letter-spacing: 0.2rem;
+  }
+
+}
+
+@media screen and (max-width : 420px) {
+  .tab {
+    margin: auto;
+  }
+
+  .tab li {
+    width: 80px !important;
+  }
+}
+
+/* 이미지중간 리플렛 */
+.lf-imgtop0{
+  margin-left: -1px;
+}
+.middleli {
+  width: 100%;
+  display: flex;
+}
+
+.middle1 {
+  width: 100%;
+  display: flex;
+}
+
+.middle1 ul,
+.middle1 li {
+  width: 100%;
+  height: 88px;
+}
+
+.middle1 a {
+  width: 100%;
+  height: 88px;
+}
+
+#st-1 {
+  position: relative;
+  width: 56px;
+}
+
+#st-2 {
+  position: relative;
+  width: 43px;
+  background: url(/images/geen/st0-img2.png) no-repeat;
+}
+
+#st-3 {
+  position: relative;
+  width: 59px;
+  background: url(/images/geen/st1-img3.png) no-repeat;
+}
+
+#st-4 {
+  position: relative;
+  width: 120px;
+  background: url(/images/geen/st2-img4.png) no-repeat;
+}
+
+#st-5 {
+  position: relative;
+  width: 61px;
+  background: url(/images/geen/st3-img5.png) no-repeat;
+}
+
+#st-6 {
+  position: relative;
+  width: 103px;
+  background: url(/images/geen/st4-img6.png) no-repeat;
+}
+
+#st-7 {
+  position: relative;
+  width: 44px;
+  background: url(/images/geen/st3-img7.png) no-repeat;
+}
+
+#st-8 {
+  position: relative;
+  width: 48px;
+  background: url(/images/geen/st5-img8.png) no-repeat;
+}
+.middle1 li.active{
+  display: block;
+}
+
+.middle2 {
+  margin-top: -20px;
+  display: flex;
+  margin: 0;  
+}
+.middle2 >img{
+ width: 99% !important;
+ vertical-align: top;
+}
+
+.middle2 li:hover{
+  opacity: .7;
+}
+.st3 {
+  margin-top: 10px;
+}
+
+.st5 {
+  margin-top: -8px;
+}
+.lf-imgtop1{
+  margin-top: -10px;
+}
+
+/* .infoul img{
+  vertical-align: top;
+} */
+/* mapicon */
+.mapicon a {
+  width: 100%;
+  background-color: antiquewhite;
+}
+
+.mapicon img {
+  position: relative;
+  top: 0;
+}
+
+.jump-animation {
+  animation-name: bounce;
+  animation-duration: 1000ms;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.79, 0.04, 0.9, 0.6);
+  animation-iteration-count: infinite;
+}
+
+.jump-animation.active {
+  display: block;
+}
+
+.jumpingball {
+  width: 15px;
+  height: 80px;
+  border-radius: 100%;
+  margin: auto;
+}
+
+.jumpingball img {
+  width: 38px;
+}
+
+.jumpanimation {
+  animation-name: bounce1;
+  animation-duration: 1000ms;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.79, 0.04, 0.8, 0.6);
+  animation-iteration-count: infinite;
+
+}
+
+.pro-info>a:hover img {
+  width: 149px;
+}
+
+.chat {
+  width: 100px;
+  position: fixed;
+  top: 45%;
+  left: 80%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0px, -30px, 0px);
+
+    height: 40px;
+  }
+
+  90% {
+    height: 40px;
+  }
+
+  100% {
+    transform: translate3d(0px, -10px, 0px);
+
+    height: 40px;
+  }
+}
+
+@keyframes bounce1 {
+  0% {
+    transform: translate3d(0px, -30px, 0px);
+
+    height: 40px;
+  }
+
+  90% {
+    height: 40px;
+  }
+
+  100% {
+    transform: translate3d(0px, 10px, 0px);
+
+    height: 40px;
+  }
+}

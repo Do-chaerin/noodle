@@ -1,0 +1,48 @@
+@charset "utf-8";
+@font-face {
+  font-family: "SBAggroM";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroM.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--gumi--sub-green);
+}
+html {
+  font-size: 20px;
+  font-family: "SBAggroM";
+}
+.inner {
+  max-width: 1280px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.tab{
+  gap: var(--li--gap--l);
+}
+
+.tab li:hover a {
+  color: var(--gumi--sub-yellow);
+}
+.active{
+  color: var(--gumi--sub-yellow);
+}
+/* Color styles */
+:root {
+  --gumi--main: rgba(252, 103, 19, 1);
+  --gumi--sub-yellow: rgba(255, 182, 80, 1);
+  --gumi--sub-green: rgba(87, 141, 54, 1);
+  --li--gap--l: 50px;
+  --inner--width: 1280px;
+}
