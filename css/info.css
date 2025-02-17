@@ -11,9 +11,13 @@
   padding: 50px 0;
   color: var(--gumi--sub-green);
 }
+
 .festival .info {
   display: flex;
   justify-content: space-between;
+}
+.info{
+  margin-bottom: 50px;
 }
 .infoPoster{
   width: 40%;
