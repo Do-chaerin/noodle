@@ -5,6 +5,12 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: 'SBAggroL';
+  src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroL.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +23,7 @@ li {
 a {
   text-decoration: none;
   color: var(--gumi--sub-green);
+  cursor: pointer;
 }
 html {
   font-size: 20px;
@@ -37,6 +44,7 @@ html {
 }
 .active{
   color: var(--gumi--sub-yellow);
+  display: block !important;
 }
 /* Color styles */
 :root {
