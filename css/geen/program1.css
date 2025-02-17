@@ -25,6 +25,7 @@
 
 .tab li:last-child a {
   letter-spacing: 0.3rem;
+  padding-left: 15px;
 }
 
 /* 프로그램상세페이지 메인전체*/
@@ -39,26 +40,11 @@ main {
   width: 100%;
   height: 100%;
   text-align: center;
-  display: flex;
-  /* justify-content: center; */
 }
-
+.leaflet img{
+  max-width: 100%;
+}
 /* 이미지 */
-.infoul,
-.infoul1 {
-  width: 100%;
-}
-
-.infoul>li,
-.infoul1>li {
-  width: 100%;
-}
-
-.infoul>li:hover img,
-.infoul1>li:hover img {
-  opacity: .7;
-}
-
 .middle1 li {
   width: 100%;
 }
@@ -87,10 +73,7 @@ main {
     background: url(/images/favicon.ico) no-repeat 100% 25%;
   }
 
-  .infoul img,
-  .infoul1 img {
-    width: 100px;
-  }
+  
 }
 
 @media screen and (max-width : 740px) {
@@ -99,29 +82,13 @@ main {
   }
 
   .tab li.active {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     background: url(/images/favicon.ico) no-repeat 100% 25%;
   }
 
-  .program {
-    display: block;
-
-  }
-
-  .infoul,
-  .infoul1 {
-    display: none;
-  }
-
-  .jump1 {
-    position: relative;
-  }
-
-  .middle1 {
-    width: 400px;
-    justify-content: center;
-  }
+  
+  
 
   .middle1 {}
 }
@@ -136,15 +103,17 @@ main {
   }
 
   .tab li.active {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
-    background: url(/images/favicon.ico) no-repeat 100% 25%;
+    background:none;
   }
-
   .tab li:last-child a {
     letter-spacing: 0.2rem;
+    padding-left: 0px;
   }
-
+}
+@media screen and (max-width : 550px){
+ 
 }
 
 @media screen and (max-width : 420px) {
@@ -169,6 +138,7 @@ main {
 .middle1 {
   width: 100%;
   display: flex;
+  justify-content: center
 }
 
 .middle1 ul,
@@ -228,14 +198,11 @@ main {
   width: 48px;
   background: url(/images/geen/st5-img8.png) no-repeat;
 }
-.middle1 li.active{
-  display: block;
-}
-
 .middle2 {
   margin-top: -20px;
   display: flex;
-  margin: 0;  
+  justify-content: center;
+  padding-left: 2px;  
 }
 .middle2 >img{
  width: 99% !important;
@@ -245,20 +212,12 @@ main {
 .middle2 li:hover{
   opacity: .7;
 }
-.st3 {
-  margin-top: 10px;
-}
-
-.st5 {
-  margin-top: -8px;
-}
 .lf-imgtop1{
   margin-top: -10px;
+  margin-left: 10px;
+  vertical-align: top;
 }
 
-/* .infoul img{
-  vertical-align: top;
-} */
 /* mapicon */
 .mapicon a {
   width: 100%;
@@ -295,7 +254,7 @@ main {
 
 .jumpanimation {
   animation-name: bounce1;
-  animation-duration: 1000ms;
+  animation-duration: 700ms;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.79, 0.04, 0.8, 0.6);
   animation-iteration-count: infinite;
@@ -315,7 +274,7 @@ main {
 
 @keyframes bounce {
   0% {
-    transform: translate3d(0px, -30px, 0px);
+    transform: translate3d(0px, -00px, 0px);
 
     height: 40px;
   }
@@ -325,7 +284,7 @@ main {
   }
 
   100% {
-    transform: translate3d(0px, -10px, 0px);
+    transform: translate3d(0px, 0px, 0px);
 
     height: 40px;
   }
@@ -333,7 +292,7 @@ main {
 
 @keyframes bounce1 {
   0% {
-    transform: translate3d(0px, -30px, 0px);
+    transform: translate3d(0px, -50px, 0px);
 
     height: 40px;
   }
