@@ -70,64 +70,107 @@
         </div>
       </header>
       <!-- 배너 -->
-      <img class="banner" src="images/배너(구미라면) (1).jpg" alt="배너" />
-      <!--탭 -->
-      <ul class="tabs">
-        <li class="tab active" onclick="openTab(0)">개인예약</li>
-        <li class="tab" onclick="openTab(1)">부스신청</li>
-        <li class="tab" onclick="openTab(2)">공장견학</li>
-      </ul>
-      <!--공통-->
+      <img class="banner" src="images/main-banner.jpg" alt="배너" />
+      <!-- 탭 버튼 -->
+    </div>
+    <!-- 탭 버튼 -->
+    <div class="tabs">
+      <button class="tab active" onclick="openTab(0)">개인예약</button>
+      <button class="tab" onclick="openTab(1)">업체예약</button>
+      <button class="tab" onclick="openTab(2)">공장견학</button>
+    </div>
+
     <!-- 탭 내용 -->
     <div class="content active">
-     <section>
-      <legend>개인 예약</legend>
-      <ul>
-        <li>
-          <label for="fullName">이름</label>
-          <input type="text" id="fullName" name="fullName" required />
-        </li>
-        <li>
-          <label for="tel">이메일</label>
-          <input type="tel" name="tel" id="tel" />
-        </li>
-        <li>
-          <label for="tel">연락처</label>
-          <input type="tel" name="tel" id="tel" />
-        </li>
-      </ul>
-    </section>
-  <section class="agree">
-    <input type="checkbox" name="banana" id="banana">
-    <label for="banana">만 14세 이상입니다.</label>
-  </section>
+      <div class="policy-box">
+        <h2>◆ 개인정보 취급방침</h2>
+        <p>
+          '대한민국라면박람회'은 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에
+          관한 법률을 준수하고 있습니다.
+        </p>
+        <p>
+          회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며,
+          개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+        </p>
+        <p>본 방침은 : <strong>2024년 10월 01일</strong> 부터 시행됩니다.</p>
+
+        <h2>◆ 수집하는 개인정보의 항목</h2>
+        <ul>
+          <li>
+            수집항목 : 이름, 아이디, 비밀번호, 자택 전화번호, 휴대전화번호, 이메일, 서비스 이용기록, 쿠키, 접속IP정보
+          </li>
+          <li>개인정보 수집방법 : 홈페이지(회원가입, 고객게시판 등), 제휴사로부터의 제공</li>
+        </ul>
+
+        <h2>◆ 개인정보의 수집 및 이용목적</h2>
+        <ul>
+          <li>서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산</li>
+          <li>회원 관리 (본인확인, 부정 이용 방지, 가입 의사 확인, 민원 처리, 고지사항 전달)</li>
+          <li>마케팅 및 광고에 활용 (신규 서비스 개발, 이벤트 정보 제공)</li>
+        </ul>
+
+        <h2>◆ 개인정보의 보유 및 이용기간</h2>
+        <p>
+          회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다. 단, 관계법령의
+          규정에 의하여 보존할 필요가 있는 경우 관계법령이 정한 일정한 기간 동안 회원정보를 보관합니다.
+        </p>
+      </div>
+      <div class="booking-form">
+        <ul>
+          <li class="booking-d">개인 예약</li>
+          <li class="booking-de">
+            <label for="fullName">이름</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </li>
+          <li class="booking-de">
+            <label for="email">이메일</label>
+            <input type="email" name="email" id="email" />
+          </li>
+          <li class="booking-de">
+            <label for="tel">연락처</label>
+            <input type="tel" name="tel" id="tel" />
+          </li>
+        </ul>
+        <!-- 공통 -->
+        <div>
+          <input type="checkbox" name="banana" id="banana" />
+          <label for="banana">만 14세 이상입니다.</label>
+          <input type="checkbox" name="apple" id="apple" />
+          <label for="apple">동의합니다.</label>
+        </div>
+        <button>예약하기</button>
+      </div>
     </div>
-    <div class="content">부스신청</div>
-    <section>
-      <legend>개인 예약</legend>
-      <ul>
-        <li>
-          <label for="fullName">이름</label>
-          <input type="text" id="fullName" name="fullName" required />
-        </li>
-        <li>
-          <label for="tel">이메일</label>
-          <input type="tel" name="tel" id="tel" />
-        </li>
-        <li>
-          <label for="tel">연락처</label>
-          <input type="tel" name="tel" id="tel" />
-        </li>
-      </ul>
-    </section>
-  <section class="agree">
-    <input type="checkbox" name="banana" id="banana">
-    <label for="banana">만 14세 이상입니다.</label>
-  </section>
-    <div class="content">공장견학</div>
-      <div></div>
-      <!-- 하단 -->
+    <!--탭2-->
+    <div class="content">
+      <div class="booking-form">
+        <ul>
+          <li class="booking-d">업체 예약</li>
+          <li class="booking-de">
+            <label for="fullName">이름</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </li>
+          <li class="booking-de">
+            <label for="email">이메일</label>
+            <input type="email" name="email" id="email" />
+          </li>
+          <li class="booking-de">
+            <label for="tel">연락처</label>
+            <input type="tel" name="tel" id="tel" />
+          </li>
+        </ul>
+        <div>
+          <input type="checkbox" name="banana" id="banana" />
+          <label for="banana">만 14세 이상입니다.</label>
+          <input type="checkbox" name="apple" id="apple" />
+          <label for="apple">동의합니다.</label>
+        </div>
+        <button>예약하기</button>
+      </div>
     </div>
+    <!--탭3-->
+    <div class="content">탭 3의 내용입니다.</div>
+
     <script>
       function openTab(index) {
         let tabs = document.querySelectorAll(".tab");

@@ -1,30 +1,125 @@
 @charset "utf-8";
-@import url("header.css");
 @font-face {
   font-family: "SBAggroB";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+@import url("header.css");
 /* 기본 스타일 */
-.tabs {
-  cursor: pointer;
-  color: var(--gumi--sub-green);
+
+/* 전체 페이지 중앙 정렬 */
+body {
   display: flex;
-  width: 1280pxw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
 }
 
+/* 탭 스타일 */
+.tabs {
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center; /* 수직 정렬 */
+  flex-wrap: nowrap; /* 한 줄 유지 */
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 10px;
+  white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+  overflow-x: auto; /* 탭이 많아질 경우 스크롤 가능 */
+}
+
+/* 탭 버튼 */
 .tab {
+  padding: 10px 40px;
   border: none;
   background: none;
   font-size: 20px;
+  cursor: pointer;
   transition: 0.3s;
-  gap: var(--li--gap-l);
-  margin: 10px;
+  color: var(--gumi--sub-green);
+  font-family: "SBAggroM";
 }
+
+.tab.active {
+  font-weight: bold;
+  color: var(--gumi--sub-yellow);
+}
+
+/* 콘텐츠 박스 */
+.content-box {
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 .content {
   display: none;
 }
+
 .content.active {
   display: block;
+}
+
+.booking-form {
+  color: #000;
+  text-align: center;
+}
+.booking-d {
+  font-size: 25px;
+  padding: 30px;
+  color: #000;
+}
+.booking-de {
+  margin: 30px;
+  color: #000;
+  font-size: 15px;
+}
+
+button {
+  font-size: 15px;
+  font-family: "SBAggroM";
+  margin: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* 개인정보 취급방침 박스 */
+.policy-box {
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* 세로 스크롤바 */
+}
+p,
+li {
+  font-size: 12px;
+  color: #7b7b7b;
+  padding: 10px;
+}
+/* 스크롤바 스타일 (크롬, 엣지, 사파리) */
+.policy-box::-webkit-scrollbar {
+  width: 8px;
+}
+.policy-box::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+.policy-box::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* 제목 스타일 */
+h2 {
+  font-size: 13px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
 }
