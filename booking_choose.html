@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="icon" type="image/icon" sizes="16x16" href="images/favicon.ico" />
+    <!-- css -->
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/variable.css" />
+    <link rel="stylesheet" href="css/header.css" />
+
+    <!-- 채린css -->
+    <link rel="stylesheet" href="css/booking_choose.css" />
+
+    <!-- js -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+
+    <title>구미라면축제</title>
+  </head>
+  <body>
+    <!-- 전체레이아웃 -->
+    <div class="container">
+      <header>
+        <div class="inner">
+          <a href="index.html" class="logo"><img src="images/구미라면축제_로고.png" alt="" /></a>
+          <nav>
+            <ul class="gnb">
+              <li class="gnb-list">
+                <a href="#">축제정보</a>
+                <ul class="depth">
+                  <li><a href="#">축제소개</a></li>
+                  <li><a href="#">히스토리</a></li>
+                </ul>
+              </li>
+              <li class="gnb-list">
+                <a href="#">프로그램</a>
+                <ul class="depth">
+                  <li><a href="#">프로그램</a></li>
+                  <li><a href="#">참여가게</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+              <li class="gnb-list">
+                <a href="#">예약하기</a>
+                <ul class="depth">
+                  <li><a href="#">부스신청</a></li>
+                  <li><a href="#">히스토리</a></li>
+                </ul>
+              </li>
+              <li class="gnb-list">
+                <a href="#">커뮤니티</a>
+                <ul class="depth">
+                  <li><a href="#">오시는길</a></li>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">갤러리</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="sns">
+            <a href="#"><img src="images/logo_youtube.png" alt="유튜브" /></a>
+            <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
+          </div>
+        </div>
+      </header>
+      <!-- 배너 -->
+      <img class="banner" src="images/배너(구미라면) (1).jpg" alt="배너" />
+      <!--탭 -->
+      <ul class="tabs">
+        <li class="tab active" onclick="openTab(0)">개인예약</li>
+        <li class="tab" onclick="openTab(1)">부스신청</li>
+        <li class="tab" onclick="openTab(2)">공장견학</li>
+      </ul>
+      <!--공통-->
+    <!-- 탭 내용 -->
+    <div class="content active">
+     <section>
+      <legend>개인 예약</legend>
+      <ul>
+        <li>
+          <label for="fullName">이름</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </li>
+        <li>
+          <label for="tel">이메일</label>
+          <input type="tel" name="tel" id="tel" />
+        </li>
+        <li>
+          <label for="tel">연락처</label>
+          <input type="tel" name="tel" id="tel" />
+        </li>
+      </ul>
+    </section>
+  <section class="agree">
+    <input type="checkbox" name="banana" id="banana">
+    <label for="banana">만 14세 이상입니다.</label>
+  </section>
+    </div>
+    <div class="content">부스신청</div>
+    <section>
+      <legend>개인 예약</legend>
+      <ul>
+        <li>
+          <label for="fullName">이름</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </li>
+        <li>
+          <label for="tel">이메일</label>
+          <input type="tel" name="tel" id="tel" />
+        </li>
+        <li>
+          <label for="tel">연락처</label>
+          <input type="tel" name="tel" id="tel" />
+        </li>
+      </ul>
+    </section>
+  <section class="agree">
+    <input type="checkbox" name="banana" id="banana">
+    <label for="banana">만 14세 이상입니다.</label>
+  </section>
+    <div class="content">공장견학</div>
+      <div></div>
+      <!-- 하단 -->
+    </div>
+    <script>
+      function openTab(index) {
+        let tabs = document.querySelectorAll(".tab");
+        let contents = document.querySelectorAll(".content");
+
+        // 모든 탭과 콘텐츠의 active 클래스 제거
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        contents.forEach((content) => content.classList.remove("active"));
+
+        // 선택한 탭과 콘텐츠 활성화
+        tabs[index].classList.add("active");
+        contents[index].classList.add("active");
+      }
+    </script>
+  </body>
+</html>
