@@ -5,10 +5,41 @@ $(document).ready(function() {
       $(this).parent().addClass("active");
       console.log(this);
   });
-  $(".middle2 a").hover(function (e) {
-      e.preventDefault();
-      $(".middle1 img , .middle2 img").removeClass("active");
-      $(this).find(this).addClass("active");
-      console.log(this);
+  $(document).ready(function(){
+    $(".st_1").hover(
+      function() {
+        $("#st-2 img, #st-3 img").addClass("jumpanimation");
+      },
+      function() {
+        $("#st-2 img, #st-3 img").removeClass("jumpanimation");
+      }
+    );
+  
+    $(".st_2").hover(
+      function() {
+        $("#st-4 img ").addClass("jumpanimation");
+      },
+      function() {
+        $("#st-4 img").removeClass("jumpanimation");
+      }
+    );
+  
+    $(".st_3").hover(
+      function() {
+        $("#st-5 img , #st-6 img , #st-7 img").addClass("jumpanimation");
+      },
+      function() {
+        $("#st-5 img , #st-6 img , #st-7 img").removeClass("jumpanimation");
+      }
+    );
+  
+    $(".st_5").hover(
+      function() {
+        $("#st-8 img").addClass("jumpanimation");
+      },
+      function() {
+        $("#st-8 img").removeClass("jumpanimation");
+      }
+    );
   });
-});
+})
