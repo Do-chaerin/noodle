@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 .video {
   margin-top: 80px;
   width: 100%;
@@ -55,7 +54,6 @@ body {
 }
 
 .post {
-  max-width: 400px;
   font-size: 1rem;
   font-weight: 500;
   color: var(--gumi--main);
@@ -68,7 +66,6 @@ body {
 
 .post-img {
   width: 100%;
-  max-width: 400px;
   object-fit: cover;
   border-radius: 6px;
   user-select: none;
@@ -111,11 +108,19 @@ body {
 }
 
 /* 카카오맵 */
-#daumRoughmapContainer1739773108536{
+#daumRoughmapContainer1739773108536 {
   margin-bottom: 50px;
 }
+
 /* 관광정보 css */
-.progress{
+.bus {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--gumi--main);
+  padding: 40px 0;
+}
+.progress {
   width: 100%;
   height: 100px;
   position: relative;
@@ -138,8 +143,8 @@ body .progress_inner__bar {
   background: repeating-linear-gradient(
     45deg,
     var(--gumi--main),
-    var(--gumi--main) 4px,
-    var(--gumi--main) 4px,
+    #fff 4px,
+    #fff 4px,
     var(--gumi--main) 10px
   );
   transition: width 800ms cubic-bezier(0.915, 0.015, 0.3, 1.005);
@@ -288,7 +293,7 @@ body .progress_inner input[type="radio"] {
   display: none;
 }
 
-#daumRoughmapContainer1739773108536{
+#daumRoughmapContainer1739778540609 {
   border-top: 2px solid var(--gumi--sub-yellow);
   margin-top: 600px;
 }

@@ -1,1 +1,54 @@
 @charset "utf-8";
+@font-face {
+  font-family: "SBAggroM";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroM.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBAggroL";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroL.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+.active {
+  color: var(--gumi--sub-yellow);
+  display: block !important;
+}
+#daumRoughmapContainer1739778540609 {
+  margin: auto;
+}
+.notice {
+  padding: 50px 0;
+}
+.item:first-child {
+  display: none;
+}
+.notice-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gumi--sub-yellow);
+  color: #333;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.click {
+  display: block !important;
+}
+.notice-txt {
+  display: none;
+  font-family: "SBAggroL";
+  font-size: 1rem;
+  font-weight: lighter;
+  margin: 20px;
+  line-height: 2;
+  padding: 30px 20px;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
