@@ -31,100 +31,42 @@
 /* 프로그램상세페이지 메인전체*/
 main {
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   position: relative;
 }
 
 /* 프로그램1 */
 .program {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  margin-top: 30px ;
   text-align: center;
 }
-.leaflet img{
-  max-width: 100%;
+.leaflet{
+  width: 100%; 
+  margin: auto;
+  overflow: hidden;
+}
+.leaflet >li , .leaflet >li> a {
+  width: 100%;
+  max-width: 1280px ;
+  height: 100%;
+}
+.leaflet >li>a{
+  width: 700px;
+  height: 100px;
+}
+.leaflet >img{  
+  object-fit: cover;
+}
+.leaflet2{
+  display: none;
 }
 /* 이미지 */
 .middle1 li {
   width: 100%;
 }
 
-@media screen and (max-width : 1120px) {
-  .tab li.active {
-    font-size: 16px;
-    font-weight: bold;
-    background: url(/images/favicon.ico) no-repeat 10% 25%;
-  }
-}
-
-@media screen and (max-width : 830px) {
-  .nav {
-    transform: translateX(-90%);
-  }
-
-  .tab {
-    display: block;
-    font-size: 18px;
-  }
-
-  .tab li.active {
-    font-size: 16px;
-    font-weight: bold;
-    background: url(/images/favicon.ico) no-repeat 100% 25%;
-  }
-
-  
-}
-
-@media screen and (max-width : 740px) {
-  .tab {
-    font-size: 16px;
-  }
-
-  .tab li.active {
-    font-size: 14px;
-    font-weight: bold;
-    background: url(/images/favicon.ico) no-repeat 100% 25%;
-  }
-
-  
-  
-
-  .middle1 {}
-}
-
-@media screen and (max-width : 630px) {
-  .tab li {
-    width: 83px;
-  }
-
-  .tab li a {
-    width: 100%;
-  }
-
-  .tab li.active {
-    font-size: 17px;
-    font-weight: bold;
-    background:none;
-  }
-  .tab li:last-child a {
-    letter-spacing: 0.2rem;
-    padding-left: 0px;
-  }
-}
-@media screen and (max-width : 550px){
- 
-}
-
-@media screen and (max-width : 420px) {
-  .tab {
-    margin: auto;
-  }
-
-  .tab li {
-    width: 80px !important;
-  }
-}
 
 /* 이미지중간 리플렛 */
 .lf-imgtop0{
@@ -134,7 +76,9 @@ main {
   width: 100%;
   display: flex;
 }
-
+.middleli li:first-child{
+  margin-left: -1px;
+}
 .middle1 {
   width: 100%;
   display: flex;
@@ -199,7 +143,7 @@ main {
   background: url(/images/geen/st5-img8.png) no-repeat;
 }
 .middle2 {
-  margin-top: -20px;
+  margin-left: -2px;
   display: flex;
   justify-content: center;
   padding-left: 2px;  
@@ -209,13 +153,26 @@ main {
  vertical-align: top;
 }
 
+.middle2 li:last-child{
+  width: 132px;
+}
 .middle2 li:hover{
   opacity: .7;
 }
-.lf-imgtop1{
-  margin-top: -10px;
-  margin-left: 10px;
+.lf-imgtop-t {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+.lf-imgtop-t img {
+  position: relative;
+}
+.lf-imgtop1{  
+  width: 540px;  
+  /*   */
   vertical-align: top;
+  object-fit: cover;
 }
 
 /* mapicon */
@@ -248,7 +205,7 @@ main {
   margin: auto;
 }
 
-.jumpingball img {
+.jumpingball img, .jumpanimation1 img {
   width: 38px;
 }
 
@@ -258,19 +215,118 @@ main {
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.79, 0.04, 0.8, 0.6);
   animation-iteration-count: infinite;
+}
+.jumpanimation1 {
+  animation-name: bounce2;
+  animation-duration: 5000ms;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.9, 0.7, 0.8, 0.6);
+  animation-iteration-count: infinite;
 
 }
-
-.pro-info>a:hover img {
-  width: 149px;
-}
-
 .chat {
-  width: 100px;
-  position: fixed;
-  top: 45%;
-  left: 80%;
+  width: 100vw;
+  position: relative;
+  bottom: 400px;
+  left: 20%;
 }
+ /*참여가게  */
+ /* 스와이프 */
+.swipe_inner { 
+  width: 100%;
+  max-width: 1450px;  
+  padding: 0 60px;  
+  background-color: #fff;
+  border-bottom: 2px solid var(--gumi--sub-yellow);
+}
+
+.recipe-container {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px; 
+  width: calc(100% / 2);
+  margin: 0 27%;
+  min-width: 650px;
+}
+
+.recipe-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--gumi--main);
+  margin: 20px 0 40px;
+}
+
+.swiper {
+  width: 80%;
+  
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.swiper-scrollbar {
+  --swiper-scrollbar-bottom: 0;
+  --swiper-scrollbar-drag-bg-color: var(--gumi--main);
+  --swiper-scrollbar-size: 5px;
+}
+
+.post {
+  max-width: 400px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gumi--main);
+  background: var(--gumi--sub-yellow);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 16px 16px 0;
+  margin-bottom: 16px;
+}
+
+.post-img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.post-body {
+  display: grid;
+  grid-template-columns: 15% 60% 20%;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 0;
+  cursor: default;
+}
+
+.post-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--gumi--sub-green);
+}
+
+.post-author {
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.6;
+  color: var(--gumi--main);
+}
+
+.post-avatar {
+  width: 50px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 @keyframes bounce {
   0% {
@@ -307,3 +363,97 @@ main {
     height: 40px;
   }
 }
+@keyframes bounce2 {
+  0% {
+    transform: translate3d(0%, -10px, 0);
+
+    height: 40px;
+  }
+
+  90% {
+    height: 40px;
+  }
+
+  100% {
+    transform: translate3d(55%, 10px, 0);
+
+    height: 40px;
+  }
+}
+@media screen and (max-width : 1120px) {
+  .tab li.active {
+    font-size: 16px;
+    font-weight: bold;
+    background: url(/images/favicon.ico) no-repeat 10% 25%;
+  }
+}
+
+@media screen and (max-width : 830px) {
+  .nav {
+    transform: translateX(-90%);
+  }
+
+  .tab {
+    display: block;
+    font-size: 18px;
+  }
+
+  .tab li.active {
+    font-size: 16px;
+    font-weight: bold;
+    background: url(/images/favicon.ico) no-repeat 100% 25%;
+  }
+
+  
+}
+
+@media screen and (max-width : 740px) {
+  .tab {
+    font-size: 16px;
+  }
+
+  .tab li.active {
+    font-size: 14px;
+    font-weight: bold;
+    background: url(/images/favicon.ico) no-repeat 100% 25%;
+  }
+
+  
+  
+
+  .middle1 {}
+}
+
+@media screen and (max-width : 630px) {
+  .tab li {
+    width: 83px;
+  }
+
+  .tab li a {
+    width: 100%;
+  }
+
+  .tab li.active {
+    font-size: 17px;
+    font-weight: bold;
+    background:none;
+  }
+  .tab li:last-child a {
+    letter-spacing: 0.2rem;
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width : 560px){
+  .leaflet{display: none;}
+  .leaflet2{display: block;}
+}
+@media screen and (max-width : 420px) {
+  .tab {
+    margin: auto;
+  }
+
+  .tab li {
+    width: 80px !important;
+  }
+}
+
