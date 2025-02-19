@@ -2,7 +2,12 @@ window.addEventListener("load", () => {
   // Swiper
   var swiper = new Swiper(".asiaswiper", {
     grabCursor: true,
+    loop: true,
     speed: 400,
+    autoplay: {   // 자동 재생 추가
+      delay: 3000, // 3초마다 슬라이드 이동
+      disableOnInteraction: false, // 사용자가 터치해도 autoplay 계속 동작
+    },
     mousewheel: {
       invert: false,
     },
@@ -26,7 +31,12 @@ window.addEventListener("load", () => {
   });
   var swiper = new Swiper(".futureswiper", {
     grabCursor: true,
+    loop: true,
     speed: 400,
+    autoplay: {   // 자동 재생 추가
+      delay: 3000, // 3초마다 슬라이드 이동
+      disableOnInteraction: false, // 사용자가 터치해도 autoplay 계속 동작
+    },
     mousewheel: {
       invert: false,
     },
