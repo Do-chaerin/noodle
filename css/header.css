@@ -8,7 +8,6 @@ header {
   background-color: #fff;
 }
 header .inner {
-  position: relative;
   width: 100%;
   max-width: 1280px;
   display: flex;
@@ -28,11 +27,6 @@ header .inner {
 }
 .logo img {
   width: 100%;
-  padding: 2.5% 0;
-}
-.sns img {
-  width: 100%;
-  padding: 40% 0;
 }
 nav {
   height: 100%;
@@ -41,7 +35,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
 }
-nav .gnb {
+.gnb {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -49,7 +43,8 @@ nav .gnb {
   align-items: center;
   gap: var(--li--gap--l);
 }
-nav .depth {
+
+.depth {
   display: none;
 }
 .sns {
@@ -69,52 +64,4 @@ nav .depth {
   width: 50%;
   margin: auto;
   text-align: center;
-}
-/* 햄버거바 */
-.mb-bar {
-  position: absolute;
-  top: 50%;
-  right: 3%;
-  transform: translateY(-50%);
-  /* display: none; */
-}
-
-/* 모바일용 메뉴 */
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 100vh;
-  background-color: var(--gumi--sub-yellow);
-  padding-top: 80px;
-  text-align: left;
-  /* display: none; */
-}
-.mobile-nav .gnb{
-  display: flex;
-  flex-direction: column;
-}
-.mobile-nav .gnb-list{
-  border-bottom: 1px solid #fff
-}
-.mobile-nav .gnb-list a{
-  display: block;
-  padding: 18px 0 18px 5%;
-}
-
-@media screen and (max-width: 768px) {
-  nav,
-  .sns {
-    display: none;
-  }
-
-  /* 햄버거바 */
-  .mb-bar {
-    display: block;
-  }
-  /* 모바일용 메뉴 */
-  .mobile-nav {
-    display: block;
-  }
 }
