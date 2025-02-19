@@ -6,8 +6,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "SBAggroL";
-  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroL.woff") format("woff");
+  font-family: 'SBAggroL';
+  src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroL.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
@@ -30,35 +30,19 @@ html {
   font-family: "SBAggroM";
 }
 .inner {
-  max-width: 66.67%;
+  max-width: 1280px;
   margin: auto;
   background-color: #fff;
 }
-.tab {
-  gap: var(--li--gap--l);
-}
 
-/* 반응형 */
-@media screen and (max-width: 1100px) {
-  a {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .inner {
-    max-width: 85%;
-  }
-}
-@media screen and (max-width: 390px) {
-  .inner {
-    max-width: 92%;
-  }
+.tab{
+  gap: var(--li--gap--l);
 }
 
 .tab li:hover a {
   color: var(--gumi--sub-yellow);
 }
-.active {
+.active{
   color: var(--gumi--sub-yellow);
   display: block !important;
 }
