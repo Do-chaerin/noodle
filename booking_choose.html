@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/variable.css" />
     <link rel="stylesheet" href="css/header.css" />
-
+    <link rel="stylesheet" href="css/footer.css" />
     <!-- 채린css -->
     <link rel="stylesheet" href="css/booking_choose.css" />
 
@@ -27,18 +27,18 @@
     <div class="container">
       <header>
         <div class="inner">
-          <a href="index.html" class="logo"><img src="images/구미라면축제_로고.png" alt="" /></a>
+          <a href="index.html" class="logo"><img src="images/main-logo.png" alt="" /></a>
           <nav>
             <ul class="gnb">
               <li class="gnb-list">
-                <a href="#">축제정보</a>
+                <a href="info.html">축제정보</a>
                 <ul class="depth">
                   <li><a href="#">축제소개</a></li>
                   <li><a href="#">히스토리</a></li>
                 </ul>
               </li>
               <li class="gnb-list">
-                <a href="#">프로그램</a>
+                <a href="program1.html">프로그램</a>
                 <ul class="depth">
                   <li><a href="#">프로그램</a></li>
                   <li><a href="#">참여가게</a></li>
@@ -46,14 +46,14 @@
                 </ul>
               </li>
               <li class="gnb-list">
-                <a href="#">예약하기</a>
+                <a href="booking_choose.html">예약하기</a>
                 <ul class="depth">
                   <li><a href="#">부스신청</a></li>
                   <li><a href="#">히스토리</a></li>
                 </ul>
               </li>
               <li class="gnb-list">
-                <a href="#">커뮤니티</a>
+                <a href="community.html">커뮤니티</a>
                 <ul class="depth">
                   <li><a href="#">오시는길</a></li>
                   <li><a href="#">공지사항</a></li>
@@ -68,6 +68,7 @@
             <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
           </div>
         </div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
       </header>
       <!-- 배너 -->
       <img class="banner" src="images/main-banner.jpg" alt="배너" />
@@ -85,8 +86,8 @@
       <div class="policy-box">
         <h2>◆ 개인정보 취급방침</h2>
         <p>
-          '대한민국라면박람회'은 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에
-          관한 법률을 준수하고 있습니다.
+          '구미라면축제'는 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한
+          법률을 준수하고 있습니다.
         </p>
         <p>
           회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며,
@@ -96,17 +97,17 @@
 
         <h2>◆ 수집하는 개인정보의 항목</h2>
         <ul>
-          <li>
+          <li class="pri">
             수집항목 : 이름, 아이디, 비밀번호, 자택 전화번호, 휴대전화번호, 이메일, 서비스 이용기록, 쿠키, 접속IP정보
           </li>
-          <li>개인정보 수집방법 : 홈페이지(회원가입, 고객게시판 등), 제휴사로부터의 제공</li>
+          <li class="pri">개인정보 수집방법 : 홈페이지(회원가입, 고객게시판 등), 제휴사로부터의 제공</li>
         </ul>
 
         <h2>◆ 개인정보의 수집 및 이용목적</h2>
         <ul>
-          <li>서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산</li>
-          <li>회원 관리 (본인확인, 부정 이용 방지, 가입 의사 확인, 민원 처리, 고지사항 전달)</li>
-          <li>마케팅 및 광고에 활용 (신규 서비스 개발, 이벤트 정보 제공)</li>
+          <li class="pri">서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산</li>
+          <li class="pri">회원 관리 (본인확인, 부정 이용 방지, 가입 의사 확인, 민원 처리, 고지사항 전달)</li>
+          <li class="pri">마케팅 및 광고에 활용 (신규 서비스 개발, 이벤트 정보 제공)</li>
         </ul>
 
         <h2>◆ 개인정보의 보유 및 이용기간</h2>
@@ -132,26 +133,63 @@
           </li>
         </ul>
         <!-- 공통 -->
-        <div>
-          <input type="checkbox" name="banana" id="banana" />
-          <label for="banana">만 14세 이상입니다.</label>
-          <input type="checkbox" name="apple" id="apple" />
-          <label for="apple">동의합니다.</label>
+        <div class="checkbox-container">
+          <div>
+            <input type="checkbox" name="banana" id="banana" />
+            <label for="banana">만 14세 이상입니다.</label>
+          </div>
+          <div>
+            <input type="checkbox" name="apple" id="apple" />
+            <label for="apple">개인정보제공에 동의합니다.</label>
+          </div>
         </div>
-        <button>예약하기</button>
+        <button onclick="openModal()">예약하기</button>
       </div>
     </div>
-    <!--탭2-->
+    <!--체크박스-->
     <div class="content">
+      <div class="policy-box">
+        <h2>◆ 개인정보 취급방침</h2>
+        <p>
+          '구미라면축제'는 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한
+          법률을 준수하고 있습니다.
+        </p>
+        <p>
+          회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며,
+          개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+        </p>
+        <p>본 방침은 : <strong>2024년 10월 01일</strong> 부터 시행됩니다.</p>
+
+        <h2>◆ 수집하는 개인정보의 항목</h2>
+        <ul>
+          <li class="pri">
+            수집항목 : 이름, 아이디, 비밀번호, 자택 전화번호, 휴대전화번호, 이메일, 서비스 이용기록, 쿠키, 접속IP정보
+          </li>
+          <li class="pri">개인정보 수집방법 : 홈페이지(회원가입, 고객게시판 등), 제휴사로부터의 제공</li>
+        </ul>
+
+        <h2>◆ 개인정보의 수집 및 이용목적</h2>
+        <ul>
+          <li class="pri">서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산</li>
+          <li class="pri">회원 관리 (본인확인, 부정 이용 방지, 가입 의사 확인, 민원 처리, 고지사항 전달)</li>
+          <li class="pri">마케팅 및 광고에 활용 (신규 서비스 개발, 이벤트 정보 제공)</li>
+        </ul>
+
+        <h2>◆ 개인정보의 보유 및 이용기간</h2>
+        <p>
+          회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다. 단, 관계법령의
+          규정에 의하여 보존할 필요가 있는 경우 관계법령이 정한 일정한 기간 동안 회원정보를 보관합니다.
+        </p>
+      </div>
       <div class="booking-form">
         <ul>
           <li class="booking-d">업체 예약</li>
           <li class="booking-de">
-            <label for="fullName">이름</label>
+            <label for="fullName">업체명</label>
             <input type="text" id="fullName" name="fullName" required />
           </li>
           <li class="booking-de">
-            <label for="email">이메일</label>
+            <label for="email">사업자번호</label>
             <input type="email" name="email" id="email" />
           </li>
           <li class="booking-de">
@@ -159,18 +197,112 @@
             <input type="tel" name="tel" id="tel" />
           </li>
         </ul>
-        <div>
-          <input type="checkbox" name="banana" id="banana" />
-          <label for="banana">만 14세 이상입니다.</label>
-          <input type="checkbox" name="apple" id="apple" />
-          <label for="apple">동의합니다.</label>
+        <!--체크박스-->
+        <div class="checkbox-container">
+          <div>
+            <input type="checkbox" name="banana" id="banana" />
+            <label for="banana">만 14세 이상입니다.</label>
+          </div>
+          <div>
+            <input type="checkbox" name="apple" id="apple" />
+            <label for="apple">개인정보제공에 동의합니다.</label>
+          </div>
         </div>
-        <button>예약하기</button>
+        <button onclick="openModal()">신청하기</button>
       </div>
     </div>
     <!--탭3-->
-    <div class="content">탭 3의 내용입니다.</div>
+    <div class="content">
+      <div class="booking-form">
+        <img src="images/factory.jpg" alt="농심구미공장" />
+        <ul>
+          <li class="booking-d">공장 견학</li>
+          <li class="booking-de"></li>
+        </ul>
+        <div class="container2">
+          <img src="images/logo_nongshim.png" width="100px" alt="농심로고" />
+          <h1>구미공장 견학안내</h1>
+          <div class="section1">
+            <h4>견학 신청 방법</h4>
+            <p class="detail">매월 1일 ~ 4일 다음달 견학 예약 (OPEN 09시, CLOSE 23시)</p>
+            <p class="detail">혹한기(1월, 2월), 혹서기(7월, 8월)은 견학 불가</p>
+          </div>
 
+          <div class="section1">
+            <h4>견학 시간</h4>
+            <p class="highlight"><strong>일반 견학:</strong> 오전 10:40 ~ 11:40 (약 1시간 정도)</p>
+          </div>
+
+          <div class="section1">
+            <h4>견학 신청 대상</h4>
+            <p class="detail">단체 견학만 가능</p>
+            <p class="detail">초등학교 3학년 이상</p>
+            <p class="detail">※ 영리 및 상업적 목적을 위한 단체는 제외</p>
+            <p class="detail">※ 안전상의 이유로 일부 견학이 제한될 수 있음</p>
+          </div>
+
+          <div class="section1">
+            <h4>견학 일정 확정 안내</h4>
+            <p class="detail">매월 9일 추첨 (토요일/휴일일 경우 익일)</p>
+            <p class="detail">선정되신 분들에게 문자/메일로 개별 연락</p>
+            <p class="detail">※ 동일단체는 월 1회 방문으로 제한</p>
+            <p class="detail">※ 1회 이상 신청 시 자동 취소될 수 있음</p>
+          </div>
+          <p class="detail1">자세한 내용은 아래 홈페이지에서 확인바랍니다.</p>
+        </div>
+        <form action="https://www.nongshim.com/customer/factory_trip/registration_gumi" target="_blank">
+          <button type="submit">홈페이지 이동하기</button>
+        </form>
+      </div>
+    </div>
+    <!-- 모달창 -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>신청되었습니다</h3>
+      </div>
+    </div>
+    <!-- 하단 -->
+    <footer>
+      <div class="footer inner">
+        <div class="ft_logo">
+          <img src="images/logo-ramyeon.png" alt="구미라면축제로고" />
+        </div>
+        <div class="ft_info">
+          <p><i class="fa fa-map-marker"></i> 행사지: 경상북도 구미시 원평동 124-23 구미역 일원</p>
+          <p>
+            <i class="fa fa-map-marker"></i> 사무국: 경상북도 구미시 시장로 1 (원평동 1번지), 구미시청 본관 문화관광과
+          </p>
+          <p><i class="fa fa-phone"></i> 054-480-2652</p>
+        </div>
+        <div class="sponsorLogo">
+          <img src="images/logo_gumi.png" alt="구미시로고" />
+          <img src="images/logo_GB.png" alt="경상북도로고" />
+          <img src="images/logo_nongshim.png" alt="농심로고" />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // 모달 열기
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      // 모달 닫기
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+
+      // 모달 외부 클릭 시 닫기
+      window.onclick = function (event) {
+        let modal = document.getElementById("myModal");
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+    <!-- 탭 이동하기 -->
     <script>
       function openTab(index) {
         let tabs = document.querySelectorAll(".tab");
