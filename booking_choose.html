@@ -19,10 +19,18 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     <title>구미라면축제</title>
   </head>
   <body>
+    <div class="fixtop">
+      <p class="scrollTo scrollToTop">▲</p>
+      <p class="scrollTo scrollTodown">▼</p>
+    </div>
     <!-- 전체레이아웃 -->
     <div class="container">
       <header>
@@ -72,14 +80,13 @@
       </header>
       <!-- 배너 -->
       <img class="banner" src="images/main-banner.jpg" alt="배너" />
-      <!-- 탭 버튼 -->
     </div>
     <!-- 탭 버튼 -->
-    <div class="tabs">
-      <button class="tab active" onclick="openTab(0)">개인예약</button>
-      <button class="tab" onclick="openTab(1)">업체예약</button>
-      <button class="tab" onclick="openTab(2)">공장견학</button>
-    </div>
+    <ul class="web tab">
+      <li><a>개인예약</a></li>
+      <li><a>부스예약</a></li>
+      <li><a>견학신청</a></li>
+    </ul>
 
     <!-- 탭 내용 -->
     <div class="content active">
@@ -116,6 +123,7 @@
           규정에 의하여 보존할 필요가 있는 경우 관계법령이 정한 일정한 기간 동안 회원정보를 보관합니다.
         </p>
       </div>
+      <!-- 탭1 -->
       <div class="booking-form">
         <ul>
           <li class="booking-d">개인 예약</li>
@@ -132,7 +140,6 @@
             <input type="tel" name="tel" id="tel" />
           </li>
         </ul>
-        <!-- 공통 -->
         <div class="checkbox-container">
           <div>
             <input type="checkbox" name="banana" id="banana" />
@@ -146,10 +153,13 @@
         <button onclick="openModal()">예약하기</button>
       </div>
     </div>
-    <!--체크박스-->
+    <!--탭2-->
     <div class="content">
+      <div class="booking-img">
+        <img src="images/booking_com.png" width="500px" alt="업체신청순서" />
+      </div>
       <div class="policy-box">
-        <h2>◆ 개인정보 취급방침</h2>
+        <h2>◆ 업체신청 개인정보 수집 및 이용 동의서</h2>
         <p>
           '구미라면축제'는 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한
           법률을 준수하고 있습니다.
@@ -162,9 +172,7 @@
 
         <h2>◆ 수집하는 개인정보의 항목</h2>
         <ul>
-          <li class="pri">
-            수집항목 : 이름, 아이디, 비밀번호, 자택 전화번호, 휴대전화번호, 이메일, 서비스 이용기록, 쿠키, 접속IP정보
-          </li>
+          <li class="pri">필수정보: 성명, 연락처(전화번호, 이메일), 주소, 사업자등록번호, 업체명, 대표자명</li>
           <li class="pri">개인정보 수집방법 : 홈페이지(회원가입, 고객게시판 등), 제휴사로부터의 제공</li>
         </ul>
 
@@ -177,8 +185,8 @@
 
         <h2>◆ 개인정보의 보유 및 이용기간</h2>
         <p>
-          회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다. 단, 관계법령의
-          규정에 의하여 보존할 필요가 있는 경우 관계법령이 정한 일정한 기간 동안 회원정보를 보관합니다.
+          개인정보의 보유 및 이용 기간수집된 개인정보는 업체 신청 처리 및 계약 유지 기간 동안 보관되며, 관계 법령에 따라
+          일정 기간 보관 후 파기됩니다.
         </p>
       </div>
       <div class="booking-form">
@@ -189,15 +197,19 @@
             <input type="text" id="fullName" name="fullName" required />
           </li>
           <li class="booking-de">
-            <label for="email">사업자번호</label>
-            <input type="email" name="email" id="email" />
+            <label for="service">참가 유형</label>
+            <select id="service" name="service">
+              <option value="consulting">컨설팅</option>
+              <option value="Relations">홍보</option>
+              <option value="sell">판매</option>
+              <option value="etc">기타</option>
+            </select>
           </li>
           <li class="booking-de">
-            <label for="tel">연락처</label>
-            <input type="tel" name="tel" id="tel" />
+            <label for="message">추가 사항</label>
+            <textarea id="message" name="message" rows="4"></textarea>
           </li>
         </ul>
-        <!--체크박스-->
         <div class="checkbox-container">
           <div>
             <input type="checkbox" name="banana" id="banana" />
@@ -214,7 +226,15 @@
     <!--탭3-->
     <div class="content">
       <div class="booking-form">
-        <img src="images/factory.jpg" alt="농심구미공장" />
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/factory.jpg" width="300px" alt="농심구미공장" /></div>
+            <div class="swiper-slide"><img src="images/factory2.jpg" width="300px" alt="농심구미공장" /></div>
+            <div class="swiper-slide"><img src="images/factory3.jpg" width="300px" alt="농심구미공장" /></div>
+            <div class="swiper-slide"><img src="images/factory4.jpg" width="300px" alt="농심구미공장" /></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
         <ul>
           <li class="booking-d">공장 견학</li>
           <li class="booking-de"></li>
@@ -266,7 +286,9 @@
     <footer>
       <div class="footer inner">
         <div class="ft_logo">
-          <img src="images/logo-ramyeon.png" alt="구미라면축제로고" />
+          <a href="#">
+            <img src="images/logo-ramyeon.png" alt="구미라면축제로고" />
+          </a>
         </div>
         <div class="ft_info">
           <p><i class="fa fa-map-marker"></i> 행사지: 경상북도 구미시 원평동 124-23 구미역 일원</p>
