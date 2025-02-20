@@ -35,11 +35,11 @@ html {
   background-color: #fff;
 }
 
-.tab {
+.web {
   gap: var(--li--gap--l);
 }
 
-.tab li:hover a {
+.web li:hover a {
   color: var(--gumi--sub-yellow);
 }
 .active {
@@ -77,7 +77,7 @@ html {
 /* Color styles */
 :root {
   --gumi--main: rgba(252, 103, 19, 1);
-  --gumi--sub-yellow: rgba(255, 182, 80, 1);
+  --gumi--sub-yellow: rgb(255, 182, 80);
   --gumi--sub-green: rgba(87, 141, 54, 1);
   --li--gap--l: 50px;
   --inner--width: 1280px;
