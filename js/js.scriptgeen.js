@@ -42,4 +42,24 @@ $(document).ready(function() {
       }
     );
   });
+  var swiper = new Swiper(".asiaswiper , .futureswiper", {
+    loop: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+
+      prevEl: ".swiper-button-prev",
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
+  },
+  });
 })
