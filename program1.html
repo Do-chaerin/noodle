@@ -1,312 +1,328 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="icon" type="image/icon" sizes="16x16" href="images/favicon.ico" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/geen/program1.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variable.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- js -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- favicon -->
-  <link rel="icon" type="image/icon" sizes="16x16" href="images/favicon.ico" />
-  <!-- css -->
-  <link rel="stylesheet" href="css/geen/program1.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- 공통 css -->
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/variable.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <!-- js -->
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/header.js"></script>
-  <script src="js/js.scriptgeen.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main_hb.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/js.scriptgeen.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main_hb.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
 
-  <title>Document</title>
-</head>
+    <title>Document</title>
+  </head>
 
-<body>
-  <header>
-    <div class="inner">
-      <a href="index.html" class="logo"><img src="images/logo-ramyeon.png" alt="" /></a>
-      <nav>
-        <ul class="gnb">
-          <li class="gnb-list">
-            <a href="#">축제정보</a>
-            <ul class="depth">
-              <li><a href="#">축제소개</a></li>
-              <li><a href="#">히스토리</a></li>
-            </ul>
-          </li>
-          <li class="gnb-list">
-            <a href="#">프로그램</a>
-            <ul class="depth">
-              <li><a href="#">프로그램</a></li>
-              <li><a href="#">참여가게</a></li>
-              <li><a href="#">이벤트</a></li>
-            </ul>
-          </li>
-          <li class="gnb-list">
-            <a href="#">예약하기</a>
-            <ul class="depth">
-              <li><a href="#">부스신청</a></li>
-              <li><a href="#">히스토리</a></li>
-            </ul>
-          </li>
-          <li class="gnb-list">
-            <a href="#">커뮤니티</a>
-            <ul class="depth">
-              <li><a href="#">오시는길</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">갤러리</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <div class="sns">
-        <a href="#"><img src="images/logo_youtube.png" alt="유튜브" /></a>
-        <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
-      </div>
-    </div>
-  </header>
-  <!-- 배너 -->
-  <section>
-    <img class="banner" src="images/main-banner.jpg" alt="배너" />
-  </section>
-  <!-- 탭 start-->
-  <ul class="tab">
-    <li ><a href=#>프로그램</a></li>
-    <li ><a href="#">참여가게</a></li>
-    <li ><a href="#">이벤트</a></li>
-  </ul>
-  <!-- 프로그램상세페이지  메인전체-->
-  
-  <main>
-    <!--inner  -->
-    <div class="inner">
-      <!--프로그램1  -->
-      <div class="program">
-        <!-- 이미지중간 리플렛 -->
-        <ul class="leaflet">
-          <li class="lf-imgtop ">
-            <a href="#"><img src="images/geen/top534_78.png" alt="이미지위"></a>
-          </li>
-          <li class="middleli">
-            <ul class="middle1">
-              <li id="st-1">
-                <img src="images/geen/1.png" alt="이미지중간1" class="jump1">
-              </li>
-              <li id="st-2">
-                <img src="images/geen/mapicon-or.png" class="jump-animation jump">
-              </li>
-              <li id="st-3"><img src="images/geen/mapicon-gr.png" alt="이미지중간1-3" class="jump-animation jump"></li>
-              <li id="st-4"><img src="images/geen/mapicon-br.png" alt="이미지중간1-4" class="jump-animation jump"></li>
-              <li id="st-5"><img src="images/geen/mapicon-yel.png" alt="이미지중간1-5" class="jump-animation jump"></li>
-              <li id="st-6"><img src="images/geen/mapicon-lbr.png" alt="이미지중간1-6" class="jump-animation jump"></li>
-              <li id="st-7"><img src="images/geen/mapicon-yel.png" alt="이미지중간1-7" class="jump-animation jump"></li>
-              <li id="st-8"><img src="images/geen/mapicon-lor.png" alt="이미지중간1-8" class="jump-animation jump"></li>
-            </ul>
-          </li>
-          <li class="lf-imgtop lf-imgtop0 ">
-            <a href="#"><img src="images/geen/middle2_180.png" alt="이미지중간2"></a>
-          </li>
-          <li class="middleli2">
-            <ul class="middle2">
-              <li class="st_1">
-                <a href="#"><img src="images/geen/st0_1_info.png" alt="이미지중간2-0,1" ></a>
-              </li>
-              <li class="st_2">
-                <a href="#"><img src="images/geen/st2_info.png" alt="이미지중간2-2" ></a>
-              </li>                            
-              <li class="st_3"><a href="#"><img src="images/geen/st3_4_inf0.png" alt="이미지중간2-3,4" ></a></li>              
-              <li class="st_5"><a href="#"><img src="images/geen/st5_info.png" alt="이미지중간2-5" ></a></li>
-              
-            </ul>
-          </li>
-          <li class="lf-imgtop lf-imgtop1 ">
-            <a href="#"><img src="images/geen/bottpm_186.png" alt="이미지아래"></a>
-          </li>
-        </ul>
-        <ul class="leaflet2">
-          <li><a href="#"><img src="images/geen/leaplet-385.png" alt=""></a></li>
-        </ul>
-
-    </div>
-    <!-- 참여가게 -->
-  <div class="swipe_inner">
-    <div class="recipe-container">
-      <h1>아시아라면</h1>
-      <div class="swiper asiaswiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide post">            
-            <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
-            </div>
-          </div> 
-
+  <body>
+    <header>
+      <div class="inner">
+        <div class="fixtop">
+          <p class="scrollTo scrollToTop">▲</p>
+          <p class="scrollTo scrollTodown">▼</p>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-scrollbar"></div>
+        <a href="index.html" class="logo"><img src="images/logo-ramyeon.png" alt="" /></a>
+        <nav>
+          <ul class="gnb">
+            <li class="gnb-list">
+              <a href="#">축제정보</a>
+              <ul class="depth">
+                <li><a href="#">축제소개</a></li>
+                <li><a href="#">히스토리</a></li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="#">프로그램</a>
+              <ul class="depth">
+                <li><a href="#">프로그램</a></li>
+                <li><a href="#">참여가게</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="#">예약하기</a>
+              <ul class="depth">
+                <li><a href="#">부스신청</a></li>
+                <li><a href="#">히스토리</a></li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="#">커뮤니티</a>
+              <ul class="depth">
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">갤러리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="sns">
+          <a href="#"><img src="images/logo_youtube.png" alt="유튜브" /></a>
+          <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
+        </div>
       </div>
-    </div>
-<!-- 퓨전라면 -->
-    <div class="recipe-container">
-      <h1>퓨-전라면</h1>
-      <div class="swiper futureswiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
+    </header>
+    <!-- 배너 -->
+    <section>
+      <img class="banner" src="images/main-banner.jpg" alt="배너" />
+    </section>
+    <!-- 탭 start-->
+    <ul class="web tab">
+      <li><a href="#">프로그램</a></li>
+      <li><a href="#">참여가게</a></li>
+      <li><a href="#">이벤트</a></li>
+    </ul>
+    <!-- 프로그램상세페이지  메인전체-->
+
+    <main>
+      <!--inner  -->
+
+      <div class="inner">
+        <!--프로그램1  -->
+        <div class="program">
+          <!-- 이미지중간 리플렛 -->
+          <h3><span>프로그램</span></h3>
+          <ul class="leaflet">
+            <li class="lf-imgtop">
+              <a href="#"><img src="images/geen/top534_78.png" alt="이미지위" /></a>
+            </li>
+            <li class="middleli">
+              <ul class="middle1">
+                <li id="st-1">
+                  <img src="images/geen/1.png" alt="이미지중간1" class="jump1" />
+                </li>
+                <li id="st-2">
+                  <img src="images/geen/mapicon-or.png" class="jump-animation jump" />
+                </li>
+                <li id="st-3">
+                  <img src="images/geen/mapicon-gr.png" alt="이미지중간1-3" class="jump-animation jump" />
+                </li>
+                <li id="st-4">
+                  <img src="images/geen/mapicon-br.png" alt="이미지중간1-4" class="jump-animation jump" />
+                </li>
+                <li id="st-5">
+                  <img src="images/geen/mapicon-yel.png" alt="이미지중간1-5" class="jump-animation jump" />
+                </li>
+                <li id="st-6">
+                  <img src="images/geen/mapicon-lbr.png" alt="이미지중간1-6" class="jump-animation jump" />
+                </li>
+                <li id="st-7">
+                  <img src="images/geen/mapicon-yel.png" alt="이미지중간1-7" class="jump-animation jump" />
+                </li>
+                <li id="st-8">
+                  <img src="images/geen/mapicon-lor.png" alt="이미지중간1-8" class="jump-animation jump" />
+                </li>
+              </ul>
+            </li>
+            <li class="lf-imgtop lf-imgtop0">
+              <a href="#"><img src="images/geen/middle2_180.png" alt="이미지중간2" /></a>
+            </li>
+            <li class="middleli2">
+              <ul class="middle2">
+                <li class="st_1">
+                  <a href="#"><img src="images/geen/st0_1_info.png" alt="이미지중간2-0,1" /></a>
+                </li>
+                <li class="st_2">
+                  <a href="#"><img src="images/geen/st2_info.png" alt="이미지중간2-2" /></a>
+                </li>
+                <li class="st_3">
+                  <a href="#"><img src="images/geen/st3_4_inf0.png" alt="이미지중간2-3,4" /></a>
+                </li>
+                <li class="st_5">
+                  <a href="#"><img src="images/geen/st5_info.png" alt="이미지중간2-5" /></a>
+                </li>
+              </ul>
+            </li>
+            <li class="lf-imgtop lf-imgtop1">
+              <a href="#"><img src="images/geen/bottpm_186.png" alt="이미지아래" /></a>
+            </li>
+          </ul>
+          <ul class="leaflet2">
+            <li>
+              <a href="#"><img src="images/geen/leaplet-385.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- 참여가게 -->
+        <div class="swipe_inner">  
+          <div class="innInner"> 
+            <h3><span>참여가게</span></h3>      
+          <div class="recipe-container">
+            <h1 class="h1-1">아시아라면</h1>
+            <div class="swiper asiaswiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">라카라카</h2>
+                      <p class="post-author">칠리라면타코</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/asia-2.JPEG" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/asia-2.JPEG" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/asia-2.JPEG" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/asia-2.JPEG" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-scrollbar"></div>
             </div>
           </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
+          <!-- 퓨전라면 -->
+          <div class="recipe-container">
+            <h1>퓨-전라면</h1>
+            <div class="swiper futureswiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/fusion-1.jpg" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/fusion-1.jpg" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/fusion-2.jpg" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/fusion-2.jpg" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/fusion-3.jpg" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/fusion-3.jpg" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/fusion-4.jpg" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/fusion-4.jpg" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide post">
+                  <img class="post-img" src="images/hb/fusion-5.JPEG" alt="recipe" />
+                  <div class="post-body">
+                    <img class="post-avatar" src="images/hb/fusion-5.JPEG" alt="avatar" />
+                    <div class="post-detail">
+                      <h2 class="post-name">무스비</h2>
+                      <p class="post-author">우삼겹미고랭라면</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide post">
-            <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
-            <div class="post-body">
-              <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
-              <div class="post-detail">
-                <h2 class="post-name">무스비</h2>
-                <p class="post-author">우삼겹미고랭라면</p>
-              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-scrollbar"></div>
             </div>
           </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-scrollbar"></div>
+      </div> 
       </div>
-    
-  </div>
-</div>
-  </div>
-  </main>
+    </main>
 
-  <div class="chat jumpanimation1">
-    <img src="images/geen/mouse_ico.png" alt="마우스이미지">
-  </div>
-  
-  <!-- 하단 -->
-  <footer>
-    <div class="footer inner">
-     <div class="ft_logo">
-       <img src="images/logo-ramyeon.png" alt="구미라면축제로고">
-     </div>
-     <div class="ft_info">
-       <p><i class="fa fa-map-marker"></i> 행사지: 경상북도 구미시 원평동 124-23 구미역 일원</p>
-       <p><i class="fa fa-map-marker"></i> 사무국: 경상북도 구미시 시장로 1 (원평동 1번지), 구미시청 본관 문화관광과</p>
-       <p><i class="fa fa-phone"></i> 054-480-2652</p>
-     </div>
-     <div class="sponsorLogo">
-       <img src="images/logo_gumi.png" alt="구미시로고">
-       <img src="images/logo_GB.png" alt="경상북도로고">
-       <img src="images/logo_nongshim.png" alt="농심로고">
-     </div>
+    <div class="chat jumpanimation1">
+      <img src="images/geen/mouse_ico.png" alt="마우스이미지" />
     </div>
-   </footer>
-</body>
 
+    <!-- 하단 -->
+    <footer>
+      <div class="footer inner">
+        <div class="ft_logo">
+          <a href="index.html">
+            <img src="images/logo-ramyeon.png" alt="구미라면축제로고" />
+          </a>
+        </div>
+        <div class="ft_info">
+          <p><i class="fa fa-map-marker"></i> 행사지: 경상북도 구미시 원평동 124-23 구미역 일원</p>
+          <p>
+            <i class="fa fa-map-marker"></i> 사무국: 경상북도 구미시 시장로 1 (원평동 1번지), 구미시청 본관 문화관광과
+          </p>
+          <p><i class="fa fa-phone"></i> 054-480-2652</p>
+        </div>
+        <div class="sponsorLogo">
+          <img src="images/logo_gumi.png" alt="구미시로고" />
+          <img src="images/logo_GB.png" alt="경상북도로고" />
+          <img src="images/logo_nongshim.png" alt="농심로고" />
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

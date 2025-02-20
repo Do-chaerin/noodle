@@ -43,11 +43,11 @@ $(document).ready(function() {
     );
   });
   var swiper = new Swiper(".asiaswiper , .futureswiper", {
-    loop: true,
     slidesPerView: "auto",
     centeredSlides: true,
     slidesPerView: 1,
     spaceBetween: 30,
+    loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

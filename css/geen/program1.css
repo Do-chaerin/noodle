@@ -1,6 +1,19 @@
 @charset "utf-8";
-header .inner , main .inner {
-  width: 100%;  
+body {
+  background-color: var(--gumi--sub-yellow);
+}
+.inner {
+  background-color: #f0f0f0;
+}
+main.inner {
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+header .inner,
+main .inner {
+  width: 100%;
   margin: 0 !important;
   margin: auto !important;
 }
@@ -36,35 +49,65 @@ header .inner , main .inner {
 .iNNer {
   width: 100%;
   max-width: 1280px;
-  height: 100%;
+  height: 100vh;
   position: relative;
 }
 
 /* 프로그램1 */
 .program {
-  width: 100%;
-  height: 90vh;
-  margin-top: 30px ;
-  text-align: center;
-}
-.leaflet{
-  width: 100%; 
+  width: 90%;
+  height: 100%;
   margin: auto;
+  margin-top: 8px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* 둥근 모서리 */
+  position: relative;
+}
+.program h3 , .innInner > h3  {
+  padding: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  position: relative;
   overflow: hidden;
 }
-.leaflet >li , .leaflet >li> a {
+.program > h3 > span , .innInner > h3 > span {
+  position: absolute; /* h3의 경계 내에서 위치 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  width: 62%;
+  height: 30%;
+  color: #fff;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 30px;
+  background: linear-gradient(95deg, var(--gumi--sub-green), var(--gumi--sub-yellow));
+}
+.leaflet {
   width: 100%;
-  max-width: 1280px ;
+  margin: auto;
+
+  overflow: hidden;
+}
+.leaflet > li,
+.leaflet > li > a {
+  width: 100%;
+  max-width: 1280px;
   height: 100%;
 }
-.leaflet >li>a{
+.leaflet > li > a {
   width: 700px;
   height: 100px;
 }
-.leaflet >img{  
+.leaflet > img {
   object-fit: cover;
 }
-.leaflet2{
+.leaflet2 {
   display: none;
 }
 /* 이미지 */
@@ -72,22 +115,21 @@ header .inner , main .inner {
   width: 100%;
 }
 
-
 /* 이미지중간 리플렛 */
-.lf-imgtop0{
+.lf-imgtop0 {
   margin-left: -1px;
 }
 .middleli {
   width: 100%;
   display: flex;
 }
-.middleli li:first-child{
+.middleli li:first-child {
   margin-left: -1px;
 }
 .middle1 {
   width: 100%;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .middle1 ul,
@@ -151,31 +193,30 @@ header .inner , main .inner {
   margin-left: -2px;
   display: flex;
   justify-content: center;
-  padding-left: 2px;  
+  padding-left: 2px;
   position: relative;
 }
-.middle2 >img{
- width: 99% !important;
- vertical-align: top;
+.middle2 > img {
+  width: 99% !important;
+  vertical-align: top;
 }
 
-.middle2 li:last-child{
+.middle2 li:last-child {
   width: 132px;
 }
-.middle2 li:hover{
-  opacity: .7;
+.middle2 li:hover {
+  opacity: 0.7;
 }
 .lf-imgtop-t {
   width: 100%;
   display: flex;
   justify-content: center;
-  
 }
 .lf-imgtop-t img {
   position: relative;
 }
-.lf-imgtop1{  
-  width: 540px;  
+.lf-imgtop1 {
+  width: 540px;
   /*   */
   vertical-align: top;
   object-fit: cover;
@@ -211,7 +252,8 @@ header .inner , main .inner {
   margin: auto;
 }
 
-.jumpingball img, .jumpanimation1 img {
+.jumpingball img,
+.jumpanimation1 img {
   width: 38px;
 }
 
@@ -228,28 +270,34 @@ header .inner , main .inner {
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.9, 0.7, 0.8, 0.6);
   animation-iteration-count: infinite;
-
 }
 .chat {
   width: 100vw;
   position: relative;
-  bottom: 1690px;
+  bottom: 1850px;
   left: 20%;
 }
- /*참여가게  */
- /* 스와이프 */
-.swipe_inner { 
-  width: 100%;
-  max-width: 1500px;      
-  background-color: #fff;
+/*참여가게  */
+/* 스와이프 */
+.swipe_inner {
+  width: 90%;
+  max-width: 1500px;
+  margin: auto;
+  background-color: #f0f0f0;
   /* border-bottom: 2px solid var(--gumi--sub-yellow); */
 }
-
+.innInner {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* 둥근 모서리 */
+  position: relative;
+}
 .recipe-container {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 25px; 
+  border-radius: 25px;
   width: calc(100% / 2);
   margin: auto;
   min-width: 540px;
@@ -260,19 +308,17 @@ header .inner , main .inner {
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
-  color: var(--gumi--main);
-  margin: 20px 0 40px;
+  color: var(--gumi--main);  
 }
-
+.h1-1{
+margin: -90px 0 20px;}
 .swiper {
-  width: 83%; 
- 
+  width: 83%;
 }
-
 
 .swiper-scrollbar {
   --swiper-scrollbar-bottom: 0;
-  opacity: .6;
+  opacity: 0.6;
   --swiper-scrollbar-drag-bg-color: var(--gumi--main);
   --swiper-scrollbar-size: 5px;
 }
@@ -287,7 +333,7 @@ header .inner , main .inner {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 16px 16px 0;
-  margin-bottom: 16px;  
+  margin-bottom: 16px;
   margin-right: 30px !important;
 }
 
@@ -356,19 +402,20 @@ swiper-slide img {
   height: 100%;
   object-fit: cover;
 }
-.swiper-button-next, .swiper-button-prev {
-  opacity: .5;
-  
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0.5;
+
   color: var(--gumi--main) !important;
 }
 .swiper-pagination-bullet-active {
-  opacity: .5 !important;
+  opacity: 0.5 !important;
   background: var(--gumi--main) !important;
 }
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-button-prev:after {
   font-size: 25px !important;
 }
-
 
 @keyframes bounce {
   0% {
@@ -422,15 +469,18 @@ swiper-slide img {
     height: 40px;
   }
 }
-@media screen and (max-width : 1120px) {
+@media screen and (max-width: 1120px) {
   .tab li.active {
     font-size: 16px;
     font-weight: bold;
     background: url(/images/favicon.ico) no-repeat 10% 25%;
   }
+  .chat {
+    bottom: 1600px;
+  }
 }
 
-@media screen and (max-width : 830px) {
+@media screen and (max-width: 830px) {
   .nav {
     transform: translateX(-90%);
   }
@@ -445,11 +495,9 @@ swiper-slide img {
     font-weight: bold;
     background: url(/images/favicon.ico) no-repeat 100% 25%;
   }
-
-  
 }
 
-@media screen and (max-width : 740px) {
+@media screen and (max-width: 740px) {
   .tab {
     font-size: 16px;
   }
@@ -460,13 +508,11 @@ swiper-slide img {
     background: url(/images/favicon.ico) no-repeat 100% 25%;
   }
 
-  
-  
-
-  .middle1 {}
+  .middle1 {
+  }
 }
 
-@media screen and (max-width : 630px) {
+@media screen and (max-width: 630px) {
   .tab li {
     width: 83px;
   }
@@ -478,18 +524,22 @@ swiper-slide img {
   .tab li.active {
     font-size: 17px;
     font-weight: bold;
-    background:none;
+    background: none;
   }
   .tab li:last-child a {
     letter-spacing: 0.2rem;
     padding-left: 0px;
   }
 }
-@media screen and (max-width : 560px){
-  .leaflet{display: none;}
-  .leaflet2{display: block;}
+@media screen and (max-width: 560px) {
+  .leaflet {
+    display: none;
+  }
+  .leaflet2 {
+    display: block;
+  }
 }
-@media screen and (max-width : 420px) {
+@media screen and (max-width: 420px) {
   .tab {
     margin: auto;
   }
@@ -498,4 +548,3 @@ swiper-slide img {
     width: 80px !important;
   }
 }
-
