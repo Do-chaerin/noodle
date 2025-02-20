@@ -5,6 +5,6 @@ window.addEventListener("load", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
   scrollDownBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 1000, behavior: "smooth" });
+    window.scrollTo({ top: window.scrollY + 1000, behavior: "smooth" });
   });
 });
