@@ -1,1 +1,70 @@
 @charset "utf-8";
+@font-face {
+  font-family: "SBAggroM";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroM.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBAggroL";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroL.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+#daumRoughmapContainer1739778540609 {
+  margin: auto;
+}
+.item {
+  display: none;
+  padding: 50px 0;
+}
+
+.item:first-child {
+  display: none;
+}
+.notice-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gumi--sub-yellow);
+  color: #333;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.click {
+  display: flex !important;
+  justify-content: space-between;
+}
+.notice-txt {
+  display: none;
+  font-family: "SBAggroL";
+  font-size: 1rem;
+  font-weight: lighter;
+  margin: 20px;
+  line-height: 2;
+  padding: 30px 20px;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.wrap{
+  display: flex;
+  flex-direction: column;
+}
+.comm-imgbox{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 20px;
+}
+.comm-imgbox img{
+  width: 400px;
+  height: 300px;
+}

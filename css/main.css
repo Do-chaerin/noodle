@@ -1,19 +1,156 @@
 @charset "utf-8";
-
-.video {
-  margin-top: 80px;
-  width: 100%;
-}
-.main-top img {
-  width: 100%;
-}
-/* 스와이프 */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--gumi--sub-yellow);
 }
+.video {
+  margin-top: 80px;
+  width: 100%;
+  position: relative;
+}
+.main-top img {
+  width: 100%;
+}
+
+::selection {
+  color: #fff;
+  background: var(--gumi--sub-green);
+}
+.wrapper {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 380px;
+  width: 100%;
+  border: 3px double var(--gumi--main);
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 99;
+}
+.wrapper header {
+  font-size: 22px;
+  font-weight: 600;
+}
+.wrapper .poll-area {
+  margin: 20px 0 15px 0;
+  position: relative;
+}
+.poll-area label {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 2px solid #e6e6e6;
+  transition: all 0.2s ease;
+}
+.poll-area label:hover {
+  border-color: #ddd;
+}
+.poll-area label.selected {
+  border-color: var(--gumi--sub-green) !important;
+}
+.poll-area label .row {
+  display: flex;
+  pointer-events: none;
+  justify-content: space-between;
+}
+.poll-area label .row .column {
+  display: flex;
+  align-items: center;
+}
+.poll-area label .row .circle {
+  height: 19px;
+  width: 19px;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+}
+.poll-area label.selected .row .circle {
+  border-color: var(--gumi--sub-green);
+}
+.poll-area label .row .circle::after {
+  content: "";
+  height: 11px;
+  width: 11px;
+  background: var(--gumi--sub-green);
+  border-radius: inherit;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: none;
+}
+.poll-area label:hover .row .circle::after {
+  display: block;
+  background: #e6e6e6;
+}
+.poll-area label.selected .row .circle::after {
+  display: block;
+  background: var(--gumi--sub-green) !important;
+}
+.poll-area label .row span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.poll-area label .row .percent {
+  display: none;
+}
+.poll-area label .progress {
+  height: 7px;
+  width: 100%;
+  position: relative;
+  background: #f0f0f0;
+  margin: 8px 0 3px 0;
+  border-radius: 30px;
+  display: none;
+  pointer-events: none;
+}
+.poll-area label .progress:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  background: #ccc;
+  width: calc(1% * var(--w));
+  border-radius: inherit;
+  transition: all 0.2s ease;
+}
+.poll-area label.selected .progress::after {
+  background: var(--gumi--sub-green);
+}
+.poll-area label.selectall .progress,
+.poll-area label.selectall .row .percent {
+  display: block;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+.poll-area button {
+  font-family: "SBAggroM";
+  padding: 5px 10px;
+  float: right;
+  border: none;
+  background-color: var(--gumi--main);
+  border-radius: 3px;
+}
+.poll-area button a {
+  font-family: "SBAggroM";
+  color: #fff;
+}
+.poll-area .close {
+  font-size: 10px;
+  color: #fff;
+  position: fixed;
+  top: 120px;
+  right: 40px;
+}
+/* 스와이프 */
+
 .swipe_inner {
   display: flex;
   flex-direction: row;
@@ -55,7 +192,6 @@ body {
 }
 
 .post {
-  max-width: 400px;
   font-size: 1rem;
   font-weight: 500;
   color: var(--gumi--main);
@@ -68,7 +204,6 @@ body {
 
 .post-img {
   width: 100%;
-  max-width: 400px;
   object-fit: cover;
   border-radius: 6px;
   user-select: none;
@@ -85,19 +220,19 @@ body {
 }
 
 .post-name {
-  font-size: 1.2rem;
+  height: fit-content;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 5px;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: var(--gumi--sub-green);
+  margin-bottom: 5px;
 }
 
 .post-author {
   width: fit-content;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   opacity: 0.6;
   color: var(--gumi--main);
 }
@@ -110,12 +245,18 @@ body {
   cursor: pointer;
 }
 
-/* 카카오맵 */
-#daumRoughmapContainer1739773108536{
-  margin-bottom: 50px;
-}
 /* 관광정보 css */
-.progress{
+.gumi {
+  height: 700px;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--gumi--sub-yellow);
+}
+.gumi h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 25px;
+}
+.progress {
   width: 100%;
   height: 100px;
   position: relative;
@@ -137,7 +278,7 @@ body .progress_inner__bar {
   left: 10%;
   background: repeating-linear-gradient(
     45deg,
-    var(--gumi--main),
+    #fff,
     var(--gumi--main) 4px,
     var(--gumi--main) 4px,
     var(--gumi--main) 10px
@@ -183,6 +324,7 @@ body .progress_inner__step label {
 body .progress_inner__step:hover {
   color: var(--gumi--main);
 }
+
 body .progress_inner__step:hover:before {
   color: white;
   background: var(--gumi--main);
@@ -287,19 +429,16 @@ body .progress_inner__tabs .tab img {
 body .progress_inner input[type="radio"] {
   display: none;
 }
-
-#daumRoughmapContainer1739773108536{
-  border-top: 2px solid var(--gumi--sub-yellow);
-  margin-top: 600px;
+/* 카카오맵 */
+.map {
+  margin-bottom: 50px;
 }
 /* MEDIA QUERIES */
-
 @media (max-width: 1200px) {
   .swiper {
     width: 80%;
   }
 }
-
 @media (max-width: 900px) {
   #recipes {
     padding: 60px 80px;
@@ -309,13 +448,11 @@ body .progress_inner input[type="radio"] {
     width: 50%;
   }
 }
-
 @media (max-width: 765px) {
   .swiper {
     width: 70%;
   }
 }
-
 @media (max-width: 550px) {
   #recipes {
     padding: 40px 40px;

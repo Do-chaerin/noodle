@@ -6,8 +6,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'SBAggroL';
-  src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroL.woff') format('woff');
+  font-family: "SBAggroL";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroL.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -35,16 +35,44 @@ html {
   background-color: #fff;
 }
 
-.tab{
+.tab {
   gap: var(--li--gap--l);
 }
 
 .tab li:hover a {
   color: var(--gumi--sub-yellow);
 }
-.active{
-  color: var(--gumi--sub-yellow);
+.active {
   display: block !important;
+}
+.active a {
+  color: var(--gumi--sub-yellow);
+}
+.fixtop {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 80px;
+  right: 20px;
+  gap: 20px;
+  z-index: 99999;
+}
+.scrollTo {
+  cursor: pointer;
+  color: var(--gumi--main);
+  font-size: 1.4rem;
+  border: 1px solid var(--gumi--main);
+  text-align: center;
+  border-radius: 50%;
+  
+}
+.scrollToTop {
+  padding: 7px 5px 3px;
+}
+.scrollTodown {
+  padding: 9px 5px 1px;
 }
 /* Color styles */
 :root {

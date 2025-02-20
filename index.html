@@ -43,7 +43,7 @@
     <!-- js -->
     <!-- 라이브러리 js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 채린js -->
@@ -56,6 +56,10 @@
     <title>구미라면축제</title>
   </head>
   <body>
+    <div class="fixtop">
+      <p class="scrollTo scrollToTop">▲</p>
+      <p class="scrollTo scrollTodown">▼</p>
+    </div>
     <!-- 전체레이아웃 -->
     <div class="container">
       <header>
@@ -114,6 +118,57 @@
           playsinline
           poster=""
         ></video>
+        <div class="wrapper">
+          <h4 style="color: var(--gumi--main)">당신의 선택은?</h4>
+          <div class="poll-area">
+            <button class="close">X</button>
+            <input type="checkbox" name="poll" id="opt-1" />
+            <input type="checkbox" name="poll" id="opt-2" />
+            <input type="checkbox" name="poll" id="opt-3" />
+            <input type="checkbox" name="poll" id="opt-4" />
+            <label for="opt-1" class="opt-1 choose">
+              <div class="row">
+                <div class="column">
+                  <span class="circle"></span>
+                  <span class="text">우삼겹미고랭라면</span>
+                </div>
+                <span class="percent">30%</span>
+              </div>
+              <div class="progress" style="--w: 30"></div>
+            </label>
+            <label for="opt-2" class="opt-2 choose">
+              <div class="row">
+                <div class="column">
+                  <span class="circle"></span>
+                  <span class="text">육전신라면</span>
+                </div>
+                <span class="percent">20%</span>
+              </div>
+              <div class="progress" style="--w: 20"></div>
+            </label>
+            <label for="opt-3" class="opt-3 choose">
+              <div class="row">
+                <div class="column">
+                  <span class="circle"></span>
+                  <span class="text">한우곱창스지라면</span>
+                </div>
+                <span class="percent">40%</span>
+              </div>
+              <div class="progress" style="--w: 40"></div>
+            </label>
+            <label for="opt-4" class="opt-4 choose">
+              <div class="row">
+                <div class="column">
+                  <span class="circle"></span>
+                  <span class="text">칠리라면타코</span>
+                </div>
+                <span class="percent">10%</span>
+              </div>
+              <div class="progress" style="--w: 10"></div>
+            </label>
+            <button><a href="booking_choose.html">라면 먹으러 가기</a></button>
+          </div>
+        </div>
         <section class="inner main-top">
           <!-- 부스 스와이프 영역 -->
           <div class="swipe_inner">
@@ -122,9 +177,19 @@
               <div class="swiper asiaswiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
+                    <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
                     <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
+                      <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
+                      <div class="post-detail">
+                        <h2 class="post-name">라카라카</h2>
+                        <p class="post-author">칠리라면타코</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide post">
+                    <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
+                    <div class="post-body">
+                      <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
                       <div class="post-detail">
                         <h2 class="post-name">무스비</h2>
                         <p class="post-author">우삼겹미고랭라면</p>
@@ -132,9 +197,9 @@
                     </div>
                   </div>
                   <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
+                    <img class="post-img" src="images/hb/asia-2.JPEG" alt="recipe" />
                     <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
+                      <img class="post-avatar" src="images/hb/asia-2.JPEG" alt="avatar" />
                       <div class="post-detail">
                         <h2 class="post-name">무스비</h2>
                         <p class="post-author">우삼겹미고랭라면</p>
@@ -142,9 +207,9 @@
                     </div>
                   </div>
                   <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
+                    <img class="post-img" src="images/hb/asia-2.JPEG" alt="recipe" />
                     <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
+                      <img class="post-avatar" src="images/hb/asia-2.JPEG" alt="avatar" />
                       <div class="post-detail">
                         <h2 class="post-name">무스비</h2>
                         <p class="post-author">우삼겹미고랭라면</p>
@@ -152,9 +217,9 @@
                     </div>
                   </div>
                   <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
+                    <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
                     <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
+                      <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
                       <div class="post-detail">
                         <h2 class="post-name">무스비</h2>
                         <p class="post-author">우삼겹미고랭라면</p>
@@ -162,19 +227,9 @@
                     </div>
                   </div>
                   <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
+                    <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
                     <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth _1(1).JPEG" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth _1(1).JPEG" alt="avatar" />
+                      <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
                       <div class="post-detail">
                         <h2 class="post-name">무스비</h2>
                         <p class="post-author">우삼겹미고랭라면</p>
@@ -190,9 +245,39 @@
               <div class="swiper futureswiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
+                    <img class="post-img" src="images/hb/fusion-1.jpg" alt="recipe" />
                     <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
+                      <img class="post-avatar" src="images/hb/fusion-1.jpg" alt="avatar" />
+                      <div class="post-detail">
+                        <h2 class="post-name">꽃돼지식당</h2>
+                        <p class="post-author">한우곱창스지라면</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide post">
+                    <img class="post-img" src="images/hb/fusion-2.jpg" alt="recipe" />
+                    <div class="post-body">
+                      <img class="post-avatar" src="images/hb/fusion-2.jpg" alt="avatar" />
+                      <div class="post-detail">
+                        <h2 class="post-name">구미펍코로나</h2>
+                        <p class="post-author">우삼겹소불고기김치라면</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide post">
+                    <img class="post-img" src="images/hb/fusion-3.jpg" alt="recipe" />
+                    <div class="post-body">
+                      <img class="post-avatar" src="images/hb/fusion-3.jpg" alt="avatar" />
+                      <div class="post-detail">
+                        <h2 class="post-name">마켓메이</h2>
+                        <p class="post-author">금오산볶라샌드</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide post">
+                    <img class="post-img" src="images/hb/fusion-4.jpg" alt="recipe" />
+                    <div class="post-body">
+                      <img class="post-avatar" src="images/hb/fusion-4.jpg" alt="avatar" />
                       <div class="post-detail">
                         <h2 class="post-name">무스비</h2>
                         <p class="post-author">우삼겹미고랭라면</p>
@@ -200,9 +285,9 @@
                     </div>
                   </div>
                   <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
+                    <img class="post-img" src="images/hb/fusion-5.JPEG" alt="recipe" />
                     <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
+                      <img class="post-avatar" src="images/hb/fusion-5.JPEG" alt="avatar" />
                       <div class="post-detail">
                         <h2 class="post-name">무스비</h2>
                         <p class="post-author">우삼겹미고랭라면</p>
@@ -210,39 +295,9 @@
                     </div>
                   </div>
                   <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
+                    <img class="post-img" src="images/hb/fusion-1.jpg" alt="recipe" />
                     <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/gumi_booth_2 (1).JPEG" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/gumi_booth_2 (1).JPEG" alt="avatar" />
+                      <img class="post-avatar" src="images/hb/fusion-1.jpg" alt="avatar" />
                       <div class="post-detail">
                         <h2 class="post-name">무스비</h2>
                         <p class="post-author">우삼겹미고랭라면</p>
@@ -257,100 +312,106 @@
         </section>
         <section class="inner">
           <!-- 관광정보영역 -->
-          <h2 class="bus">🚍구미라면축제 셔틀버스🚍</h2>
-          <div class="progress">
-            <div class="progress_inner">
-              <div class="progress_inner__step">
-                <label for="step-1">김천구미역</label>
-              </div>
-              <div class="progress_inner__step">
-                <label for="step-2">금오산</label>
-              </div>
-              <div class="progress_inner__step">
-                <label for="step-3">구미에코랜드</label>
-              </div>
-              <div class="progress_inner__step">
-                <label for="step-4">대해폭포</label>
-              </div>
-              <div class="progress_inner__step">
-                <label for="step-5">구미라면축제</label>
-              </div>
-              <input checked="checked" id="step-1" name="step" type="radio" />
-              <input id="step-2" name="step" type="radio" />
-              <input id="step-3" name="step" type="radio" />
-              <input id="step-4" name="step" type="radio" />
-              <input id="step-5" name="step" type="radio" />
-              <div class="progress_inner__bar"></div>
-              <div class="progress_inner__bar--set"></div>
-              <div class="progress_inner__tabs">
-                <div class="tab tab-0">
-                  <h1>김천구미역</h1>
-                  <img src="images/hb/dehe.jpg" alt="" />
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veritatis quasi blanditiis quod esse
-                    minus enim consectetur quis. Provident ipsum unde doloribus asperiores soluta consectetur. Corrupti,
-                    culpa? Alias, a laborum.
-                  </p>
+          <div class="gumi">
+            <h2 class="bus">🚍구미라면축제 셔틀버스🚍</h2>
+            <div class="progress">
+              <div class="progress_inner">
+                <div class="progress_inner__step">
+                  <label for="step-1">김천구미역</label>
                 </div>
-                <div class="tab tab-1">
-                  <h1>금오산</h1>
-                  <img src="images/hb/gumo.jpg" alt="" />
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque hic beatae perspiciatis quasi, sequi
-                    vitae illum sint, dolore animi temporibus aperiam quidem quis quia aliquam, minus quisquam magni.
-                    Illum, quaerat.
-                  </p>
+                <div class="progress_inner__step">
+                  <label for="step-2">금오산</label>
                 </div>
-                <div class="tab tab-2">
-                  <h1>구미에코랜드</h1>
-                  <img src="images/hb/dehe.jpg" alt="" />
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt recusandae a odio
-                    dignissimos natus quisquam facilis repudiandae debitis nisi impedit asperiores, eligendi sed fuga
-                    sequi consequuntur, voluptate ratione. Alias.
-                  </p>
+                <div class="progress_inner__step">
+                  <label for="step-3">구미에코랜드</label>
                 </div>
-                <div class="tab tab-3">
-                  <h1>대해폭포</h1>
-                  <img src="images/hb/dehe.jpg" alt="" />
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error ipsum asperiores, quisquam
-                    incidunt fugit deserunt maiores, ipsa recusandae dolores quas quos blanditiis illo totam
-                    reprehenderit magnam ad odio perferendis!
-                  </p>
+                <div class="progress_inner__step">
+                  <label for="step-4">대해폭포</label>
                 </div>
-                <div class="tab tab-4">
-                  <h1>구미라면축제</h1>
-                  <img src="images/main-poster-1x1.png" alt="" />
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aut illo voluptas ad sed,
-                    quibusdam vitae dolore necessitatibus hic voluptatum, iure assumenda totam consequatur eum?
-                    Obcaecati explicabo quisquam asperiores eum!
-                  </p>
+                <div class="progress_inner__step">
+                  <label for="step-5">구미라면축제</label>
+                </div>
+                <input checked="checked" id="step-1" name="step" type="radio" />
+                <input id="step-2" name="step" type="radio" />
+                <input id="step-3" name="step" type="radio" />
+                <input id="step-4" name="step" type="radio" />
+                <input id="step-5" name="step" type="radio" />
+                <div class="progress_inner__bar"></div>
+                <div class="progress_inner__bar--set"></div>
+                <div class="progress_inner__tabs">
+                  <div class="tab tab-0">
+                    <h1>김천구미역</h1>
+                    <img src="images/hb/dehe.jpg" alt="" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veritatis quasi blanditiis quod esse
+                      minus enim consectetur quis. Provident ipsum unde doloribus asperiores soluta consectetur.
+                      Corrupti, culpa? Alias, a laborum.
+                    </p>
+                  </div>
+                  <div class="tab tab-1">
+                    <h1>금오산</h1>
+                    <img src="images/hb/gumo.jpg" alt="" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque hic beatae perspiciatis quasi,
+                      sequi vitae illum sint, dolore animi temporibus aperiam quidem quis quia aliquam, minus quisquam
+                      magni. Illum, quaerat.
+                    </p>
+                  </div>
+                  <div class="tab tab-2">
+                    <h1>구미에코랜드</h1>
+                    <img src="images/hb/dehe.jpg" alt="" />
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt recusandae a odio
+                      dignissimos natus quisquam facilis repudiandae debitis nisi impedit asperiores, eligendi sed fuga
+                      sequi consequuntur, voluptate ratione. Alias.
+                    </p>
+                  </div>
+                  <div class="tab tab-3">
+                    <h1>대해폭포</h1>
+                    <img src="images/hb/dehe.jpg" alt="" />
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error ipsum asperiores, quisquam
+                      incidunt fugit deserunt maiores, ipsa recusandae dolores quas quos blanditiis illo totam
+                      reprehenderit magnam ad odio perferendis!
+                    </p>
+                  </div>
+                  <div class="tab tab-4">
+                    <h1>구미라면축제</h1>
+                    <img src="images/main-poster-1x1.png" alt="" />
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aut illo voluptas ad sed,
+                      quibusdam vitae dolore necessitatibus hic voluptatum, iure assumenda totam consequatur eum?
+                      Obcaecati explicabo quisquam asperiores eum!
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <!-- * 카카오맵 - 지도퍼가기 -->
           <!-- 1. 지도 노드 -->
-          <div
-            id="daumRoughmapContainer1739778540609"
-            style="width: 100%"
-            class="root_daum_roughmap root_daum_roughmap_landing"
-          ></div>
-          <script
-            charset="UTF-8"
-            class="daum_roughmap_loader_script"
-            src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
-          ></script>
-          <!-- 3. 실행 스크립트 -->
-          <script charset="UTF-8">
-            new daum.roughmap.Lander({
-              timestamp: "1739778540609",
-              key: "2n3dn",
-              mapHeight: "600",
-            }).render();
-          </script>
+          <div class="map">
+            <div
+              id="daumRoughmapContainer1739778540609"
+              style="width: 100%"
+              class="root_daum_roughmap root_daum_roughmap_landing"
+            ></div>
+            <script
+              charset="UTF-8"
+              class="daum_roughmap_loader_script"
+              src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+            ></script>
+            <!-- 3. 실행 스크립트 -->
+            <script charset="UTF-8">
+              new daum.roughmap.Lander({
+                timestamp: "1739778540609",
+                key: "2n3dn",
+                mapHeight: "600",
+              }).render();
+            </script>
+          </div>
+
           <!-- 갤러리 -->
           <div class="gallery"></div>
         </section>
