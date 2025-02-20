@@ -8,6 +8,7 @@ header {
   background-color: #fff;
 }
 header .inner {
+  position: relative;
   width: 100%;
   max-width: 1280px;
   display: flex;
@@ -27,6 +28,11 @@ header .inner {
 }
 .logo img {
   width: 100%;
+  padding: 2.5% 0;
+}
+.sns img {
+  width: 100%;
+  padding: 40% 0;
 }
 nav {
   height: 100%;
@@ -35,7 +41,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
 }
-.gnb {
+nav .gnb {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -43,8 +49,7 @@ nav {
   align-items: center;
   gap: var(--li--gap--l);
 }
-
-.depth {
+nav .depth {
   display: none;
 }
 .sns {
@@ -56,7 +61,7 @@ nav {
   margin-top: 80px;
   width: 100%;
 }
-.tab {
+.web {
   padding: 20px 0;
   display: flex;
   justify-content: center;
@@ -64,4 +69,72 @@ nav {
   width: 50%;
   margin: auto;
   text-align: center;
+}
+
+/* 햄버거바 */
+.mb-bar {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  display: none;
+}
+/* 모바일용 메뉴 */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: fit-content;
+  background-color: #fff;
+  padding-top: 80px;
+  text-align: left;
+  display: none;
+}
+.mobile-nav .gnb{
+  display: flex;
+  flex-direction: column;
+}
+.mobile-nav .gnb-list{
+  border-bottom: 1px solid var(--gumi--main)
+}
+.mobile-nav .gnb-list a{
+  color: var(--gumi--sub-green);
+  display: block;
+  padding: 18px 0 18px 5%;
+  background-color: var(--gumi--sub-yellow);
+}
+.mobile-nav .depth{
+  display: none;
+}
+.mobile-nav .depth>li>a{
+  color: var(--gumi--main);
+  background-color: #FFE177;
+}
+.mobile-nav .depth>li>a:hover{
+  background-color: #fff2c2;
+}
+/* X 버튼 */
+.close-menu {
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  nav,
+  .sns {
+    display: none;
+  }
+
+  /* 햄버거바 */
+  .mb-bar {
+    display: block;
+  }
+  /* 모바일용 메뉴 */
+  .mobile-nav {
+    display: block;
+  }
 }
