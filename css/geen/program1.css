@@ -46,7 +46,7 @@ main .inner {
 }
 
 /* 프로그램상세페이지 메인전체*/
-.iNNer {
+main {
   width: 100%;
   max-width: 1280px;
   height: 100vh;
@@ -299,12 +299,11 @@ main .inner {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 25px;
   width: calc(100% / 2);
-  margin: auto;
-  min-width: 540px;
+  margin: 0 27%;
+  min-width: 650px;
 }
 
 .recipe-container h1 {
-  width: 100%;
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
@@ -324,8 +323,7 @@ margin: -90px 0 20px;}
 }
 
 .post {
-  width: 100%;
-  max-width: 540px;
+  max-width: 400px;
   font-size: 1rem;
   font-weight: 500;
   color: var(--gumi--main);
@@ -339,7 +337,7 @@ margin: -90px 0 20px;}
 
 .post-img {
   width: 100%;
-  max-width: 540px;
+  max-width: 400px;
   object-fit: cover;
   border-radius: 6px;
   user-select: none;
@@ -454,7 +452,7 @@ swiper-slide img {
 }
 @keyframes bounce2 {
   0% {
-    transform: translate3d(10%, -5px, 00px);
+    transform: translate3d(0%, -10px, 0);
 
     height: 40px;
   }
@@ -464,7 +462,7 @@ swiper-slide img {
   }
 
   100% {
-    transform: translate3d(50%, -5px, 00px);
+    transform: translate3d(55%, 10px, 0);
 
     height: 40px;
   }
