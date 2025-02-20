@@ -125,8 +125,8 @@ body {
 .poll-area label.selectall .row .percent {
   display: block;
 }
-input[type="radio"],
-input[type="checkbox"] {
+.poll-area input[type="radio"],
+.poll-area input[type="checkbox"] {
   display: none;
 }
 

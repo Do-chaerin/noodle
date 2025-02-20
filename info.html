@@ -6,7 +6,12 @@
     <!-- favicon -->
     <link rel="icon" type="image/icon" sizes="16x16" href="images/favicon.ico" />
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <!-- 공통 css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variable.css" />
@@ -17,13 +22,18 @@
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
     <title>구미라면축제</title>
   </head>
   <body>
+    <!-- 탑버튼 -->
+    <div class="fixtop">
+    <p class="scrollTo scrollToTop">▲</p>
+    </div>
     <!-- 헤더 -->
     <header>
       <div class="inner">
-        <a href="index.html" class="logo"><img src="images/구미라면축제_로고.png" alt="" /></a>
+        <a href="index.html" class="logo"><img src="images/main-logo.png" alt="" /></a>
         <nav>
           <ul class="gnb">
             <li class="gnb-list">
@@ -64,13 +74,55 @@
           <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
         </div>
       </div>
+      <!-- 햄버거바 -->
+      <p class="mb-bar" id="hamburger-menu">
+        <a href="#"><i class="fa-solid fa-bars fa-2xl" style="color: #578d36"></i></a>
+      </p>
+      <!-- 모바일용 메뉴 -->
+      <div class="mobile-nav" id="mobile-nav">
+        <ul class="gnb">
+          <li class="gnb-list">
+            <a href="#">축제정보</a>
+            <ul class="depth mbtab">
+              <li><a href="#">축제소개</a></li>
+              <li><a href="#">히스토리</a></li>
+            </ul>
+          </li>
+          <li class="gnb-list">
+            <a href="#">프로그램</a>
+            <ul class="depth mbtab">
+              <li><a href="#">프로그램</a></li>
+              <li><a href="#">참여가게</a></li>
+              <li><a href="#">이벤트</a></li>
+            </ul>
+          </li>
+          <li class="gnb-list">
+            <a href="#">예약하기</a>
+            <ul class="depth mbtab">
+              <li><a href="#">부스신청</a></li>
+              <li><a href="#">히스토리</a></li>
+            </ul>
+          </li>
+          <li class="gnb-list">
+            <a href="#">커뮤니티</a>
+            <ul class="depth mbtab">
+              <li><a href="#">오시는길</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">갤러리</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="close-menu" id="close-menu">
+          <i class="fa-solid fa-x fa-lg" style="color: #578d36;"></i>
+        </div>
+      </div>
     </header>
     <!-- 배너 -->
     <section>
-      <img class="banner" src="images/배너(구미라면) (1).jpg" alt="배너" />
+      <img class="banner" src="images/main-banner.jpg" alt="배너" />
     </section>
     <!-- 탭 -->
-    <ul class="tab">
+    <ul class="web tab">
       <li><a>축제소개</a></li>
       <li><a>히스토리</a></li>
     </ul>
@@ -79,7 +131,7 @@
       <h1 class="title inner">축제소개</h1>
       <div class="info inner">
         <div class="infoPoster">
-          <img src="images/라면축제 포스터_최종 (1).jpg" alt="라면축제포스터" />
+          <img src="images/main-poster.jpg" alt="라면축제포스터" />
         </div>
         <div class="infoText">
           <ul>
@@ -196,22 +248,26 @@
       </div>
     </div>
     <!-- 하단 -->
-     <footer>
-       <div class="footer inner">
+    <footer>
+      <div class="footer inner">
         <div class="ft_logo">
-          <img src="images/logo-ramyeon.png" alt="구미라면축제로고">
+          <a href="index.html">
+            <img src="images/logo-ramyeon.png" alt="구미라면축제로고" />
+          </a>
         </div>
         <div class="ft_info">
           <p><i class="fa fa-map-marker"></i> 행사지: 경상북도 구미시 원평동 124-23 구미역 일원</p>
-          <p><i class="fa fa-map-marker"></i> 사무국: 경상북도 구미시 시장로 1 (원평동 1번지), 구미시청 본관 문화관광과</p>
+          <p>
+            <i class="fa fa-map-marker"></i> 사무국: 경상북도 구미시 시장로 1 (원평동 1번지), 구미시청 본관 문화관광과
+          </p>
           <p><i class="fa fa-phone"></i> 054-480-2652</p>
         </div>
         <div class="sponsorLogo">
-          <img src="images/logo_gumi.png" alt="구미시로고">
-          <img src="images/logo_GB.png" alt="경상북도로고">
-          <img src="images/logo_nongshim.png" alt="농심로고">
+          <img src="images/logo_gumi.png" alt="구미시로고" />
+          <img src="images/logo_GB.png" alt="경상북도로고" />
+          <img src="images/logo_nongshim.png" alt="농심로고" />
         </div>
-       </div>
-      </footer>
+      </div>
+    </footer>
   </body>
 </html>

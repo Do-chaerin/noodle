@@ -13,15 +13,16 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <!-- 채린css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/booking_choose.css" />
 
     <!-- js -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/scroll.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     <title>구미라면축제</title>
   </head>
@@ -75,6 +76,7 @@
             <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
           </div>
         </div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
       </header>
       <!-- 배너 -->
       <img class="banner" src="images/main-banner.jpg" alt="배너" />
@@ -187,22 +189,12 @@
           일정 기간 보관 후 파기됩니다.
         </p>
       </div>
-
       <div class="booking-form">
         <ul>
           <li class="booking-d">업체 예약</li>
-
           <li class="booking-de">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" required />
-          </li>
-          <li class="booking-de">
-            <label for="phone">전화번호</label>
-            <input type="tel" id="phone" name="phone" required />
-          </li>
-          <li class="booking-de">
-            <label for="email">이메일</label>
-            <input type="email" id="email" name="email" required />
+            <label for="fullName">업체명</label>
+            <input type="text" id="fullName" name="fullName" required />
           </li>
           <li class="booking-de">
             <label for="service">참가 유형</label>
@@ -241,7 +233,6 @@
             <div class="swiper-slide"><img src="images/factory3.jpg" width="300px" alt="농심구미공장" /></div>
             <div class="swiper-slide"><img src="images/factory4.jpg" width="300px" alt="농심구미공장" /></div>
           </div>
-
           <div class="swiper-pagination"></div>
         </div>
         <ul>
@@ -313,27 +304,7 @@
         </div>
       </div>
     </footer>
-    <!-- 스와이프 -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 2000, // 3초마다 자동 슬라이드
-          disableOnInteraction: false, // 사용자 조작 후에도 자동 재생 유지
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
-    <!-- 신청하기 모달창 -->
+
     <script>
       // 모달 열기
       function openModal() {

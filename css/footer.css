@@ -41,3 +41,14 @@ footer {
 .sponsorLogo img {
   height: 100%;
 }
+
+@media screen and (max-width: 390px){
+    .ft_logo {
+        max-width: 200px;
+    }
+    .ft_info p {
+        font-size: 0.6rem;}
+        .sponsorLogo {
+            height: 20px;
+        }
+}
