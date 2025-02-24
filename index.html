@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WXFDGVRL");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- seo 엔진 최적화 -->
@@ -18,13 +32,22 @@
     <meta property="og:type" content="website" />
     <!-- Open Graph 프로토콜에서 사용되는 메타 태그의 속성 중 하나로, 페이지의 간략한 설명을 제공하는 데 사용 -->
     <!-- 소셜 미디어에서 공유될 때 사용되는 URL -->
-    <meta property="og:url" content="넣기" />
+    <meta property="og:url" content="noodle-kappa.vercel.app" />
     <!-- 소셜 미디어에서 페이지가 공유될 때 표시되는 이미지 -->
-    <meta property="og:image" content="넣기" />
+    <meta property="og:image" content="https://noodle-kappa.vercel.app/images/main-banner.jpg" />
     <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
-    <meta property="og:description" content="넣기" />
+    <meta property="og:description" content="구미라면축제 홈페이지입니다." />
+
     <!-- favicon -->
     <link rel="icon" type="image/icon" sizes="16x16" href="images/favicon.ico" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- css -->
     <!-- 공통 css -->
     <!-- Link Swiper's CSS -->
@@ -52,10 +75,31 @@
 
     <!-- 효빈js -->
     <script src="js/main_hb.js"></script>
+    <script src="js/header.js"></script>
     <!-- 채원js -->
     <title>구미라면축제</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-10HM7B12P9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-10HM7B12P9");
+    </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WXFDGVRL"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="fixtop">
       <p class="scrollTo scrollToTop">▲</p>
       <p class="scrollTo scrollTodown">▼</p>
@@ -69,29 +113,30 @@
             <ul class="gnb">
               <li class="gnb-list">
                 <a href="info.html">축제정보</a>
-                <ul class="depth">
+                <ul class="maindepth">
                   <li><a>축제소개</a></li>
                   <li><a>히스토리</a></li>
                 </ul>
               </li>
               <li class="gnb-list">
                 <a href="program1.html">프로그램</a>
-                <ul class="depth">
+                <ul class="maindepth">
                   <li><a href="#">프로그램</a></li>
                   <li><a href="#">참여가게</a></li>
                   <li><a href="#">이벤트</a></li>
                 </ul>
               </li>
               <li class="gnb-list">
+                <a href="booking_choose.html" class="booking-ment">사전 예약시 5,000원 쿠폰 증정</a>
                 <a href="booking_choose.html">예약하기</a>
-                <ul class="depth">
+                <ul class="maindepth">
                   <li><a href="#">부스신청</a></li>
                   <li><a href="#">히스토리</a></li>
                 </ul>
               </li>
               <li class="gnb-list">
                 <a href="community.html">커뮤니티</a>
-                <ul class="depth">
+                <ul class="maindepth">
                   <li><a href="#">오시는길</a></li>
                   <li><a href="#">공지사항</a></li>
                   <li><a href="#">FAQ</a></li>
@@ -101,8 +146,52 @@
             </ul>
           </nav>
           <div class="sns">
-            <a href="#"><img src="images/logo_youtube.png" alt="유튜브" /></a>
-            <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
+            <a href="https://www.youtube.com/@gumi_ramyun"><img src="images/logo_youtube.png" alt="유튜브" /></a>
+            <a href="https://www.instagram.com/gumi_ramyeon/"
+              ><img src="images/logo_instagram.png" alt="인스타그램"
+            /></a>
+          </div>
+        </div>
+        <!-- 햄버거바 -->
+        <p class="mb-bar" id="hamburger-menu">
+          <a href="#"><i class="fa-solid fa-bars fa-2xl" style="color: #578d36"></i></a>
+        </p>
+        <!-- 모바일용 메뉴 -->
+        <div class="mobile-nav" id="mobile-nav">
+          <ul class="gnb">
+            <li class="gnb-list">
+              <a href="info.html">축제정보</a>
+              <ul class="depth">
+                <li><a href="#">축제소개</a></li>
+                <li><a href="#">히스토리</a></li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="program1.html">프로그램</a>
+              <ul class="depth">
+                <li><a href="#">프로그램</a></li>
+                <li><a href="#">참여가게</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="booking_choose.html">예약하기</a>
+              <ul class="depth">
+                <li><a href="#">부스신청</a></li>
+                <li><a href="#">히스토리</a></li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="community.html">커뮤니티</a>
+              <ul class="depth mbtab">
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">갤러리</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="close-menu" id="close-menu">
+            <i class="fa-solid fa-x fa-lg" style="color: #578d36"></i>
           </div>
         </div>
       </header>
@@ -118,6 +207,10 @@
           playsinline
           poster=""
         ></video>
+
+        <div class="gumislide">
+          <span class="flowtxt"> 새해에도 맛있는 인생 되길. </span>
+        </div>
         <div class="wrapper">
           <h4 style="color: var(--gumi--main)">당신의 선택은?</h4>
           <div class="poll-area">
@@ -241,7 +334,7 @@
               </div>
             </div>
             <div class="recipe-container">
-              <h1>퓨-전라면</h1>
+              <h1 class="retrotxt">퓨-전라면</h1>
               <div class="swiper futureswiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide post">
@@ -317,16 +410,16 @@
             <div class="progress">
               <div class="progress_inner">
                 <div class="progress_inner__step">
-                  <label for="step-1">김천구미역</label>
+                  <label for="step-1">도선굴</label>
                 </div>
                 <div class="progress_inner__step">
                   <label for="step-2">금오산</label>
                 </div>
                 <div class="progress_inner__step">
-                  <label for="step-3">구미에코랜드</label>
+                  <label for="step-3">대혜폭포</label>
                 </div>
                 <div class="progress_inner__step">
-                  <label for="step-4">대해폭포</label>
+                  <label for="step-4">구미에코랜드</label>
                 </div>
                 <div class="progress_inner__step">
                   <label for="step-5">구미라면축제</label>
@@ -339,49 +432,62 @@
                 <div class="progress_inner__bar"></div>
                 <div class="progress_inner__bar--set"></div>
                 <div class="progress_inner__tabs">
-                  <div class="tab tab-0">
-                    <h1>김천구미역</h1>
-                    <img src="images/hb/dehe.jpg" alt="" />
+                  <div class="tabmain tab-0">
+                    <img src="images/hb/dosun.png" alt="" />
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veritatis quasi blanditiis quod esse
-                      minus enim consectetur quis. Provident ipsum unde doloribus asperiores soluta consectetur.
-                      Corrupti, culpa? Alias, a laborum.
+                      <strong>도선굴</strong>
+                      경상북도 구미시 금오산에 위치한 자연동굴로 도선 대사가 도를 깨우쳤다고 전해지는 장소 이용시간:
+                      00:00~24:00
+                      <br />
+                      휴일: 없음
+                      <br />
+                      주차: 가능
+                      <br />
+                      입장료: 무료
                     </p>
                   </div>
-                  <div class="tab tab-1">
-                    <h1>금오산</h1>
-                    <img src="images/hb/gumo.jpg" alt="" />
+                  <div class="tabmain tab-1">
+                    <img src="images/hb/gumo.png" alt="" />
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque hic beatae perspiciatis quasi,
-                      sequi vitae illum sint, dolore animi temporibus aperiam quidem quis quia aliquam, minus quisquam
-                      magni. Illum, quaerat.
+                      <strong>금오산</strong>
+                      영남 대표 명산 금오산 도립공원 1970년 6월 1일 대한민국 도립공원 1호로 지정
+                      <br />올레길 : 금오지 둘레 2.7km <br />도선굴 : 대혜폭포와 세류폭포 <br />금오산성 : 영남지방
+                      국방의 요충지 <br />케이블카 : 해운사까지 길이 805m
                     </p>
                   </div>
-                  <div class="tab tab-2">
-                    <h1>구미에코랜드</h1>
-                    <img src="images/hb/dehe.jpg" alt="" />
+                  <div class="tabmain tab-2">
+                    <img src="images/hb/dehe.png" alt="" />
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt recusandae a odio
-                      dignissimos natus quisquam facilis repudiandae debitis nisi impedit asperiores, eligendi sed fuga
-                      sequi consequuntur, voluptate ratione. Alias.
+                      <strong>대혜폭포</strong>
+                      구미시 남통동 금오산에 자리한 대혜곡의 폭포.
+                      <br />
+                      1595년경 임진왜란 당시 만들어진 아홉 개의 우물[九井]과 일곱 개의 못[七澤]이 있어 거기서 비롯된 큰
+                      계곡을 대혜계곡이라 하였고, 그 곳에서 형성된 폭포를 대혜폭포라고 함.
                     </p>
                   </div>
-                  <div class="tab tab-3">
-                    <h1>대해폭포</h1>
-                    <img src="images/hb/dehe.jpg" alt="" />
+                  <div class="tabmain tab-3">
+                    <img src="images/hb/ehco.png" alt="" />
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error ipsum asperiores, quisquam
-                      incidunt fugit deserunt maiores, ipsa recusandae dolores quas quos blanditiis illo totam
-                      reprehenderit magnam ad odio perferendis!
+                      <strong>구미에코랜드</strong>
+                      구미시 산동읍 인덕리 일원에 위치
+                      <br />
+                      옥외 :잔디광장, 물빛정원, 인공암벽장 등
+                      <br />
+                      지상1층 : 산림생태 전시/체험장, 영상관, 카페테리아, 북카페
+                      <br />
+                      지상2층 : 산림생태 전시/체험장, 녹색체험교실
+                      <br />
+                      지상3층 : 모노레일 탑승 대기실, 하늘정원
                     </p>
                   </div>
-                  <div class="tab tab-4">
-                    <h1>구미라면축제</h1>
+                  <div class="tabmain tab-4">
                     <img src="images/main-poster-1x1.png" alt="" />
                     <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aut illo voluptas ad sed,
-                      quibusdam vitae dolore necessitatibus hic voluptatum, iure assumenda totam consequatur eum?
-                      Obcaecati explicabo quisquam asperiores eum!
+                      <strong>구미라면축제</strong>
+                      구미라면축제는 라면을 테마로 한 특별한 문화 행사로 경상북도 구미시에서 열리는 축제
+                      <br />
+                      기간 | 2.24(월) ~ 2.28(금)
+                      <br />시간 | 10:00 - 22:00 <br />장소 | 구미역 앞 역전로 일원 <br />주최 | 구미시
                     </p>
                   </div>
                 </div>
@@ -389,14 +495,9 @@
             </div>
           </div>
 
-          <!-- * 카카오맵 - 지도퍼가기 -->
-          <!-- 1. 지도 노드 -->
-          <div class="map">
-            <div
-              id="daumRoughmapContainer1739778540609"
-              style="width: 100%"
-              class="root_daum_roughmap root_daum_roughmap_landing"
-            ></div>
+          <div class="main-bt">
+            <!-- 1. 지도 노드 -->
+            <div id="daumRoughmapContainer1739778540609" class="root_daum_roughmap root_daum_roughmap_landing"></div>
             <script
               charset="UTF-8"
               class="daum_roughmap_loader_script"
@@ -407,13 +508,21 @@
               new daum.roughmap.Lander({
                 timestamp: "1739778540609",
                 key: "2n3dn",
-                mapHeight: "600",
               }).render();
             </script>
+            <!--후기 -->
+            <div class="review">
+              <h3>갤러리 <a href="community.html">더보기+</a></h3>
+              <div class="comm-imgbox">
+                <img src="images/hb/hugi1.jpg" alt="후기1" />
+                <img src="images/hb/hugi2.jpg" alt="후기2" />
+                <img src="images/hb/hugi3.png" alt="후기1" />
+                <img src="images/hb/hugi4.jpg" alt="후기2" />
+                <img src="images/hb/hugi5.jpg" alt="후기1" />
+                <img src="images/hb/hugi7.png" alt="후기2" />
+              </div>
+            </div>
           </div>
-
-          <!-- 갤러리 -->
-          <div class="gallery"></div>
         </section>
       </main>
       <!-- 하단 -->
