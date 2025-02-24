@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 header {
   position: fixed;
   top: 0;
@@ -6,6 +7,7 @@ header {
   height: 80px;
   z-index: 999;
   background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 header .inner {
   position: relative;
@@ -34,6 +36,29 @@ header .inner {
   width: 100%;
   padding: 40% 0;
 }
+.booking-ment {
+  font-size: 0.6rem;
+  position: fixed;
+  top: 10px;
+  left: 200px;
+  color: var(--gumi--main);
+  border: 1px solid var(--gumi--main);
+  padding: 4px 4px 3px;
+  border-radius: 10px;
+  background-color: #fff;
+  animation: ment 1.5s infinite;
+}
+@keyframes ment {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 nav {
   height: 100%;
   margin: auto;
@@ -42,20 +67,27 @@ nav {
   transform: translateX(-50%);
 }
 nav .gnb {
+  position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   gap: var(--li--gap--l);
+  margin-top: 8px;
 }
-nav .depth {
+.maindepth {
   display: none;
 }
+
+
 .sns {
-  line-height: 110px;
+  line-height: 150px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
+}
+.sns img{
+  width: 70%;
 }
 .banner {
   margin-top: 80px;
@@ -67,7 +99,7 @@ nav .depth {
   display: none;
 }
 .web {
-  padding: 20px 0;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -96,27 +128,27 @@ nav .depth {
   text-align: left;
   display: none;
 }
-.mobile-nav .gnb{
+.mobile-nav .gnb {
   display: flex;
   flex-direction: column;
 }
-.mobile-nav .gnb-list{
-  border-bottom: 1px solid var(--gumi--main)
+.mobile-nav .gnb-list {
+  border-bottom: 1px solid var(--gumi--main);
 }
-.mobile-nav .gnb-list a{
+.mobile-nav .gnb-list a {
   color: var(--gumi--sub-green);
   display: block;
   padding: 18px 0 18px 5%;
   background-color: var(--gumi--sub-yellow);
 }
-.mobile-nav .depth{
+.mobile-nav .depth {
   display: none;
 }
-.mobile-nav .depth>li>a{
+.mobile-nav .depth > li > a {
   color: var(--gumi--main);
-  background-color: #FFE177;
+  background-color: #ffe177;
 }
-.mobile-nav .depth>li>a:hover{
+.mobile-nav .depth > li > a:hover {
   background-color: #fff2c2;
 }
 /* X 버튼 */
@@ -135,11 +167,11 @@ nav .depth {
   }
   /* 햄버거바 */
   .mb-bar {
-    display: block;
+    display: block !important;
   }
   /* 모바일용 메뉴 */
   .mobile-nav {
-    display: block;
+    display: block !important;
   }
   
   /* 배너 */

@@ -87,4 +87,5 @@ window.addEventListener("load", () => {
     const popup = document.querySelector(".wrapper");
     popup.style.display = "none";
   });
+  
 });
