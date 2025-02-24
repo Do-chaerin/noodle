@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
     <link rel="icon" type="image/icon" sizes="16x16" href="images/favicon.ico" />
+      <!-- fontawesome -->
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="css/geen/program1.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -74,6 +81,48 @@
           <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
         </div>
       </div>
+      <!-- 햄버거바 -->
+      <p class="mb-bar" id="hamburger-menu">
+        <a href="#"><i class="fa-solid fa-bars fa-2xl" style="color: #578d36"></i></a>
+      </p>
+      <!-- 모바일용 메뉴 -->
+      <div class="mobile-nav" id="mobile-nav">
+        <ul class="gnb">
+          <li class="gnb-list">
+            <a href="#">축제정보</a>
+            <ul class="depth">
+              <li><a href="#">축제소개</a></li>
+              <li><a href="#">히스토리</a></li>
+            </ul>
+          </li>
+          <li class="gnb-list ">
+            <a href="#">프로그램</a>
+            <ul class="depth mbtab">
+              <li><a href="#">프로그램</a></li>
+              <li><a href="#">참여가게</a></li>
+              <li><a href="#">이벤트</a></li>
+            </ul>
+          </li>
+          <li class="gnb-list">
+            <a href="#">예약하기</a>
+            <ul class="depth">
+              <li><a href="#">부스신청</a></li>
+              <li><a href="#">히스토리</a></li>
+            </ul>
+          </li>
+          <li class="gnb-list">
+            <a href="#">커뮤니티</a>
+            <ul class="depth ">
+              <li><a href="#">오시는길</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">갤러리</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="close-menu" id="close-menu">
+          <i class="fa-solid fa-x fa-lg" style="color: #578d36"></i>
+        </div>
+      </div>
     </header>
     <!-- 배너 -->
     <section>
@@ -90,12 +139,13 @@
     <main>
       <!--inner  -->
 
-      <div class="inner">
+      <div class="inner innerM">
         <!--프로그램1  -->
         <div class="program">
           <!-- 이미지중간 리플렛 -->
           <h3><span>프로그램</span></h3>
           <ul class="leaflet">
+            <h1 class="h1-0">리플렛</h1>
             <li class="lf-imgtop">
               <a href="#"><img src="images/geen/top534_78.png" alt="이미지위" /></a>
             </li>
@@ -233,7 +283,7 @@
           </div>
           <!-- 퓨전라면 -->
           <div class="recipe-container">
-            <h1>퓨-전라면</h1>
+            <h1 class="h1-2">퓨-전라면</h1>
             <div class="swiper futureswiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide post">

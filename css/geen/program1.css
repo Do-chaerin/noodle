@@ -2,11 +2,15 @@
 body {
   background-color: var(--gumi--sub-yellow);
 }
-.inner {
+.inner { 
   background-color: #f0f0f0;
 }
-main.inner {
-  height: 100vh;
+.innerM{
+  width: 100%;
+  height: calc(100vh -150px);
+
+}
+main.inner {  
   margin: 0;
   background-color: #f0f0f0;
 }
@@ -46,7 +50,7 @@ main .inner {
 }
 
 /* 프로그램상세페이지 메인전체*/
-main {
+.iNNer {
   width: 100%;
   max-width: 1280px;
   height: 100vh;
@@ -56,7 +60,7 @@ main {
 /* 프로그램1 */
 .program {
   width: 90%;
-  height: 100%;
+  height: 105vh;
   margin: auto;
   margin-top: 8px;
   padding-bottom: 50px;
@@ -69,7 +73,7 @@ main {
 .program h3 , .innInner > h3  {
   padding: 30px;
   width: 200px;
-  height: 200px;
+  height: 130px;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
@@ -80,7 +84,7 @@ main {
   left: 50%;
   transform: translate(-50% , -50%);
   width: 62%;
-  height: 30%;
+  height: 44%;
   color: #fff;
   margin-top: 30px;
   padding: 20px;
@@ -90,7 +94,7 @@ main {
 }
 .leaflet {
   width: 100%;
-  margin: auto;
+  margin: -70px auto 0;
 
   overflow: hidden;
 }
@@ -280,41 +284,52 @@ main {
 /*참여가게  */
 /* 스와이프 */
 .swipe_inner {
-  width: 90%;
+  width: 90%;  
   max-width: 1500px;
   margin: auto;
+  border-radius: 10px;
   background-color: #f0f0f0;
   /* border-bottom: 2px solid var(--gumi--sub-yellow); */
 }
 .innInner {
   width: 100%;
+  height: 120%;
   background-color: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px; /* 둥근 모서리 */
   position: relative;
+  margin: 30px 0 0 0 !important ;
 }
 .recipe-container {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 25px;
-  width: calc(100% / 2);
-  margin: 0 27%;
-  min-width: 650px;
+  width: calc(110% / 2);
+  margin: 30px auto;
+  min-width: 540px;
 }
 
-.recipe-container h1 {
+.recipe-container h1 , .leaflet h1{
+  width: 100%;
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
   color: var(--gumi--main);  
 }
+.h1-0{
+  line-height: 100px;
+  margin: -20px 0 0 0;
+  text-align: center;
+}
 .h1-1{
-margin: -90px 0 20px;}
+margin: -90px 0 30px;}
 .swiper {
   width: 83%;
 }
-
+.h1-2{
+  margin: 20px 0 30px 0;
+}
 .swiper-scrollbar {
   --swiper-scrollbar-bottom: 0;
   opacity: 0.6;
@@ -323,7 +338,8 @@ margin: -90px 0 20px;}
 }
 
 .post {
-  max-width: 400px;
+  width: 100%;
+  max-width: 540px;
   font-size: 1rem;
   font-weight: 500;
   color: var(--gumi--main);
@@ -337,7 +353,7 @@ margin: -90px 0 20px;}
 
 .post-img {
   width: 100%;
-  max-width: 400px;
+  max-width: 540px;
   object-fit: cover;
   border-radius: 6px;
   user-select: none;
@@ -452,7 +468,7 @@ swiper-slide img {
 }
 @keyframes bounce2 {
   0% {
-    transform: translate3d(0%, -10px, 0);
+    transform: translate3d(10%, -5px, 00px);
 
     height: 40px;
   }
@@ -462,7 +478,7 @@ swiper-slide img {
   }
 
   100% {
-    transform: translate3d(55%, 10px, 0);
+    transform: translate3d(50%, -5px, 00px);
 
     height: 40px;
   }
