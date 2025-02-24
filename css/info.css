@@ -4,6 +4,10 @@
 .item {
   display: none;
 }
+.infoContainer{
+  padding: 0 5%;
+}
+
 /* 축제 소개 */
 .title {
   font-size: 3rem;
@@ -155,9 +159,9 @@
 
   /* 히스토리 */
   .poster .infoText ul li {
-    font-size: 0.8rem;}
+    font-size: 0.7rem;}
     .poster .infoText ul li p {
-      font-size: 1rem;}
+      font-size: 0.9rem;}
       .textline , .programText {
         display: none;
       }

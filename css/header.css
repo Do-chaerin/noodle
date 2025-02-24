@@ -61,6 +61,11 @@ nav .depth {
   margin-top: 80px;
   width: 100%;
 }
+.banner_tb,.banner_mb{
+  margin-top: 80px;
+  width: 100%;
+  display: none;
+}
 .web {
   padding: 20px 0;
   display: flex;
@@ -128,7 +133,6 @@ nav .depth {
   .sns {
     display: none;
   }
-
   /* 햄버거바 */
   .mb-bar {
     display: block;
@@ -136,5 +140,28 @@ nav .depth {
   /* 모바일용 메뉴 */
   .mobile-nav {
     display: block;
+  }
+  
+  /* 배너 */
+  .banner{display: none;}
+  .banner_tb{
+    display: block;
+  }
+}
+@media screen and (max-width: 390px){
+  /* 로고 */
+  header .inner{
+    justify-content: center;
+  }
+  /* 배너 */
+  .banner_tb{
+    display: none;
+  }
+  .banner_mb{
+    display: block;
+  }
+  /* 탭 */
+  .web{
+    width: 70%;
   }
 }
