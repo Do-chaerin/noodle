@@ -1,53 +1,38 @@
 window.addEventListener("load", () => {
+  // 모바일 햄버거바 메뉴
+  $(document).ready(function () {
+    //햄버거바 클릭
+    $("#hamburger-menu").click(function () {
+      $(".mobile-nav").animate({ right: 0 }, 300);
+    });
+    // 닫기
+    $("#close-menu").click(function () {
+      $(".mobile-nav").animate({ right: "-250px" }, 300);
+    });
+    //하위메뉴 토글
+    $(".mobile-nav .gnb > li > a").click(function () {
+      // 열린 .depth를 닫기
+      $(".mobile-nav .depth").stop().slideUp();
+      $(this).next(".mobile-nav .depth").stop().slideToggle();
+    });
+  });
+  
   // Swiper
-  var swiper = new Swiper(".asiaswiper", {
-    grabCursor: true,
-    speed: 400,
+  var swiper = new Swiper(".blog-slider", {
+    spaceBetween: 30,
+    effect: "fade",
+    loop: true,
     mousewheel: {
       invert: false,
     },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      draggable: true,
-    },
-    slidesPerView: 1,
-    spaceBetween: 10,
-    // Responsive breakpoints
-    breakpoints: {
-      900: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
+    // autoHeight: true,
+    pagination: {
+      el: ".blog-slider__pagination",
+      clickable: true,
     },
   });
-  var swiper = new Swiper(".futureswiper", {
-    grabCursor: true,
-    speed: 400,
-    mousewheel: {
-      invert: false,
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      draggable: true,
-    },
-    slidesPerView: 1,
-    spaceBetween: 10,
-    // Responsive breakpoints
-    breakpoints: {
-      900: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-    },
-  });
+
+  //팝업
   const options = document.querySelectorAll(".choose");
   for (let i = 0; i < options.length; i++) {
     options[i].addEventListener("click", () => {
@@ -82,10 +67,45 @@ window.addEventListener("load", () => {
       }
     });
   }
+  //팝업 스크롤
+  const popup = document.querySelector(".popupwrapper");
+  document.addEventListener("scroll", (e) => {
+    console.log(window.scrollY);
+
+    if (window.scrollY > 850) {
+      popup.style.display = "block";
+    } else {
+      popup.style.display = "none";
+    }
+  });
+  //팝업 창 닫기
   const closeBtn = document.querySelector(".close");
   closeBtn.addEventListener("click", () => {
-    const popup = document.querySelector(".wrapper");
+    const popup = document.querySelector(".popupwrapper");
     popup.style.display = "none";
   });
-  
+  //관광정보
+  const step = document.querySelectorAll(".progress_inner__step");
+  const tabs = document.querySelectorAll(".tabmain");
+  const radios = document.querySelectorAll('input[name="step"]');
+
+  // 첫 번째 탭 활성화
+  step[0].classList.add("active");
+  tabs[0].style.display = "flex";
+
+  step.forEach((stepbtn, index) => {
+    stepbtn.addEventListener("click", () => {
+      // 모든 버튼 비활성화
+      step.forEach((btn) => btn.classList.remove("active"));
+      // 모든 탭 숨김
+      tabs.forEach((tab) => (tab.style.display = "none"));
+
+      // 클릭한 버튼 활성화
+      stepbtn.classList.add("active");
+      // 해당 탭 표시
+      tabs[index].style.display = "flex";
+      // 해당 라디오 버튼 체크
+      radios[index].checked = true;
+    });
+  });
 });

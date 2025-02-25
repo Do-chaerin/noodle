@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 footer {
   padding: 1.5%;
   width: 100%;
@@ -55,7 +54,6 @@ footer {
   height: 170px;
   padding-bottom: 10px;
 }
-
 .character img {
   height: 100%;
 }
