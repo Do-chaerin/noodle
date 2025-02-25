@@ -56,11 +56,9 @@ body {
 .content {
   display: none;
 }
-
 .content.active {
   display: block;
 }
-
 .booking-form {
   color: #000;
   text-align: center;
@@ -71,6 +69,7 @@ body {
   color: #000;
 }
 .booking-de {
+  display: flex;
   margin: 30px;
   color: #000;
   font-size: 18px;
@@ -125,6 +124,10 @@ p {
   padding: 10px;
 }
 /* 스크롤바 스타일 (크롬, 엣지, 사파리) */
+.policy-box {
+  margin: 50px auto; /* 중앙 정렬 */
+
+}
 .policy-box::-webkit-scrollbar {
   width: 8px;
 }
@@ -204,6 +207,9 @@ h3 {
 }
 
 /* 공장견학내용 */
+.booking-img{
+  margin: 50px auto;
+}
 .container2 {
   max-width: 800px;
   margin: auto;
@@ -263,17 +269,17 @@ h4 {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
-  
+  font-size: 20px;
 }
 
 .booking-de label {
-  margin-bottom: 5px;
+  margin: 5px auto;
 }
-
 .booking-de input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin: 5px auto;
 }
 
 .checkbox-container {
@@ -308,18 +314,25 @@ button {
 }
 
 /*스와이프*/
-.swiper {
-  width: 600px;
-  height: 350px;
+#slider {
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  position: relative;
 }
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#slider .slides-container {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#slider .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
 }
 
 .swiper-slide img {
@@ -327,9 +340,101 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+}
+#slider .arrows a {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.65);
+  top: 43%;
+  left: 15px;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 42px;
+}
+#slider .arrows a:hover {
+  color: #fff;
+}
+#slider .arrows a.next {
+  left: initial;
+  right: 15px;
+}
+/* 기본 반응형 설정 */
+@media screen and (max-width: 768px) {
+  /* 개인정보 취급방침 박스 */
+  .policy-box {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto; /* 중앙 정렬 */
+
+  }
+  /* 모달창 크기 조정 */
+  .modal-content {
+    width: 80%;
+  }
+
+  /* 공장 견학 섹션 */
+  .container2 {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  /* 버튼 크기 조정 */
+  button {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  /* 이미지 슬라이더 */
+  #slider {
+    height: 300px;
+  }
 }
 
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (max-width: 390px) {
+  /* 개인정보 취급방침 박스 */
+  .policy-box {
+    width: 100%;
+    height: 250px;
+        margin: 0 auto; /* 중앙 정렬 */
+
+  }
+  
+  /* 모달창 크기 조정 */
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* 공장 견학 섹션 */
+  .container2 {
+    max-width: 95%;
+    padding: 10px;
+  }
+  
+  /* 폰트 크기 조정 */
+  h1 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .detail, .detail1 {
+    font-size: 14px;
+  }
+
+  /* 버튼 크기 조정 */
+  button {
+    width: 90%;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* 이미지 슬라이더 */
+  #slider {
+    height: 250px;
+  }
 }
