@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 header {
   position: fixed;
   top: 0;
@@ -6,8 +7,10 @@ header {
   height: 80px;
   z-index: 999;
   background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 header .inner {
+  position: relative;
   width: 100%;
   max-width: 1280px;
   display: flex;
@@ -31,7 +34,7 @@ header .inner {
 }
 .sns img {
   width: 100%;
-  padding: 55% 0;
+  padding: 40% 0;
 }
 .booking-ment {
   font-size: 0.6rem;
@@ -63,16 +66,15 @@ nav {
   left: 50%;
   transform: translateX(-50%);
 }
-.gnb {
+nav .gnb {
+  position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   gap: var(--li--gap--l);
-}
-.depth {
-  display: none;
+  margin-top: 8px;
 }
 nav .gnb-list {
   position: relative;
@@ -93,6 +95,7 @@ nav .gnb-list:hover .community {
   visibility: visible;
   opacity: 1;
 }
+
 .info,
 .program,
 .booking,
@@ -123,11 +126,8 @@ nav .gnb-list:hover .community {
 .sub-menu:last-child {
   border: none;
 }
-.sub-menu:hover {
-  background-color: #fff2c2;
-}
 .sns {
-  line-height: 110px;
+  line-height: 150px;
   display: flex;
   gap: 10px;
 }
@@ -138,8 +138,6 @@ nav .gnb-list:hover .community {
   margin-top: 80px;
   width: 100%;
 }
-.tab {
-  padding: 20px 0;
 .banner_tb,
 .banner_mb {
   margin-top: 80px;
@@ -155,6 +153,7 @@ nav .gnb-list:hover .community {
   margin: auto;
   text-align: center;
 }
+
 /* 햄버거바 */
 .mb-bar {
   position: absolute;
@@ -206,6 +205,7 @@ nav .gnb-list:hover .community {
   font-size: 24px;
   cursor: pointer;
 }
+
 @media screen and (max-width: 768px) {
   nav,
   .sns {
