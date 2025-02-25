@@ -1,4 +1,16 @@
 @charset "utf-8";
+@font-face {
+  font-family: "SBAggroL";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/SANDBOX/SBAggroL.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   display: flex;
   justify-content: center;
@@ -9,6 +21,39 @@ body {
   margin-top: 80px;
   width: 100%;
   position: relative;
+  height: auto;
+  display: block;
+}
+.gumislide {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: var(--gumi--main);
+}
+.flowtxt {
+  font-family: "DungGeunMo";
+  color: #fff;
+  line-height: 30px;
+  animation: flow linear 10s infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation: flow linear 8s infinite;
+}
+@keyframes flow {
+  0% {
+    left: 0%;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 90%;
+    opacity: 0;
+  }
 }
 .main-top img {
   width: 100%;
@@ -125,8 +170,8 @@ body {
 .poll-area label.selectall .row .percent {
   display: block;
 }
-input[type="radio"],
-input[type="checkbox"] {
+.poll-area input[type="radio"],
+.poll-area input[type="checkbox"] {
   display: none;
 }
 
@@ -148,6 +193,7 @@ input[type="checkbox"] {
   position: fixed;
   top: 120px;
   right: 40px;
+  cursor: pointer;
 }
 /* 스와이프 */
 
@@ -174,6 +220,14 @@ input[type="checkbox"] {
 .recipe-container h1 {
   font-size: 2rem;
   font-weight: 600;
+  text-align: center;
+  color: var(--gumi--main);
+  margin: 20px 0 40px;
+}
+.recipe-container .retrotxt {
+  font-family: "DungGeunMo";
+  font-size: 2rem;
+  font-weight: bold;
   text-align: center;
   color: var(--gumi--main);
   margin: 20px 0 40px;
@@ -334,7 +388,7 @@ body .progress_inner__step:hover:before {
 body .progress_inner #step-5:checked + div {
   width: 80%;
 }
-body .progress_inner #step-5:checked + div + div + div > .tab:nth-of-type(5) {
+body .progress_inner #step-5:checked + div + div + div > .tabmain:nth-of-type(5) {
   opacity: 1;
   top: 0;
 }
@@ -344,7 +398,7 @@ body .progress_inner #step-5:checked + div + div + div + div {
 body .progress_inner #step-4:checked + input + div {
   width: 60%;
 }
-body .progress_inner #step-4:checked + input + div + div + div > .tab:nth-of-type(4) {
+body .progress_inner #step-4:checked + input + div + div + div > .tabmain:nth-of-type(4) {
   opacity: 1;
   top: 0;
 }
@@ -354,7 +408,7 @@ body .progress_inner #step-4:checked + input + div + div + div + div {
 body .progress_inner #step-3:checked + input + input + div {
   width: 40%;
 }
-body .progress_inner #step-3:checked + input + input + div + div + div > .tab:nth-of-type(3) {
+body .progress_inner #step-3:checked + input + input + div + div + div > .tabmain:nth-of-type(3) {
   opacity: 1;
   top: 0;
 }
@@ -364,7 +418,7 @@ body .progress_inner #step-3:checked + input + input + div + div + div + div {
 body .progress_inner #step-2:checked + input + input + input + div {
   width: 20%;
 }
-body .progress_inner #step-2:checked + input + input + input + div + div + div > .tab:nth-of-type(2) {
+body .progress_inner #step-2:checked + input + input + input + div + div + div > .tabmain:nth-of-type(2) {
   opacity: 1;
   top: 0;
 }
@@ -374,7 +428,7 @@ body .progress_inner #step-2:checked + input + input + input + div + div + div +
 body .progress_inner #step-1:checked + input + input + input + input + div {
   width: 0%;
 }
-body .progress_inner #step-1:checked + input + input + input + input + div + div + div > .tab:nth-of-type(1) {
+body .progress_inner #step-1:checked + input + input + input + input + div + div + div > .tabmain:nth-of-type(1) {
   opacity: 1;
   top: 0;
 }
@@ -403,11 +457,12 @@ body .progress_inner__bar--set {
   position: relative;
   z-index: -2;
 }
-body .progress_inner__tabs .tab {
+body .progress_inner__tabs .tabmain {
   width: 60%;
+  display: flex;
+  gap: 10px;
   opacity: 0;
   position: absolute;
-  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -419,46 +474,113 @@ body .progress_inner__tabs .tab {
   border-radius: 10px;
   transition: all 0.2s;
 }
-body .progress_inner__tabs .tab h1 {
+body .progress_inner__tabs .tabmain h1 {
   margin: 0;
 }
-body .progress_inner__tabs .tab img {
+body .progress_inner__tabs .tabmain img {
   width: 50%;
 }
-
+body .progress_inner__tabs .tabmain p {
+  font-family: "SBAggroL";
+  padding: 0 10px;
+  line-height: 1.7;
+  text-align: left;
+  color: #444;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+body .progress_inner__tabs .tabmain p strong {
+  font-weight: bold;
+  display: block;
+  color: var(--gumi--main);
+  font-size: 1.2rem;
+  text-align: center;
+}
 body .progress_inner input[type="radio"] {
   display: none;
 }
-/* 카카오맵 */
-.map {
-  margin-bottom: 50px;
+.main-bt {
+  display: flex;
+  padding: 50px 20px 50px;
+  gap: 20px;
 }
-/* MEDIA QUERIES */
-@media (max-width: 1200px) {
-  .swiper {
-    width: 80%;
-  }
-}
-@media (max-width: 900px) {
-  #recipes {
-    padding: 60px 80px;
-  }
 
-  .swiper {
-    width: 50%;
-  }
+.review,
+#daumRoughmapContainer1739778540609 {
+  width: 50%;
 }
-@media (max-width: 765px) {
-  .swiper {
+.review h3 {
+  text-align: center;
+  color: var(--gumi--main);
+}
+.review a {
+  padding: 3px;
+  color: #666;
+  font-size: 12px;
+  float: right;
+  cursor: pointer;
+}
+.review a:hover {
+  color: var(--gumi--sub-green);
+}
+.comm-imgbox {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.comm-imgbox img {
+  width: 100%;
+  height: 100%;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+  body .progress_inner__tabs .tabmain {
     width: 70%;
   }
 }
-@media (max-width: 550px) {
-  #recipes {
-    padding: 40px 40px;
+@media (max-width: 768px) {
+  body .progress_inner__tabs .tabmain {
+    width: 80%;
+  }
+  body .progress_inner__tabs .tabmain p {
+    font-size: 14px;
+  }
+  .swipe_inner {
+    display: flex;
+    flex-direction: column;
   }
 
-  .swiper {
-    width: 80%;
+  .wrapper {
+    max-width: 280px;
+  }
+  .main-bt {
+    flex-direction: column;
+  }
+  .review,
+  #daumRoughmapContainer1739778540609 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 580px) {
+  body .progress_inner__tabs .tabmain {
+    flex-direction: column;
+    margin-top: 120px;
+  }
+  body .progress_inner__step label {
+    font-size: 16px;
+  }
+  body .progress_inner__tabs .tabmain p {
+    display: none;
+  }
+  body .progress_inner__tabs .tabmain p strong {
+    display: block;
+  }
+  body .progress_inner__tabs .tabmain img {
+    width: 100%;
+  }
+  .wrapper {
+    display: none;
   }
 }

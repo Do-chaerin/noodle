@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 header {
   position: fixed;
   top: 0;
@@ -7,10 +6,8 @@ header {
   height: 80px;
   z-index: 999;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 header .inner {
-  position: relative;
   width: 100%;
   max-width: 1280px;
   display: flex;
@@ -30,34 +27,6 @@ header .inner {
 }
 .logo img {
   width: 100%;
-  padding: 2.5% 0;
-}
-.sns img {
-  width: 100%;
-  padding: 40% 0;
-}
-.booking-ment {
-  font-size: 0.6rem;
-  position: fixed;
-  top: 10px;
-  left: 200px;
-  color: var(--gumi--main);
-  border: 1px solid var(--gumi--main);
-  padding: 4px 4px 3px;
-  border-radius: 10px;
-  background-color: #fff;
-  animation: ment 1.5s infinite;
-}
-@keyframes ment {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15%);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 nav {
   height: 100%;
@@ -66,134 +35,33 @@ nav {
   left: 50%;
   transform: translateX(-50%);
 }
-nav .gnb {
-  position: relative;
+.gnb {
   width: 100%;
   height: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   gap: var(--li--gap--l);
-  margin-top: 8px;
 }
-.maindepth {
+
+.depth {
   display: none;
 }
-
-
 .sns {
-  line-height: 150px;
+  line-height: 110px;
   display: flex;
-  gap: 10px;
-}
-.sns img{
-  width: 70%;
+  gap: 20px;
 }
 .banner {
   margin-top: 80px;
   width: 100%;
 }
-.banner_tb,.banner_mb{
-  margin-top: 80px;
-  width: 100%;
-  display: none;
-}
-.web {
-  padding: 30px 0;
+.tab {
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   gap: 20px;
   width: 50%;
   margin: auto;
   text-align: center;
-}
-
-/* 햄버거바 */
-.mb-bar {
-  position: absolute;
-  top: 50%;
-  right: 3%;
-  transform: translateY(-50%);
-  display: none;
-}
-/* 모바일용 메뉴 */
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  right: -250px;
-  width: 250px;
-  height: fit-content;
-  background-color: #fff;
-  padding-top: 80px;
-  text-align: left;
-  display: none;
-}
-.mobile-nav .gnb {
-  display: flex;
-  flex-direction: column;
-}
-.mobile-nav .gnb-list {
-  border-bottom: 1px solid var(--gumi--main);
-}
-.mobile-nav .gnb-list a {
-  color: var(--gumi--sub-green);
-  display: block;
-  padding: 18px 0 18px 5%;
-  background-color: var(--gumi--sub-yellow);
-}
-.mobile-nav .depth {
-  display: none;
-}
-.mobile-nav .depth > li > a {
-  color: var(--gumi--main);
-  background-color: #ffe177;
-}
-.mobile-nav .depth > li > a:hover {
-  background-color: #fff2c2;
-}
-/* X 버튼 */
-.close-menu {
-  position: absolute;
-  top: 8%;
-  right: 8%;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  nav,
-  .sns {
-    display: none;
-  }
-  /* 햄버거바 */
-  .mb-bar {
-    display: block !important;
-  }
-  /* 모바일용 메뉴 */
-  .mobile-nav {
-    display: block !important;
-  }
-  
-  /* 배너 */
-  .banner{display: none;}
-  .banner_tb{
-    display: block;
-  }
-}
-@media screen and (max-width: 390px){
-  /* 로고 */
-  header .inner{
-    justify-content: center;
-  }
-  /* 배너 */
-  .banner_tb{
-    display: none;
-  }
-  .banner_mb{
-    display: block;
-  }
-  /* 탭 */
-  .web{
-    width: 70%;
-  }
 }

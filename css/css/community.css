@@ -24,47 +24,74 @@
   display: none;
 }
 .notice-title {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--gumi--sub-yellow);
   color: #333;
   padding: 20px;
-  margin: 20px;
+  margin: 20px auto;
   border-radius: 10px;
   cursor: pointer;
+  line-height: 1.3;
 }
 .click {
   display: flex !important;
   justify-content: space-between;
 }
 .notice-txt {
+  width: 80%;
   display: none;
   font-family: "SBAggroL";
   font-size: 1rem;
   font-weight: lighter;
-  margin: 20px;
+  margin: 20px auto;
   line-height: 2;
   padding: 30px 20px;
 }
-button {
+.notice-title span {
   border: none;
   background: none;
   cursor: pointer;
   font-size: 1rem;
 }
-.wrap{
+.wrap {
   display: flex;
   flex-direction: column;
 }
-.comm-imgbox{
+.comm-imgbox {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   gap: 20px;
 }
-.comm-imgbox img{
-  width: 400px;
-  height: 300px;
+.comm-imgbox img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .comm-imgbox {
+    grid-template-columns: 1fr 1fr; /* 가로 2칸 */
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .notice-title{
+    font-size: 16px;
+    gap: 10px;
+  }
+  .notice-web-title{
+    display: none;
+  }
+  .notice-txt {
+    font-size: 0.8rem;
+    padding: 0;
+  }
+  .notice-title span {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.6rem;
+  }
 }

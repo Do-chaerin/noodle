@@ -1,0 +1,235 @@
+@layer reset, base,  card;
+
+@layer card {
+  .containerE {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 360px);
+    gap: 20px;
+    transform: translateY(-100px); 
+  }
+  .card--wrapper {
+    --rx: 0;
+    --ry: 0;
+    --tx: 0;
+    --ty: 0;
+    --clip-position: right bottom;
+    --hover-color: #fff72d;
+
+    transform: perspective(800px);
+    transform-style: preserve-3d;
+    cursor: pointer; 
+    &:nth-child(1) {
+        --rx: 1deg; 
+        --ry: 1deg; 
+    }   
+
+    &:nth-child(2) {
+      --clip-position: left bottom;
+      --hover-color: #72dfff;
+      & .info {
+        left: 0;
+        right: auto;
+      }
+    }
+
+    &:nth-child(3) {
+      --clip-position: right top;
+      --hover-color: #eafecf;
+      & .info {
+        top: 0;
+        bottom: auto;
+        
+      }
+    }
+
+    &:nth-child(4) {
+      --clip-position: left top;
+      --hover-color: #fcaefe;
+      & .info {
+        inset: 0 auto auto 0;
+      }
+    }
+
+    .card {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      position: relative;
+      
+      background-color: #f1ebeb;
+      overflow: hidden;
+      border-radius: 10px;
+      /* box-shadow:  inset #e0e0e0 0 0 0 5px, */
+        /* inset rgba(252, 252, 252, 0.1) 0 0 0 6px; */
+      transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transform: rotateY(1deg) rotateX(1deg);
+       
+      &:has(.info:hover) .card__info {
+        opacity: 0;
+      }
+    }
+
+    & img {
+      /* opacity: 0.5; */
+      position: absolute;
+      inset: 0;      
+        width: 100%; 
+      object-fit: cover;
+      transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+        opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      pointer-events: none;
+      transform: translateX(var(--tx)) translateY(var(--ty));
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+      border-radius: 50%;
+      min-width: 32px;
+      aspect-ratio: 1;
+      display: grid;
+      place-content: center;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 1;
+      transition: opacity 300ms ease-in-out;
+      color: #606060;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        scale: 3.5;
+        z-index: -1;
+      }
+
+      &:hover {
+        opacity: 0;
+
+        + .answer {
+          background-color: color-mix(
+            in oklch,
+            var(--hover-color),
+            transparent 56%
+          );
+          clip-path: circle(150% at var(--clip-position));
+          backdrop-filter: blur(2px);
+        }
+      }
+    }
+
+    .answer {
+      display: grid;
+      place-items: center;
+      position: absolute;
+      inset: 0;
+      padding: 2em;
+
+      border-radius: 10px;
+      /* background-color: #bbf2f6; */
+      clip-path: circle(20% at var(--clip-position));
+      transition: all 300ms ease-in-out;
+      z-index: 1;
+      color: #333;
+      text-align: center;
+      place-content: center;
+      gap: 1rem;
+      text-shadow: 1px 1px 0 rgb(255 255 255 / 0.125);
+    }
+
+    .card__info {
+      padding: 20px;
+      position: absolute;
+      left: 50%;
+      color: #fff;
+/*       transform: translate(-50%, 10%); */
+      translate: -50% 10%;      
+      transition: 0.6s 1.6s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);
+
+      & h1 {
+        font-size: 36px;
+        font-weight: 700;
+        text-shadow: rgba(0, 0, 0, 0.1) 0 10px 10px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &:hover {
+      .card {
+        transition: 0.9s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);,
+          box-shadow 2s cubic-bezier(0.23, 0.3, 0.32, 0.4);;
+        box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px,
+           /* inset #333 0 0 0 5px, */
+          /* inset white 0 0 0 6px; */
+      }
+      & img {
+        transition: 0.9s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);
+         /* cubic-bezier(0.23, 0.3, 0.32, 0.4); */
+        opacity: 0.8;
+        scale: 1.5;
+      }
+
+      .card__info {
+        transition: 0.9s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);;
+        transform: translate(-50%, -10%);
+        translate: -50% -10%;
+      }
+    }
+  }
+}
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@layer base {
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: "Exo", "Bungee Shade", cursive, Arial, sans-serif;
+    background-color: #557;
+    color: #fff;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+  }
+  .tutorials {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    width: 64px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    /* background: #3f517e; */
+    padding: .5rem;
+    display: grid;
+    place-content: center;
+    transition: all .28s linear;
+    
+    &:hover {
+      /* background:#4161b2; */
+    }
+    
+    & svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      filter: invert(1);
+    }
+  }
+}
