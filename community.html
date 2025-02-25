@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <!-- fontawesome -->
+    <!-- fontawesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+      referrerpolicy="no-referrer"
+    />
     <!-- css -->
     <!-- 공통 css -->
     <!-- Link Swiper's CSS -->
@@ -33,39 +34,41 @@
       <div class="inner">
         <a href="index.html" class="logo"><img src="images/logo-ramyeon.png" alt="" /></a>
         <nav>
-          <ul class="gnb">
-            <li class="gnb-list">
+          <div class="gnb">
+            <span class="gnb-list">
               <a href="info.html">축제정보</a>
-              <ul class="depth">
-                <li><a href="#">축제소개</a></li>
-                <li><a href="#">히스토리</a></li>
+              <ul class="info">
+                <li class="sub-menu">축제소개</li>
+                <li class="sub-menu">히스토리</li>
               </ul>
-            </li>
-            <li class="gnb-list">
+            </span>
+            <span class="gnb-list">
               <a href="program1.html">프로그램</a>
-              <ul class="depth">
-                <li><a href="#">프로그램</a></li>
-                <li><a href="#">참여가게</a></li>
-                <li><a href="#">이벤트</a></li>
+              <ul class="program">
+                <li class="sub-menu">프로그램</li>
+                <li class="sub-menu">참여가게</li>
+                <li class="sub-menu">이벤트</li>
               </ul>
-            </li>
-            <li class="gnb-list">
+            </span>
+            <span class="gnb-list">
+              <a href="booking_choose.html" class="booking-ment">사전 예약시 5,000원 쿠폰 증정</a>
               <a href="booking_choose.html">예약하기</a>
-              <ul class="depth">
-                <li><a href="#">부스신청</a></li>
-                <li><a href="#">히스토리</a></li>
+              <ul class="booking">
+                <li class="sub-menu">사전예약</li>
+                <li class="sub-menu">부스신청</li>
+                <li class="sub-menu">공장견학</li>
               </ul>
-            </li>
-            <li class="gnb-list">
+            </span>
+            <span class="gnb-list">
               <a href="community.html">커뮤니티</a>
-              <ul class="depth">
-                <li><a href="#">오시는길</a></li>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">갤러리</a></li>
+              <ul class="community">
+                <li class="sub-menu">오시는길</li>
+                <li class="sub-menu">공지사항</li>
+                <li class="sub-menu">갤러리</li>
               </ul>
-            </li>
-          </ul>
+            </span>
+          </div>
+          <div class="depth"></div>
         </nav>
         <div class="sns">
           <a href="#"><img src="images/logo_youtube.png" alt="유튜브" /></a>
@@ -126,7 +129,6 @@
       <li><a>갤러리</a></li>
     </ul>
     <!-- 오시는 길 -->
-    <!-- 오시는 길 -->
     <div class="comeon item" style="display: none">
       <div
         id="daumRoughmapContainer1739778540609"
@@ -156,8 +158,9 @@
         <ul>
           <li>
             <div class="notice-title">
-              <p class = "notice-web-title">🍜2025 구미라면축제🍜 </p>
-              <p>체험부스 운영할 업체를 모집합니다.</p><span>▼</span>
+              <p class="notice-web-title">🍜2025 구미라면축제🍜</p>
+              <p>체험부스 운영할 업체를 모집합니다.</p>
+              <span>▼</span>
             </div>
             <p class="notice-txt">
               신청기한 : 2025. 01. 23.(월) ~ 01. 31.(화) / 9일간
@@ -171,8 +174,9 @@
           </li>
           <li>
             <div class="notice-title">
-              <p class = "notice-web-title">🍜2025 구미라면축제🍜 </p>
-              <p>라면레스토랑에 참가할 음식점(셰프)를 모집합니다.</p><span>▼</span>
+              <p class="notice-web-title">🍜2025 구미라면축제🍜</p>
+              <p>라면레스토랑에 참가할 음식점(셰프)를 모집합니다.</p>
+              <span>▼</span>
             </div>
             <p class="notice-txt">
               신청기한 : 2025. 01. 20.(월) 까지
@@ -186,8 +190,9 @@
           </li>
           <li>
             <div class="notice-title">
-              <p class = "notice-web-title">🍜2025 구미라면축제🍜 </p>
-              <p>체험부스 운영할 업체를 모집합니다.</p><span>▼</span>
+              <p class="notice-web-title">🍜2025 구미라면축제🍜</p>
+              <p>체험부스 운영할 업체를 모집합니다.</p>
+              <span>▼</span>
             </div>
             <p class="notice-txt">
               신청기한 : 2025. 01. 23.(월) ~ 01. 31.(화) / 9일간
@@ -201,8 +206,9 @@
           </li>
           <li>
             <div class="notice-title">
-              <p class = "notice-web-title">🍜2025 구미라면축제🍜</p>
-              <p>라면레스토랑에 참가할 음식점(셰프)를 모집합니다.</p><span>▼</span>
+              <p class="notice-web-title">🍜2025 구미라면축제🍜</p>
+              <p>라면레스토랑에 참가할 음식점(셰프)를 모집합니다.</p>
+              <span>▼</span>
             </div>
             <p class="notice-txt">
               신청기한 : 2025. 01. 20.(월) 까지
@@ -216,8 +222,9 @@
           </li>
           <li>
             <div class="notice-title">
-              <p class = "notice-web-title">🍜2025 구미라면축제🍜</p>
-              <p>라면레스토랑에 참가할 음식점(셰프)를 모집합니다.</p><span>▼</span>
+              <p class="notice-web-title">🍜2025 구미라면축제🍜</p>
+              <p>라면레스토랑에 참가할 음식점(셰프)를 모집합니다.</p>
+              <span>▼</span>
             </div>
             <p class="notice-txt">
               신청기한 : 2025. 01. 20.(월) 까지
@@ -231,8 +238,9 @@
           </li>
           <li>
             <div class="notice-title">
-              <p class = "notice-web-title">🍜2025 구미라면축제🍜</p>
-              <p>체험부스 운영할 업체를 모집합니다.</p><span>▼</span>
+              <p class="notice-web-title">🍜2025 구미라면축제🍜</p>
+              <p>체험부스 운영할 업체를 모집합니다.</p>
+              <span>▼</span>
             </div>
             <p class="notice-txt">
               신청기한 : 2025. 01. 23.(월) ~ 01. 31.(화) / 9일간
@@ -246,8 +254,9 @@
           </li>
           <li>
             <div class="notice-title">
-              <p class = "notice-web-title">🍜2025 구미라면축제🍜 </p>
-              <p>라면레스토랑에 참가할 음식점(셰프)를 모집합니다.</p><span>▼</span>
+              <p class="notice-web-title">🍜2025 구미라면축제🍜</p>
+              <p>라면레스토랑에 참가할 음식점(셰프)를 모집합니다.</p>
+              <span>▼</span>
             </div>
             <p class="notice-txt">
               신청기한 : 2025. 01. 20.(월) 까지

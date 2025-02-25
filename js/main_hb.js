@@ -16,7 +16,6 @@ window.addEventListener("load", () => {
       $(this).next(".mobile-nav .depth").stop().slideToggle();
     });
   });
-  
   // Swiper
   var swiper = new Swiper(".blog-slider", {
     spaceBetween: 30,
@@ -31,7 +30,6 @@ window.addEventListener("load", () => {
       clickable: true,
     },
   });
-
   //팝업
   const options = document.querySelectorAll(".choose");
   for (let i = 0; i < options.length; i++) {
@@ -67,21 +65,17 @@ window.addEventListener("load", () => {
       }
     });
   }
-  //팝업 스크롤
   const popup = document.querySelector(".popupwrapper");
   document.addEventListener("scroll", (e) => {
-    console.log(window.scrollY);
-
     if (window.scrollY > 850) {
       popup.style.display = "block";
     } else {
       popup.style.display = "none";
     }
   });
-  //팝업 창 닫기
   const closeBtn = document.querySelector(".close");
   closeBtn.addEventListener("click", () => {
-    const popup = document.querySelector(".popupwrapper");
+    const popup = document.querySelector(".wrapper");
     popup.style.display = "none";
   });
   //관광정보
