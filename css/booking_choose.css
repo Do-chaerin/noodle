@@ -27,9 +27,7 @@ body {
 .content {
   display: none;
 }
-.content.active {
-  display: block;
-}
+
 .booking-form {
   color: #000;
   text-align: center;
@@ -40,6 +38,7 @@ body {
   color: #000;
 }
 .booking-de {
+  display: flex;
   margin: 30px;
   color: #000;
   font-size: 18px;
@@ -90,7 +89,6 @@ p {
 /* 스크롤바 스타일 (크롬, 엣지, 사파리) */
 .policy-box {
   margin: 50px auto; /* 중앙 정렬 */
-
 }
 .policy-box::-webkit-scrollbar {
   width: 8px;
@@ -153,7 +151,7 @@ h3 {
   font-size: 18px;
 }
 /* 공장견학내용 */
-.booking-img{
+.booking-img {
   margin: 50px auto;
 }
 .container2 {
@@ -206,16 +204,19 @@ h4 {
 .booking-de {
   margin: 10px 0;
   display: flex;
-  flex-direction: column;
   font-size: 20px;
+  align-items: center;
 }
 .booking-de label {
-  margin-bottom: 5px;
+  margin: 5px auto;
 }
-.booking-de input {
-  padding: 10px;
+.booking-de input,
+textarea,
+select {
+  width: 80%;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin: 5px auto;
 }
 .booking-img {
   margin: 50px 0 0 0;
@@ -253,6 +254,15 @@ button {
   height: 400px;
   margin: auto;
   position: relative;
+}
+.arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 10; /* 슬라이드보다 앞에 오도록 설정 */
+  display: flex;
+  justify-content: space-between;
 }
 #slider .slides-container {
   margin-top: 50px;
@@ -301,7 +311,6 @@ button {
     width: 90%;
     height: 300px;
     margin: 0 auto; /* 중앙 정렬 */
-
   }
   /* 모달창 크기 조정 */
   .modal-content {
@@ -331,10 +340,9 @@ button {
   .policy-box {
     width: 100%;
     height: 250px;
-        margin: 0 auto; /* 중앙 정렬 */
-
+    margin: 0 auto; /* 중앙 정렬 */
   }
-  
+
   /* 모달창 크기 조정 */
   .modal-content {
     width: 90%;
@@ -346,7 +354,7 @@ button {
     max-width: 95%;
     padding: 10px;
   }
-  
+
   /* 폰트 크기 조정 */
   h1 {
     font-size: 20px;
@@ -357,7 +365,8 @@ button {
   h4 {
     font-size: 18px;
   }
-  .detail, .detail1 {
+  .detail,
+  .detail1 {
     font-size: 14px;
   }
 
