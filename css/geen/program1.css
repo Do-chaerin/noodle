@@ -1,16 +1,13 @@
 @charset "utf-8";
+@import url(/css/geen/cardlayer.css);
 body {
   background-color: var(--gumi--sub-yellow);
 }
-.inner { 
+.inner {
   background-color: #f0f0f0;
 }
-.innerM{
-  width: 100%;
-  height: calc(100vh -150px);
-
-}
-main.inner {  
+main.inner {
+  height: 100vh;
   margin: 0;
   background-color: #f0f0f0;
 }
@@ -60,31 +57,31 @@ main .inner {
 /* 프로그램1 */
 .program {
   width: 90%;
-  height: 105vh;
+  height: 100%;
   margin: auto;
-  margin-top: 8px;
-  padding-bottom: 50px;
+  padding-top: 8px;
+  padding-bottom: 150px;
   text-align: center;
   background-color: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px; /* 둥근 모서리 */
   position: relative;
 }
-.program h3 , .innInner > h3  {
+.program h3 , .innInner > h3 , .evEnt> h3  {
   padding: 30px;
   width: 200px;
-  height: 130px;
+  height: 200px;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
 }
-.program > h3 > span , .innInner > h3 > span {
+.program > h3 > span , .innInner > h3 > span , .evEnt> h3 >span {
   position: absolute; /* h3의 경계 내에서 위치 */
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
   width: 62%;
-  height: 44%;
+  height: 30%;
   color: #fff;
   margin-top: 30px;
   padding: 20px;
@@ -94,7 +91,8 @@ main .inner {
 }
 .leaflet {
   width: 100%;
-  margin: -70px auto 0;
+  height: 100% !important;
+  margin: -110px auto;
 
   overflow: hidden;
 }
@@ -221,6 +219,7 @@ main .inner {
 }
 .lf-imgtop1 {
   width: 540px;
+  height: 100%;
   /*   */
   vertical-align: top;
   object-fit: cover;
@@ -278,58 +277,57 @@ main .inner {
 .chat {
   width: 100vw;
   position: relative;
-  bottom: 1850px;
+  top: -4100px;
   left: 20%;
 }
 /*참여가게  */
 /* 스와이프 */
 .swipe_inner {
-  width: 90%;  
+  width: 90%;
   max-width: 1500px;
   margin: auto;
-  border-radius: 10px;
   background-color: #f0f0f0;
   /* border-bottom: 2px solid var(--gumi--sub-yellow); */
 }
 .innInner {
   width: 100%;
-  height: 120%;
+  margin-top: 8px;  
   background-color: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px; /* 둥근 모서리 */
   position: relative;
-  margin: 30px 0 0 0 !important ;
 }
 .recipe-container {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 25px;
-  width: calc(110% / 2);
-  margin: 30px auto;
+  width: calc(100% / 2);
+  margin: auto;
   min-width: 540px;
+  height: 100%;
+  padding-bottom: 50px;
 }
 
-.recipe-container h1 , .leaflet h1{
+.recipe-container h1 , .leaflet h2 {
   width: 100%;
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
-  color: var(--gumi--main);  
+  color: var(--gumi--main); 
+  z-index: 11; 
 }
 .h1-0{
-  line-height: 100px;
-  margin: -20px 0 0 0;
-  text-align: center;
-}
+  width: 200px !important;
+  margin: 0 auto;
+  line-height: 75px;
+}  
 .h1-1{
-margin: -90px 0 30px;}
+margin: -90px 0 20px;}
 .swiper {
   width: 83%;
 }
-.h1-2{
-  margin: 20px 0 30px 0;
-}
+
 .swiper-scrollbar {
   --swiper-scrollbar-bottom: 0;
   opacity: 0.6;
@@ -429,6 +427,31 @@ swiper-slide img {
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 25px !important;
+}
+/* 이벤트 */
+
+.evEnt{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  margin-top: 8px;
+  padding: 50px 0;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* 둥근 모서리 */
+  position: relative;
+}
+.row {
+  margin: 15px;
+}
+.answer p{
+  font-size: 14px;
+}
+.answerp{
+  width: 50px;
+  height: 50px;
+  background: url(/images/geen/qr.png);
 }
 
 @keyframes bounce {

@@ -16,6 +16,34 @@ body {
   flex-direction: column;
   background-color: #fff;
 }
+
+/* 탭 스타일 */
+.tabs {
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center; /* 수직 정렬 */
+  flex-wrap: nowrap; /* 한 줄 유지 */
+  margin-bottom: 10px;
+  white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+  overflow-x: auto; /* 탭이 많아질 경우 스크롤 가능 */
+}
+
+/* 탭 버튼 */
+.tab {
+  padding: 10px 40px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--gumi--sub-green);
+  font-family: "SBAggroM";
+}
+
+.tab.active {
+  color: var(--gumi--sub-yellow);
+}
+
 /* 콘텐츠 박스 */
 .content-box {
   width: 300px;
@@ -24,12 +52,15 @@ body {
   border-radius: 8px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .content {
   display: none;
 }
+
 .content.active {
   display: block;
 }
+
 .booking-form {
   color: #000;
   text-align: center;
@@ -44,6 +75,7 @@ body {
   color: #000;
   font-size: 18px;
 }
+
 button {
   font-size: 15px;
   font-family: "SBAggroM";
@@ -55,23 +87,28 @@ label {
   flex-direction: column;
   font-size: 15px;
 }
-input,
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 줄 간격 조절 */
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
 select,
 textarea {
+  width: 100%;
   padding: 8px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
 }
-.checkbox-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
 /* 개인정보 취급방침 박스 */
 .policy-box {
-  margin-top: 50px;
   width: 600px;
   height: 350px;
   padding: 20px;
@@ -88,10 +125,6 @@ p {
   padding: 10px;
 }
 /* 스크롤바 스타일 (크롬, 엣지, 사파리) */
-.policy-box {
-  margin: 50px auto; /* 중앙 정렬 */
-
-}
 .policy-box::-webkit-scrollbar {
   width: 8px;
 }
@@ -102,23 +135,39 @@ p {
 .policy-box::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
+
+/* 제목 스타일 */
+/*h2 {
+  font-size: 13px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+*/
 .policy-box h2 {
   color: #d32f2f;
   border-bottom: 2px solid #d32f2f;
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
+
 .policy-box p,
 .policy-box ul {
   font-size: 14px;
   line-height: 1.6;
 }
+
 .policy-box ul {
   list-style: none;
   padding: 0;
 }
+
 .policy-box li {
   padding: 5px 0;
+}
+.booking-img {
+  text-align: center;
+  padding-top: 80px;
 }
 /* 모달 스타일 */
 .modal {
@@ -149,13 +198,12 @@ p {
 .close:hover {
   color: black;
 }
+
 h3 {
   font-size: 18px;
 }
+
 /* 공장견학내용 */
-.booking-img{
-  margin: 50px auto;
-}
 .container2 {
   max-width: 800px;
   margin: auto;
@@ -169,21 +217,25 @@ h1 {
   padding: 20px;
   font-size: 25px;
 }
+
 .section1 {
   margin-bottom: 20px;
   padding: 15px;
   border-radius: 5px;
 }
+
 .highlight {
   padding: 10px;
   border-radius: 5px;
   color: #000;
   font-size: 15px;
 }
+
 h4 {
   font-size: 20px;
   padding: 10px;
 }
+
 .detail {
   font-size: 15px;
   color: #000;
@@ -192,6 +244,7 @@ h4 {
   font-size: 18px;
   color: blue;
 }
+
 /*꾸미기*/
 .booking-form {
   margin: 50px;
@@ -199,40 +252,45 @@ h4 {
   background: #f5f5f5;
   border-radius: 8px;
 }
+
 .booking-d {
-  font-size: 30px;
+  font-size: 18px;
+
   color: #555;
 }
+
 .booking-de {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  
 }
+
 .booking-de label {
   margin-bottom: 5px;
 }
+
 .booking-de input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.booking-img {
-  margin: 50px 0 0 0;
-  text-align: center;
-}
+
 .checkbox-container {
   margin-top: 15px;
 }
+
 .checkbox-container div {
   display: flex;
   align-items: center;
   margin: 5px 0;
 }
+
 .checkbox-container label {
   margin-left: 8px;
   font-size: 14px;
 }
+
 button {
   width: 70%;
   padding: 12px;
@@ -244,132 +302,34 @@ button {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .move:hover {
   background: #9a1616;
 }
+
 /*스와이프*/
-#slider {
-  width: 100%;
-  height: 400px;
-  margin: auto;
-  position: relative;
+.swiper {
+  width: 600px;
+  height: 350px;
 }
-#slider .slides-container {
-  margin-top: 50px;
-  position: relative;
-  width: 100%;
-  height: 100%;
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#slider .slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: none;
-}
-#slider .slide:first-child {
+
+.swiper-slide img {
   display: block;
-}
-#slider img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-}
-#slider .arrows a {
-  position: absolute;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.65);
-  top: 43%;
-  left: 15px;
-  font-weight: 400;
-  line-height: 1;
-  font-size: 42px;
-}
-#slider .arrows a:hover {
-  color: #fff;
-}
-#slider .arrows a.next {
-  left: initial;
-  right: 15px;
-}
-/* 기본 반응형 설정 */
-@media screen and (max-width: 768px) {
-  /* 개인정보 취급방침 박스 */
-  .policy-box {
-    width: 90%;
-    height: 300px;
-    margin: 0 auto; /* 중앙 정렬 */
-
-  }
-  /* 모달창 크기 조정 */
-  .modal-content {
-    width: 80%;
-  }
-
-  /* 공장 견학 섹션 */
-  .container2 {
-    max-width: 90%;
-    padding: 15px;
-  }
-
-  /* 버튼 크기 조정 */
-  button {
-    width: 80%;
-    font-size: 14px;
-  }
-
-  /* 이미지 슬라이더 */
-  #slider {
-    height: 300px;
-  }
 }
 
-@media screen and (max-width: 390px) {
-  /* 개인정보 취급방침 박스 */
-  .policy-box {
-    width: 100%;
-    height: 250px;
-        margin: 0 auto; /* 중앙 정렬 */
-
-  }
-  
-  /* 모달창 크기 조정 */
-  .modal-content {
-    width: 90%;
-    padding: 15px;
-  }
-
-  /* 공장 견학 섹션 */
-  .container2 {
-    max-width: 95%;
-    padding: 10px;
-  }
-  
-  /* 폰트 크기 조정 */
-  h1 {
-    font-size: 20px;
-  }
-  h3 {
-    font-size: 16px;
-  }
-  h4 {
-    font-size: 18px;
-  }
-  .detail, .detail1 {
-    font-size: 14px;
-  }
-
-  /* 버튼 크기 조정 */
-  button {
-    width: 90%;
-    font-size: 13px;
-    padding: 10px;
-  }
-
-  /* 이미지 슬라이더 */
-  #slider {
-    height: 250px;
-  }
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
 }

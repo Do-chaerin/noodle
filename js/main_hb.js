@@ -84,7 +84,6 @@ window.addEventListener("load", () => {
     const popup = document.querySelector(".popupwrapper");
     popup.style.display = "none";
   });
-
   //관광정보
   const step = document.querySelectorAll(".progress_inner__step");
   const tabs = document.querySelectorAll(".tabmain");
