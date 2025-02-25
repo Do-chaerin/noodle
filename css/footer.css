@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 footer {
-  padding: 5%;
+  padding: 1.5%;
   width: 100%;
-  height: 300px;
+  height: 280px;
   background-color: var(--gumi--sub-green);
 }
 .footer {
@@ -12,44 +12,111 @@ footer {
   background-color: var(--gumi--sub-green) !important;
 }
 .ft_logo {
-  padding: 2% 0;
   max-width: 300px;
 }
 .ft_logo img {
   width: 100%;
 }
+.ft_info {
+  width: fit-content;
+  padding-bottom: 20px;
+}
 .ft_info p {
   font-family: "SBAggroL";
-  font-size: 0.8rem;
-  padding-bottom: 15px;
+  font-size: 0.7rem;
+  line-height: 2;
   color: #eeeeee;
 }
 .fa {
-    display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-  }
-.sponsorLogo {
+  display: inline-block;
+  font: normal normal normal 14px / 1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.copyright {
+  font-family: "SBAggroL";
+  font-size: 0.6rem;
+  line-height: 2;
+  color: #eeeeee;
+}
+.footer_r {
   position: absolute;
+  top: 0;
   right: 0;
-  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+}
+.character {
+  display: flex;
+  gap: 10px;
+  height: 170px;
+  padding-bottom: 10px;
+}
+
+.character img {
+  height: 100%;
+}
+.ment {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  padding: 9px;
+  background-color: #fff;
+  border: 1px solid var(--gumi--main);
+  border-radius: 30px;
+  color: var(--gumi--sub-yellow);
+}
+.ment p {
+  align-items: center;
+}
+.ment span {
+  color: var(--gumi--main);
+}
+.sponsorLogo {
   height: 30px;
   display: flex;
-  gap: 20px;
+  gap: 45px;
 }
 .sponsorLogo img {
   height: 100%;
 }
-
-@media screen and (max-width: 390px){
-    .ft_logo {
-        max-width: 200px;
-    }
-    .ft_info p {
-        font-size: 0.6rem;}
-        .sponsorLogo {
-            height: 20px;
-        }
+@media screen and (max-width: 768px) {
+  .footer_r {
+    top: auto;
+    bottom: 5px;
+  }
+  .character .boy {
+    display: none;
+  }
+  .sponsorLogo {
+    gap: 25px;
+  }
+}
+@media screen and (max-width: 390px) {
+  footer {
+    height: 250px;
+  }
+  .ft_logo {
+    max-width: 200px;
+  }
+  .ft_info p {
+    font-size: 0.6rem;
+  }
+  .copyright {
+    font-size: 0.5rem;
+  }
+  .footer_r {
+    bottom: 12px;
+  }
+  .character {
+    display: none;
+  }
+  .sponsorLogo {
+    height: 20px;
+  }
 }
