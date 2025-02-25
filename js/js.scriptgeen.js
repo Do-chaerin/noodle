@@ -63,38 +63,3 @@ $(document).ready(function() {
   },
   });
 })
-$(document).on("click", '[data-toggle="lightbox"]', function(event) {
-  event.preventDefault();
-  $(this).ekkoLightbox();
-});
-const cards = document.querySelectorAll(".card--wrapper");
-
-cards.forEach((card) => {
-  const { x, y, width, height } = card.getBoundingClientRect();
-  const centerPoint = { x: x + width / 2, y: y + height / 2 };
-  card.addEventListener("mousemove", (e) => {
-    card.style.setProperty(
-      "--tx",
-      `${(e.clientY - centerPoint.y) * -0.0004}px`
-    );
-    card.style.setProperty(
-      "--ty",
-      `${(e.clientX - centerPoint.x) * -0.0004}px`
-    );
-    card.style.setProperty("--rx", `${(e.clientY - centerPoint.y) * 0.04}deg`);
-    card.style.setProperty("--ry", `${(e.clientX - centerPoint.x) * -0.04}deg`);
-  });
-  card.addEventListener("mouseout", (e) => {
-    card.style.setProperty(
-      "--tx",
-      `0px`
-    );
-    card.style.setProperty(
-      "--ty",
-      `0px`
-    );
-    card.style.setProperty("--rx", `0deg`);
-    card.style.setProperty("--ry", `0deg`);
-  });
-});
-

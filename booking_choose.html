@@ -2,88 +2,136 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
     <link rel="icon" type="image/icon" sizes="16x16" href="images/favicon.ico" />
-    <!-- css -->
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <!-- 공통 css -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/variable.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <!-- 채린css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- css -->
     <link rel="stylesheet" href="css/booking_choose.css" />
-
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/header.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="js/scroll.js"></script>
+    <script src="js/booking_s.js"></script>
     <title>구미라면축제</title>
   </head>
   <body>
-    <!-- 전체레이아웃 -->
-    <div class="container">
-      <header>
-        <div class="inner">
-          <a href="index.html" class="logo"><img src="images/main-logo.png" alt="" /></a>
-          <nav>
-            <ul class="gnb">
-              <li class="gnb-list">
-                <a href="info.html">축제정보</a>
-                <ul class="depth">
-                  <li><a href="#">축제소개</a></li>
-                  <li><a href="#">히스토리</a></li>
-                </ul>
-              </li>
-              <li class="gnb-list">
-                <a href="program1.html">프로그램</a>
-                <ul class="depth">
-                  <li><a href="#">프로그램</a></li>
-                  <li><a href="#">참여가게</a></li>
-                  <li><a href="#">이벤트</a></li>
-                </ul>
-              </li>
-              <li class="gnb-list">
-                <a href="booking_choose.html">예약하기</a>
-                <ul class="depth">
-                  <li><a href="#">부스신청</a></li>
-                  <li><a href="#">히스토리</a></li>
-                </ul>
-              </li>
-              <li class="gnb-list">
-                <a href="community.html">커뮤니티</a>
-                <ul class="depth">
-                  <li><a href="#">오시는길</a></li>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">갤러리</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <div class="sns">
-            <a href="#"><img src="images/logo_youtube.png" alt="유튜브" /></a>
-            <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
-          </div>
+    <!-- 탑버튼 -->
+    <div class="fixtop">
+      <p class="scrollTo scrollToTop">▲</p>
+    </div>
+    <!-- 헤더 -->
+    <header>
+      <div class="inner">
+        <a href="index.html" class="logo"><img src="images/main-logo.png" alt="" /></a>
+        <nav>
+          <ul class="gnb">
+            <li class="gnb-list">
+              <a href="info.html">축제정보</a>
+              <ul class="maindepth">
+                <li><a>축제소개</a></li>
+                <li><a>히스토리</a></li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="program1.html">프로그램</a>
+              <ul class="maindepth">
+                <li><a href="#">프로그램</a></li>
+                <li><a href="#">참여가게</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="booking_choose.html" class="booking-ment">사전 예약시 5,000원 쿠폰 증정</a>
+              <a href="booking_choose.html">예약하기</a>
+              <ul class="maindepth">
+                <li><a href="#">부스신청</a></li>
+                <li><a href="#">히스토리</a></li>
+              </ul>
+            </li>
+            <li class="gnb-list">
+              <a href="community.html">커뮤니티</a>
+              <ul class="maindepth">
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">갤러리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="sns">
+          <a href="#"><img src="images/logo_youtube.png" alt="유튜브" /></a>
+          <a href="#"><img src="images/logo_instagram.png" alt="인스타그램" /></a>
         </div>
-      </header>
-      <!-- 배너 -->
+      </div>
+      <!-- 햄버거바 -->
+      <p class="mb-bar" id="hamburger-menu">
+        <a href="#"><i class="fa-solid fa-bars fa-2xl" style="color: #578d36"></i></a>
+      </p>
+      <!-- 모바일용 메뉴 -->
+      <div class="mobile-nav" id="mobile-nav">
+        <ul class="gnb">
+          <li class="gnb-list">
+            <a href="#">축제정보</a>
+            <ul class="depth">
+              <li><a href="#">축제소개</a></li>
+              <li><a href="#">히스토리</a></li>
+            </ul>
+          </li>
+          <li class="gnb-list">
+            <a href="#">프로그램</a>
+            <ul class="depth">
+              <li><a href="#">프로그램</a></li>
+              <li><a href="#">참여가게</a></li>
+              <li><a href="#">이벤트</a></li>
+            </ul>
+          </li>
+          <li class="gnb-list">
+            <a href="#">예약하기</a>
+            <ul class="depth mbtab">
+              <li><a href="#">사전예약</a></li>
+              <li><a href="#">부스신청</a></li>
+              <li><a href="#">공장견학</a></li>
+            </ul>
+          </li>
+          <li class="gnb-list">
+            <a href="#">커뮤니티</a>
+            <ul class="depth">
+              <li><a href="#">오시는길</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">갤러리</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="close-menu" id="close-menu">
+          <i class="fa-solid fa-x fa-lg" style="color: #578d36"></i>
+        </div>
+      </div>
+    </header>
+    <!-- 배너 -->
+    <section>
       <img class="banner" src="images/main-banner.jpg" alt="배너" />
-      <!-- 탭 버튼 -->
-    </div>
-    <!-- 탭 버튼 -->
-    <div class="tabs">
-      <button class="tab active" onclick="openTab(0)">개인예약</button>
-      <button class="tab" onclick="openTab(1)">업체예약</button>
-      <button class="tab" onclick="openTab(2)">공장견학</button>
-    </div>
-
-    <!-- 탭 내용 -->
-    <div class="content active">
+    </section>
+    <!-- 탭 -->
+    <ul class="web tab">
+      <li><a>사전예약</a></li>
+      <li><a>부스신청</a></li>
+      <li><a>공장견학</a></li>
+    </ul>
+    <!-- 축제소개 -->
+    <div class="content item">
       <div class="policy-box">
         <h2>◆ 개인정보 취급방침</h2>
         <p>
@@ -95,7 +143,6 @@
           개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
         </p>
         <p>본 방침은 : <strong>2024년 10월 01일</strong> 부터 시행됩니다.</p>
-
         <h2>◆ 수집하는 개인정보의 항목</h2>
         <ul>
           <li class="pri">
@@ -103,23 +150,22 @@
           </li>
           <li class="pri">개인정보 수집방법 : 홈페이지(회원가입, 고객게시판 등), 제휴사로부터의 제공</li>
         </ul>
-
         <h2>◆ 개인정보의 수집 및 이용목적</h2>
         <ul>
           <li class="pri">서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산</li>
           <li class="pri">회원 관리 (본인확인, 부정 이용 방지, 가입 의사 확인, 민원 처리, 고지사항 전달)</li>
           <li class="pri">마케팅 및 광고에 활용 (신규 서비스 개발, 이벤트 정보 제공)</li>
         </ul>
-
         <h2>◆ 개인정보의 보유 및 이용기간</h2>
         <p>
           회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다. 단, 관계법령의
           규정에 의하여 보존할 필요가 있는 경우 관계법령이 정한 일정한 기간 동안 회원정보를 보관합니다.
         </p>
       </div>
+      <!-- 탭1 사전예약-->
       <div class="booking-form">
         <ul>
-          <li class="booking-d">개인 예약</li>
+          <li class="booking-d">사전 예약</li>
           <li class="booking-de">
             <label for="fullName">이름</label>
             <input type="text" id="fullName" name="fullName" required />
@@ -133,7 +179,6 @@
             <input type="tel" name="tel" id="tel" />
           </li>
         </ul>
-        <!-- 공통 -->
         <div class="checkbox-container">
           <div>
             <input type="checkbox" name="banana" id="banana" />
@@ -147,10 +192,13 @@
         <button onclick="openModal()">예약하기</button>
       </div>
     </div>
-    <!--체크박스-->
-    <div class="content">
+    <!--탭2 부스신청-->
+    <div class="content item">
+      <div class="booking-img">
+        <img src="images/booking_com.png" width="500px" alt="업체신청순서" />
+      </div>
       <div class="policy-box">
-        <h2>◆ 개인정보 취급방침</h2>
+        <h2>◆ 업체신청 개인정보 수집 및 이용 동의서</h2>
         <p>
           '구미라면축제'는 (이하 '회사'는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한
           법률을 준수하고 있습니다.
@@ -160,35 +208,26 @@
           개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
         </p>
         <p>본 방침은 : <strong>2024년 10월 01일</strong> 부터 시행됩니다.</p>
-
         <h2>◆ 수집하는 개인정보의 항목</h2>
         <ul>
-          <li class="pri">
-            수집항목 : 이름, 아이디, 비밀번호, 자택 전화번호, 휴대전화번호, 이메일, 서비스 이용기록, 쿠키, 접속IP정보
-          </li>
+          <li class="pri">필수정보: 성명, 연락처(전화번호, 이메일), 주소, 사업자등록번호, 업체명, 대표자명</li>
           <li class="pri">개인정보 수집방법 : 홈페이지(회원가입, 고객게시판 등), 제휴사로부터의 제공</li>
         </ul>
-
         <h2>◆ 개인정보의 수집 및 이용목적</h2>
         <ul>
           <li class="pri">서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산</li>
           <li class="pri">회원 관리 (본인확인, 부정 이용 방지, 가입 의사 확인, 민원 처리, 고지사항 전달)</li>
           <li class="pri">마케팅 및 광고에 활용 (신규 서비스 개발, 이벤트 정보 제공)</li>
         </ul>
-
         <h2>◆ 개인정보의 보유 및 이용기간</h2>
         <p>
-          회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다. 단, 관계법령의
-          규정에 의하여 보존할 필요가 있는 경우 관계법령이 정한 일정한 기간 동안 회원정보를 보관합니다.
+          개인정보의 보유 및 이용 기간수집된 개인정보는 업체 신청 처리 및 계약 유지 기간 동안 보관되며, 관계 법령에 따라
+          일정 기간 보관 후 파기됩니다.
         </p>
       </div>
-      <div class="booking-img">
-      <img src="images/booking_com.png" width="500px" alt="업체신청순서" />
-    </div>
       <div class="booking-form">
         <ul>
-          <li class="booking-d">업체 예약</li>
-
+          <li class="booking-d">부스신청</li>
           <li class="booking-de">
             <label for="name">이름</label>
             <input type="text" id="name" name="name" required />
@@ -202,21 +241,19 @@
             <input type="email" id="email" name="email" required />
           </li>
           <li class="booking-de">
-            <label for="service">서비스 유형</label>
-          </li>
-          <li class="booking-de">
+            <label for="service">참가 유형</label>
             <select id="service" name="service">
               <option value="consulting">컨설팅</option>
-              <option value="maintenance">유지보수</option>
-              <option value="installation">설치</option>
+              <option value="Relations">홍보</option>
+              <option value="sell">판매</option>
+              <option value="etc">기타</option>
             </select>
           </li>
-          <li class="booking-de"></li>
-          <label for="message">추가 요청 사항</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-      </li>
-      </ul>
-        <!--체크박스-->
+          <li class="booking-de">
+            <label for="message">추가 사항</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </li>
+        </ul>
         <div class="checkbox-container">
           <div>
             <input type="checkbox" name="banana" id="banana" />
@@ -238,11 +275,15 @@
           <div class="slide"><img src="images/factory2.jpg" alt="Slider img 2" /></div>
           <div class="slide"><img src="images/factory3.jpg" alt="Slider img 3" /></div>
           <div class="slide"><img src="images/factory4.jpg" alt="Slider img 4" /></div>
+          <div class="slide"><img src="images/factory5.jpg" alt="Slider img 5" /></div>
+          <div class="slide"><img src="images/factory6.jpg" alt="Slider img 6" /></div>
         </div>
         <div class="arrows">
           <a class="prev" href="#"><</a>
           <a class="next" href="#">></a>
         </div>
+      </div>
+      <div class="booking-form">
         <ul>
           <li class="booking-d">공장 견학</li>
           <li class="booking-de"></li>
@@ -255,12 +296,10 @@
             <p class="detail">매월 1일 ~ 4일 다음달 견학 예약 (OPEN 09시, CLOSE 23시)</p>
             <p class="detail">혹한기(1월, 2월), 혹서기(7월, 8월)은 견학 불가</p>
           </div>
-
           <div class="section1">
             <h4>견학 시간</h4>
             <p class="highlight"><strong>일반 견학:</strong> 오전 10:40 ~ 11:40 (약 1시간 정도)</p>
           </div>
-
           <div class="section1">
             <h4>견학 신청 대상</h4>
             <p class="detail">단체 견학만 가능</p>
@@ -268,7 +307,6 @@
             <p class="detail">※ 영리 및 상업적 목적을 위한 단체는 제외</p>
             <p class="detail">※ 안전상의 이유로 일부 견학이 제한될 수 있음</p>
           </div>
-
           <div class="section1">
             <h4>견학 일정 확정 안내</h4>
             <p class="detail">매월 9일 추첨 (토요일/휴일일 경우 익일)</p>
@@ -290,11 +328,12 @@
         <h3>신청되었습니다</h3>
       </div>
     </div>
-    <!-- 하단 -->
     <footer>
       <div class="footer inner">
         <div class="ft_logo">
-          <img src="images/logo-ramyeon.png" alt="구미라면축제로고" />
+          <a href="index.html">
+            <img src="images/logo-ramyeon.png" alt="구미라면축제로고" />
+          </a>
         </div>
         <div class="ft_info">
           <p><i class="fa fa-map-marker"></i> 행사지: 경상북도 구미시 원평동 124-23 구미역 일원</p>
@@ -310,38 +349,16 @@
         </div>
       </div>
     </footer>
-    <!-- 스와이프 -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 2000, // 3초마다 자동 슬라이드
-          disableOnInteraction: false, // 사용자 조작 후에도 자동 재생 유지
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
-    <!-- 신청하기 모달창 -->
+    <!-- 신청모달 -->
     <script>
       // 모달 열기
       function openModal() {
         document.getElementById("myModal").style.display = "block";
       }
-
       // 모달 닫기
       function closeModal() {
         document.getElementById("myModal").style.display = "none";
       }
-
       // 모달 외부 클릭 시 닫기
       window.onclick = function (event) {
         let modal = document.getElementById("myModal");
@@ -349,21 +366,6 @@
           modal.style.display = "none";
         }
       };
-    </script>
-    <!-- 탭 이동하기 -->
-    <script>
-      function openTab(index) {
-        let tabs = document.querySelectorAll(".tab");
-        let contents = document.querySelectorAll(".content");
-
-        // 모든 탭과 콘텐츠의 active 클래스 제거
-        tabs.forEach((tab) => tab.classList.remove("active"));
-        contents.forEach((content) => content.classList.remove("active"));
-
-        // 선택한 탭과 콘텐츠 활성화
-        tabs[index].classList.add("active");
-        contents[index].classList.add("active");
-      }
     </script>
   </body>
 </html>

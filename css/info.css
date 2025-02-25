@@ -12,11 +12,11 @@
   color: var(--gumi--sub-green);
 }
 
-.festival .info {
+.festival .info-box {
   display: flex;
   justify-content: space-between;
 }
-.info{
+.info-box{
   margin-bottom: 50px;
 }
 .infoPoster{

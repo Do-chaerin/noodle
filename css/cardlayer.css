@@ -6,7 +6,7 @@
     justify-content: center;
     grid-template-columns: repeat(2, 360px);
     gap: 20px;
-    transform: translateY(-100px); 
+    transform: translateY(-100px);
   }
   .card--wrapper {
     --rx: 0;
@@ -18,11 +18,11 @@
 
     transform: perspective(800px);
     transform-style: preserve-3d;
-    cursor: pointer; 
+    cursor: pointer;
     &:nth-child(1) {
-        --rx: 1deg; 
-        --ry: 1deg; 
-    }   
+      --rx: 1deg;
+      --ry: 1deg;
+    }
 
     &:nth-child(2) {
       --clip-position: left bottom;
@@ -39,7 +39,6 @@
       & .info {
         top: 0;
         bottom: auto;
-        
       }
     }
 
@@ -55,15 +54,15 @@
       width: 100%;
       aspect-ratio: 4 / 3;
       position: relative;
-      
+
       background-color: #f1ebeb;
       overflow: hidden;
       border-radius: 10px;
       /* box-shadow:  inset #e0e0e0 0 0 0 5px, */
-        /* inset rgba(252, 252, 252, 0.1) 0 0 0 6px; */
+      /* inset rgba(252, 252, 252, 0.1) 0 0 0 6px; */
       transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
       transform: rotateY(1deg) rotateX(1deg);
-       
+
       &:has(.info:hover) .card__info {
         opacity: 0;
       }
@@ -72,11 +71,10 @@
     & img {
       /* opacity: 0.5; */
       position: absolute;
-      inset: 0;      
-        width: 100%; 
+      inset: 0;
+      width: 100%;
       object-fit: cover;
-      transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
-        opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
       pointer-events: none;
       transform: translateX(var(--tx)) translateY(var(--ty));
     }
@@ -109,11 +107,7 @@
         opacity: 0;
 
         + .answer {
-          background-color: color-mix(
-            in oklch,
-            var(--hover-color),
-            transparent 56%
-          );
+          background-color: color-mix(in oklch, var(--hover-color), transparent 56%);
           clip-path: circle(150% at var(--clip-position));
           backdrop-filter: blur(2px);
         }
@@ -144,8 +138,8 @@
       position: absolute;
       left: 50%;
       color: #fff;
-/*       transform: translate(-50%, 10%); */
-      translate: -50% 10%;      
+      /*       transform: translate(-50%, 10%); */
+      translate: -50% 10%;
       transition: 0.6s 1.6s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);
 
       & h1 {
@@ -159,77 +153,76 @@
 
     &:hover {
       .card {
-        transition: 0.9s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);,
-          box-shadow 2s cubic-bezier(0.23, 0.3, 0.32, 0.4);;
-        box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px,
-           /* inset #333 0 0 0 5px, */
-          /* inset white 0 0 0 6px; */
+        transition: 0.9s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);
+        box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px;
+        /* inset #333 0 0 0 5px, */
+        /* inset white 0 0 0 6px; */
       }
       & img {
         transition: 0.9s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);
-         /* cubic-bezier(0.23, 0.3, 0.32, 0.4); */
+        /* cubic-bezier(0.23, 0.3, 0.32, 0.4); */
         opacity: 0.8;
         scale: 1.5;
       }
 
       .card__info {
-        transition: 0.9s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);;
+        transition: 0.9s cubic-bezier(0.7, 0.7.1, 0.7, 0.7.1);
         transform: translate(-50%, -10%);
         translate: -50% -10%;
       }
     }
   }
-}
 
-@layer reset {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .card img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-@layer base {
-  body {
-    width: 100vw;
-    min-height: 100vh;
-    font-family: "Exo", "Bungee Shade", cursive, Arial, sans-serif;
-    background-color: #557;
-    color: #fff;
-    display: grid;
-    place-content: center;
-    padding: 1rem;
-  }
-  .tutorials {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 9999;
-    width: 64px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    /* background: #3f517e; */
-    padding: .5rem;
-    display: grid;
-    place-content: center;
-    transition: all .28s linear;
-    
-    &:hover {
-      /* background:#4161b2; */
+  @layer reset {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    
-    & svg {
+    .card img {
       display: block;
-      width: 100%;
-      height: 100%;
-      filter: invert(1);
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  @layer base {
+    body {
+      width: 100vw;
+      min-height: 100vh;
+      font-family: "Exo", "Bungee Shade", cursive, Arial, sans-serif;
+      background-color: #557;
+      color: #fff;
+      display: grid;
+      place-content: center;
+      padding: 1rem;
+    }
+    .tutorials {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 9999;
+      width: 64px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      /* background: #3f517e; */
+      padding: 0.5rem;
+      display: grid;
+      place-content: center;
+      transition: all 0.28s linear;
+
+      &:hover {
+        /* background:#4161b2; */
+      }
+
+      & svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        filter: invert(1);
+      }
     }
   }
 }
