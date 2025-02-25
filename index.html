@@ -75,7 +75,6 @@
 
     <!-- 효빈js -->
     <script src="js/main_hb.js"></script>
-    <script src="js/header.js"></script>
     <!-- 채원js -->
     <title>구미라면축제</title>
     <!-- Google tag (gtag.js) -->
@@ -110,44 +109,47 @@
         <div class="inner">
           <a href="index.html" class="logo"><img src="images/logo-ramyeon.png" alt="" /></a>
           <nav>
-            <ul class="gnb">
-              <li class="gnb-list">
+            <div class="gnb">
+              <span class="gnb-list">
                 <a href="info.html">축제정보</a>
-                <ul class="maindepth">
-                  <li><a>축제소개</a></li>
-                  <li><a>히스토리</a></li>
+                <ul class="info">
+                  <li class="sub-menu">축제소개</li>
+                  <li class="sub-menu">히스토리</li>
                 </ul>
-              </li>
-              <li class="gnb-list">
+              </span>
+              <span class="gnb-list">
                 <a href="program1.html">프로그램</a>
-                <ul class="maindepth">
-                  <li><a href="#">프로그램</a></li>
-                  <li><a href="#">참여가게</a></li>
-                  <li><a href="#">이벤트</a></li>
+                <ul class="program">
+                  <li class="sub-menu">프로그램</li>
+                  <li class="sub-menu">참여가게</li>
+                  <li class="sub-menu">이벤트</li>
                 </ul>
-              </li>
-              <li class="gnb-list">
+              </span>
+              <span class="gnb-list">
                 <a href="booking_choose.html" class="booking-ment">사전 예약시 5,000원 쿠폰 증정</a>
                 <a href="booking_choose.html">예약하기</a>
-                <ul class="maindepth">
-                  <li><a href="#">부스신청</a></li>
-                  <li><a href="#">히스토리</a></li>
+                <ul class="booking">
+                  <li class="sub-menu">사전예약</li>
+                  <li class="sub-menu">부스신청</li>
+                  <li class="sub-menu">공장견학</li>
                 </ul>
-              </li>
-              <li class="gnb-list">
+              </span>
+              <span class="gnb-list">
                 <a href="community.html">커뮤니티</a>
-                <ul class="maindepth">
-                  <li><a href="#">오시는길</a></li>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">갤러리</a></li>
+                <ul class="community">
+                  <li class="sub-menu">오시는길</li>
+                  <li class="sub-menu">공지사항</li>
+                  <li class="sub-menu">갤러리</li>
                 </ul>
-              </li>
-            </ul>
+              </span>
+            </div>
+            <div class="depth"></div>
           </nav>
           <div class="sns">
-            <a href="https://www.youtube.com/@gumi_ramyun"><img src="images/logo_youtube.png" alt="유튜브" /></a>
-            <a href="https://www.instagram.com/gumi_ramyeon/"
+            <a href="https://www.youtube.com/@gumi_ramyun" target="_blank"
+              ><img src="images/logo_youtube.png" alt="유튜브"
+            /></a>
+            <a href="https://www.instagram.com/gumi_ramyeon/" target="_blank"
               ><img src="images/logo_instagram.png" alt="인스타그램"
             /></a>
           </div>
@@ -211,7 +213,7 @@
         <div class="gumislide">
           <span class="flowtxt"> 새해에도 맛있는 인생 되길. </span>
         </div>
-        <div class="wrapper">
+        <div class="popupwrapper">
           <h4 style="color: var(--gumi--main)">당신의 선택은?</h4>
           <div class="poll-area">
             <button class="close">X</button>
@@ -264,142 +266,104 @@
         </div>
         <section class="inner main-top">
           <!-- 부스 스와이프 영역 -->
-          <div class="swipe_inner">
-            <div class="recipe-container">
-              <h1>아시아라면</h1>
-              <div class="swiper asiaswiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">라카라카</h2>
-                        <p class="post-author">칠리라면타코</p>
-                      </div>
-                    </div>
+          <div class="slide-box">
+            <div class="blog-slider">
+              <div class="blog-slider__wrp swiper-wrapper">
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="images/hb/asia-1.jpg" alt="아시아라면1" />
                   </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/asia-2.JPEG" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/asia-2.JPEG" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/asia-2.JPEG" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/asia-2.JPEG" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/asia-1.jpg" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/asia-1.jpg" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
+                  <div class="blog-slider__content">
+                    <span class="blog-slider__code">라카라카 Lacalaca</span>
+                    <div class="blog-slider__title">칠리라면타코</div>
+                    <div class="blog-slider__text">
+                      <i class="fa fa-map-marker"></i> 경북 구미시 원평동 413-3 <br />
+                      <i class="fa fa-phone"></i> 0507-1341-2173
                     </div>
                   </div>
                 </div>
-                <div class="swiper-scrollbar"></div>
-              </div>
-            </div>
-            <div class="recipe-container">
-              <h1 class="retrotxt">퓨-전라면</h1>
-              <div class="swiper futureswiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/fusion-1.jpg" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/fusion-1.jpg" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">꽃돼지식당</h2>
-                        <p class="post-author">한우곱창스지라면</p>
-                      </div>
-                    </div>
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="images/hb/asia-2.JPEG" alt="아시아라면2" />
                   </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/fusion-2.jpg" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/fusion-2.jpg" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">구미펍코로나</h2>
-                        <p class="post-author">우삼겹소불고기김치라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/fusion-3.jpg" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/fusion-3.jpg" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">마켓메이</h2>
-                        <p class="post-author">금오산볶라샌드</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/fusion-4.jpg" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/fusion-4.jpg" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/fusion-5.JPEG" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/fusion-5.JPEG" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide post">
-                    <img class="post-img" src="images/hb/fusion-1.jpg" alt="recipe" />
-                    <div class="post-body">
-                      <img class="post-avatar" src="images/hb/fusion-1.jpg" alt="avatar" />
-                      <div class="post-detail">
-                        <h2 class="post-name">무스비</h2>
-                        <p class="post-author">우삼겹미고랭라면</p>
-                      </div>
+                  <div class="blog-slider__content">
+                    <span class="blog-slider__code">구미무스비</span>
+                    <div class="blog-slider__title">우삼겹미고랭라면</div>
+                    <div class="blog-slider__text">
+                      <i class="fa fa-map-marker"></i> 경북 구미시 진평동 180 <br />
+                      <i class="fa fa-phone"></i> 0504-1425-7656
                     </div>
                   </div>
                 </div>
-                <div class="swiper-scrollbar"></div>
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="images/hb/fusion-1.jpg" alt="퓨전라면1" />
+                  </div>
+                  <div class="blog-slider__content">
+                    <span class="blog-slider__code">꽃돼지식당</span>
+                    <div class="blog-slider__title">한우곱창스지라면</div>
+                    <div class="blog-slider__text">
+                      <i class="fa fa-map-marker"></i> 경북 구미시 황상동 312-2 <br />
+                      <i class="fa fa-phone"></i> 0507-1333-2243
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="images/hb/fusion-2.jpg" alt="퓨전라면2" />
+                  </div>
+                  <div class="blog-slider__content">
+                    <span class="blog-slider__code">구미펍코로나</span>
+                    <div class="blog-slider__title">우삼겹소불고기김치라면</div>
+                    <div class="blog-slider__text">
+                      <i class="fa fa-map-marker"></i> 경북 구미시 원평동 155-6 <br />
+                      <i class="fa fa-phone"></i> 054-444-4414
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="images/hb/fusion-3.jpg" alt="퓨전라면3" />
+                  </div>
+                  <div class="blog-slider__content">
+                    <span class="blog-slider__code">마켓메이</span>
+                    <div class="blog-slider__title">금오산볶라샌드</div>
+                    <div class="blog-slider__text">
+                      <i class="fa fa-map-marker"></i> 경북 구미시 남통동 296-8 <br />
+                      <i class="fa fa-phone"></i> 0507-1386-5022
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="images/hb/fusion-4.jpg" alt="퓨전라면4" />
+                  </div>
+                  <div class="blog-slider__content">
+                    <span class="blog-slider__code">싸다구돼지</span>
+                    <div class="blog-slider__title">육전신라면</div>
+                    <div class="blog-slider__text">
+                      <i class="fa fa-map-marker"></i> 경북 구미시 봉곡동 146-8<br />
+                      <i class="fa fa-phone"></i> 054-443-7288
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-slider__item swiper-slide">
+                  <div class="blog-slider__img">
+                    <img src="images/hb/fusion-5.JPEG" alt="퓨전라면5" />
+                  </div>
+                  <div class="blog-slider__content">
+                    <span class="blog-slider__code">할미감성</span>
+                    <div class="blog-slider__title">불맛대패라면</div>
+                    <div class="blog-slider__text">
+                      <i class="fa fa-map-marker"></i> 경북 구미시 황상동 305-40 할미감성<br />
+                      <i class="fa fa-phone"></i> 0507-1384-8288
+
+                    </div>
+                  </div>
+                </div>
+
               </div>
+              <div class="blog-slider__pagination"></div>
             </div>
           </div>
         </section>
@@ -433,7 +397,7 @@
                 <div class="progress_inner__bar--set"></div>
                 <div class="progress_inner__tabs">
                   <div class="tabmain tab-0">
-                    <img src="images/hb/dosun.png" alt="" />
+                    <img src="images/hb/dosun.png" alt="도선굴" />
                     <p>
                       <strong>도선굴</strong>
                       경상북도 구미시 금오산에 위치한 자연동굴로 도선 대사가 도를 깨우쳤다고 전해지는 장소 이용시간:
@@ -447,7 +411,7 @@
                     </p>
                   </div>
                   <div class="tabmain tab-1">
-                    <img src="images/hb/gumo.png" alt="" />
+                    <img src="images/hb/gumo.png" alt="금오산" />
                     <p>
                       <strong>금오산</strong>
                       영남 대표 명산 금오산 도립공원 1970년 6월 1일 대한민국 도립공원 1호로 지정
@@ -456,7 +420,7 @@
                     </p>
                   </div>
                   <div class="tabmain tab-2">
-                    <img src="images/hb/dehe.png" alt="" />
+                    <img src="images/hb/dehe.png" alt="대혜폭포" />
                     <p>
                       <strong>대혜폭포</strong>
                       구미시 남통동 금오산에 자리한 대혜곡의 폭포.
@@ -466,11 +430,12 @@
                     </p>
                   </div>
                   <div class="tabmain tab-3">
-                    <img src="images/hb/ehco.png" alt="" />
+                    <img src="images/hb/land.png" alt="구미에코랜드" />
                     <p>
                       <strong>구미에코랜드</strong>
                       구미시 산동읍 인덕리 일원에 위치
                       <br />
+
                       옥외 :잔디광장, 물빛정원, 인공암벽장 등
                       <br />
                       지상1층 : 산림생태 전시/체험장, 영상관, 카페테리아, 북카페
@@ -514,7 +479,7 @@
             <div class="review">
               <h3>갤러리 <a href="community.html">더보기+</a></h3>
               <div class="comm-imgbox">
-                <img src="images/hb/hugi1.jpg" alt="후기1" />
+                <a href="community.html"> <img src="images/hb/hugi1.jpg" alt="후기1" /></a>
                 <img src="images/hb/hugi2.jpg" alt="후기2" />
                 <img src="images/hb/hugi3.png" alt="후기1" />
                 <img src="images/hb/hugi4.jpg" alt="후기2" />

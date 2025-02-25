@@ -43,7 +43,7 @@ header .inner {
   left: 200px;
   color: var(--gumi--main);
   border: 1px solid var(--gumi--main);
-  padding: 4px 4px 3px;
+  padding: 5px 8px 4px;
   border-radius: 10px;
   background-color: #fff;
   animation: ment 1.5s infinite;
@@ -76,24 +76,74 @@ nav .gnb {
   gap: var(--li--gap--l);
   margin-top: 8px;
 }
-.maindepth {
-  display: none;
+nav .gnb-list {
+  position: relative;
+}
+nav .gnb-list:hover .info {
+  visibility: visible;
+  opacity: 1;
+}
+nav .gnb-list:hover .program {
+  visibility: visible;
+  opacity: 1;
+}
+nav .gnb-list:hover .booking {
+  visibility: visible;
+  opacity: 1;
+}
+nav .gnb-list:hover .community {
+  visibility: visible;
+  opacity: 1;
 }
 
+.info,
+.program,
+.booking,
+.community {
+  font-family: "SBAggroL";
+  visibility: hidden;
+  opacity: 0;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.5s;
+  min-width: 100px;
+  font-weight: 500;
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  line-height: 3;
+  font-size: 0.8rem;
+  color: var(--gumi--main);
+  background-color: #ffe177;
+  border-radius: 5px;
+}
 
+.sub-menu {
+  cursor: pointer;
+  border-bottom: 1px solid;
+}
+.sub-menu:last-child {
+  border: none;
+}
+.sub-menu:hover {
+  background-color: #fff2c2;
+}
 .sns {
   line-height: 150px;
   display: flex;
   gap: 10px;
 }
-.sns img{
+.sns img {
   width: 70%;
 }
 .banner {
   margin-top: 80px;
   width: 100%;
 }
-.banner_tb,.banner_mb{
+.banner_tb,
+.banner_mb {
   margin-top: 80px;
   width: 100%;
   display: none;
@@ -173,27 +223,29 @@ nav .gnb {
   .mobile-nav {
     display: block !important;
   }
-  
+
   /* 배너 */
-  .banner{display: none;}
-  .banner_tb{
+  .banner {
+    display: none;
+  }
+  .banner_tb {
     display: block;
   }
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 390px) {
   /* 로고 */
-  header .inner{
+  header .inner {
     justify-content: center;
   }
   /* 배너 */
-  .banner_tb{
+  .banner_tb {
     display: none;
   }
-  .banner_mb{
+  .banner_mb {
     display: block;
   }
   /* 탭 */
-  .web{
+  .web {
     width: 70%;
   }
 }
