@@ -24,6 +24,10 @@ window.addEventListener("load", () => {
     mousewheel: {
       invert: false,
     },
+    autoplay: {
+      delay: 2000, // 3초마다 변경
+      disableOnInteraction: false, // 유저가 스와이프해도 자동 재생 유지
+    },
     // autoHeight: true,
     pagination: {
       el: ".blog-slider__pagination",
