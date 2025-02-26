@@ -66,7 +66,6 @@ html {
   border: 1px solid var(--gumi--main);
   text-align: center;
   border-radius: 50%;
-  
 }
 .scrollToTop {
   padding: 7px 5px 3px;
@@ -82,8 +81,8 @@ html {
   --li--gap--l: 50px;
   --inner--width: 1280px;
   --background-dark: #2d3548;
-  --text-light: rgba(255,255,255,0.6);
-  --text-lighter: rgba(255,255,255,0.9);
+  --text-light: rgba(255, 255, 255, 0.6);
+  --text-lighter: rgba(255, 255, 255, 0.9);
   --spacing-s: 8px;
   --spacing-m: 16px;
   --spacing-l: 24px;

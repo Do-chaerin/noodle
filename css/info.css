@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url(variable.css);
 
-.item{
+.item {
   display: none;
 }
 
@@ -16,14 +16,31 @@
   display: flex;
   justify-content: space-between;
 }
-.info-box{
+.info-box {
   margin-bottom: 50px;
 }
-.infoPoster{
+.introduce,
+.noodle2024,
+.noodle2023,
+.noodle2022 {
+  display: flex;
+  gap: 20px;
+  opacity: 0; /* 처음에는 숨김 */
+  transform: translateY(30px); /* 아래에서 올라오는 효과 */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.introduce.show,
+.noodle2024.show,
+.noodle2023.show,
+.noodle2022.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.infoPoster {
   width: 40%;
 }
 .infoPoster img {
-width: 100%;
+  width: 100%;
 }
 .festival .infoText {
   width: 50%;
@@ -59,7 +76,7 @@ width: 100%;
 .posterline:first-child {
   border-top: 1px solid #fff;
 }
-.historyPoster{
+.historyPoster {
   width: 30%;
 }
 .historyPoster img {
@@ -100,4 +117,70 @@ width: 100%;
 .programText dd {
   font-size: 0.8rem;
   padding-bottom: 20px;
+}
+/* 반응형 */
+@media screen and (max-width: 1100px) {
+  .infoPoster {
+    width: 100%;
+  }
+  .festival .info-box {
+    flex-direction: column;
+  }
+  .festival .infoText {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  /* 축제소개 */
+  .festival .infoText ul li {
+    font-size: 1rem;
+  }
+  .festival .infoText p {
+    font-size: 0.8rem;
+  }
+  .festival .infoText {
+    gap: 25px;
+  }
+  .infoPoster {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  /* 히스토리 */
+  .historyPoster {
+    width: 46%;
+  }
+  .poster .infoText ul li {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 2rem;
+  }
+  /* 축제소개 */
+  .festival .info-box {
+    flex-direction: column;
+  }
+  .festival .infoText ul li {
+    font-size: 0.8rem;
+  }
+  .festival .infoText p {
+    font-size: 0.6rem;
+  }
+
+  /* 히스토리 */
+  .poster .infoText ul li {
+    font-size: 0.7rem;
+  }
+  .poster .infoText ul li p {
+    font-size: 0.9rem;
+  }
+  .textline,
+  .programText {
+    display: none;
+  }
 }
