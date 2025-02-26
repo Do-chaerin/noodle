@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url(/css/geen/cardlayer.css);
+@import url(/css/cardlayer.css);
 body {
   background-color: var(--gumi--sub-yellow);
 }
@@ -19,7 +19,7 @@ main .inner {
   margin: auto !important;
 }
 /* 탭 */
-.tab {
+/* .tab {
   font-size: 1.01rem;
   text-align: center;
   gap: 5px !important;
@@ -29,7 +29,7 @@ main .inner {
   width: 110%;
   /* background: url(/images/favicon.ico) no-repeat 10%; */
   /* display: none; */
-}
+/* }
 
 .tab li.active {
   font-size: 16px;
@@ -44,7 +44,7 @@ main .inner {
 .tab li:last-child a {
   letter-spacing: 0.3rem;
   padding-left: 15px;
-}
+/* } 
 
 /* 프로그램상세페이지 메인전체*/
 .iNNer {
@@ -55,7 +55,7 @@ main .inner {
 }
 
 /* 프로그램1 */
-.program {
+.program_imgWrap {
   width: 90%;
   height: 100%;
   margin: auto;
@@ -67,7 +67,7 @@ main .inner {
   border-radius: 10px; /* 둥근 모서리 */
   position: relative;
 }
-.program h3 , .innInner > h3 , .evEnt> h3  {
+.program_imgWrap h3 , .innInner > h3 , .evEnt> h3  {
   padding: 30px;
   width: 200px;
   height: 200px;
@@ -75,7 +75,7 @@ main .inner {
   position: relative;
   overflow: hidden;
 }
-.program > h3 > span , .innInner > h3 > span , .evEnt> h3 >span {
+.program_imgWrap > h3 > span , .innInner > h3 > span , .evEnt> h3 >span {
   position: absolute; /* h3의 경계 내에서 위치 */
   top: 50%;
   left: 50%;
@@ -446,13 +446,20 @@ swiper-slide img {
   margin: 15px;
 }
 .answer p{
-  font-size: 14px;
+  font-size: 13px;
 }
+.answer h2>img{width: 100%;}
 .answerp{
   width: 50px;
   height: 50px;
-  background: url(/images/geen/qr.png);
+  background: url(/images/geen/qr.png)no-repeat;
 }
+.answerqr{
+  width: 50px;
+  height: 50px;
+  background: url(/images/geen/qr-recipe.png) no-repeat;
+}
+
 
 @keyframes bounce {
   0% {
