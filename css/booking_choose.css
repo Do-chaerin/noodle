@@ -304,6 +304,9 @@ button {
   left: initial;
   right: 15px;
 }
+footer {
+  font-family: "SBAggroB";
+}
 /* 기본 반응형 설정 */
 @media screen and (max-width: 768px) {
   /* 개인정보 취급방침 박스 */
