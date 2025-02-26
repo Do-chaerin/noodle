@@ -197,7 +197,8 @@ body {
 /* 스와이프 */
 .slide-box {
   height: 600px;
-  padding: 6%;
+  padding: 6% 0%;
+  border-bottom: 2px solid var(--gumi--sub-yellow);
 }
 .blog-slider {
   width: 90%;

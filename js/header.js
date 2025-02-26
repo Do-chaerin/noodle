@@ -42,7 +42,5 @@ window.addEventListener("load", function () {
     li[index].classList.add("active");
     box[index].classList.add("active");
   }
-  window.setTimeout(function () {
-    map.relayout();
-  }, 0);
+  
 });

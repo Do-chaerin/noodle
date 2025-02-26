@@ -34,11 +34,9 @@ html {
   margin: auto;
   background-color: #fff;
 }
-
 .web {
   gap: var(--li--gap--l);
 }
-
 .web li:hover a {
   color: var(--gumi--sub-yellow);
 }
@@ -55,7 +53,7 @@ html {
   align-items: center;
   justify-content: center;
   bottom: 40px;
-  right: 150px;
+  right: 5%;
   gap: 20px;
   z-index: 99999;
 }
@@ -73,6 +71,7 @@ html {
 .scrollTodown {
   padding: 9px 5px 1px;
 }
+
 /* Color styles */
 :root {
   --gumi--main: rgba(252, 103, 19, 1);
