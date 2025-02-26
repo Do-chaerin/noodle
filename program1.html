@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
     <link rel="icon" type="image/icon" sizes="16x16" href="images/favicon.ico" />
-
+    <!-- fontawesome -->
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <!-- 공통 css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.css" />
@@ -15,7 +21,6 @@
     <link rel="stylesheet" href="css/program1.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <!-- js -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
@@ -23,7 +28,6 @@
     <script src="js/scroll.js" defer></script>
     <script src="js/js.scriptgeen.js" defer></script>
     <script src="js/js.swipergeen.js" defer></script>
-    <script src="js/main_hb.js" defer></script>
 
     <title>Document</title>
   </head>
@@ -124,12 +128,14 @@
     <!-- 배너 -->
     <section>
       <img class="banner" src="images/main-banner.jpg" alt="배너" />
+      <img class="banner_tb" src="images/banner_768.jpg" alt="배너" />
+      <img class="banner_mb" src="images/banner_390.jpg" alt="배너" />
     </section>
     <!-- 탭 start-->
     <ul class="web tab">
-      <li><a href="#">프로그램</a></li>
-      <li><a href="#">참여가게</a></li>
-      <li><a href="#">이벤트</a></li>
+      <li><a>프로그램</a></li>
+      <li><a>참여가게</a></li>
+      <li><a>이벤트</a></li>
     </ul>
     <!-- 프로그램상세페이지  메인전체-->
 
@@ -138,11 +144,11 @@
 
       <div class="inner">
         <!--프로그램1  -->
-        <div class="program_imgWrap">
+        <div class="item program_imgWrap">
           <!-- 이미지중간 리플렛 -->
           <h3><span>프로그램</span></h3>
           <ul class="leaflet">
-            <h2 class="h1-0">아시아라면</h2>
+            <h2 class="h1-0">리플렛</h2>
             <li class="lf-imgtop">
               <a href="#"><img src="images/geen/top534_78.png" alt="이미지위" /></a>
             </li>
@@ -197,14 +203,18 @@
               <a href="#"><img src="images/geen/bottpm_186.png" alt="이미지아래" /></a>
             </li>
           </ul>
+          <div class="chat jumpanimation1">
+            <img src="images/geen/mouse_ico.png" alt="마우스이미지" />
+          </div>
           <ul class="leaflet2">
+            <h2 class="h1-3">리플렛</h2>
             <li>
-              <a href="#"><img src="images/geen/leaplet-385.png" alt="" /></a>
+              <a href="#"><img src="images/geen/leaflet-385.png" alt="" /></a>
             </li>
           </ul>
         </div>
         <!-- 참여가게 -->
-        <div class="swipe_inner">
+        <div class="item swipe_inner">
           <div class="innInner">
             <h3><span>참여가게</span></h3>
             <div class="recipe-container">
@@ -343,7 +353,7 @@
           </div>
         </div>
          <!-- 이벤트 -->
-         <div class="evEnt">
+         <div class="item evEnt">
           <h3><span>이벤트</span></h3>     
           <div class="containerE">
             <div class="card--wrapper">
@@ -452,9 +462,7 @@
       </div>
     </main>
 
-    <div class="chat jumpanimation1">
-      <img src="images/geen/mouse_ico.png" alt="마우스이미지" />
-    </div>
+    
     <!-- 하단 -->
     <footer>
       <div class="footer inner">
@@ -470,10 +478,21 @@
           </p>
           <p><i class="fa fa-phone"></i> 054-480-2652</p>
         </div>
-        <div class="sponsorLogo">
-          <img src="images/logo_gumi.png" alt="구미시로고" />
-          <img src="images/logo_GB.png" alt="경상북도로고" />
-          <img src="images/logo_nongshim.png" alt="농심로고" />
+        <p class="copyright">© Copyright 2025. Gumi Ramyeon Festival. All Rights Reserved.</p>
+        <div class="footer_r">
+          <div class="character">
+            <img class="boy" src="images/character_boy.png" alt="마스코트캐릭터" />
+            <div class="ment">
+              <p>함께 <span>라면</span></p>
+              <p><span>구미</span>가 땡기네~</p>
+            </div>
+            <img class="girl" src="images/character_girl.png" alt="마스코트캐릭터" />
+          </div>
+          <div class="sponsorLogo">
+            <img src="images/logo_gumi.png" alt="구미시로고" />
+            <img src="images/logo_GB.png" alt="경상북도로고" />
+            <img src="images/logo_nongshim.png" alt="농심로고" />
+          </div>
         </div>
       </div>
     </footer>
