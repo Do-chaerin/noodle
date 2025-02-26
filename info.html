@@ -23,6 +23,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/info.js"></script>
     <title>구미라면축제</title>
   </head>
   <body>
@@ -35,39 +36,41 @@
       <div class="inner">
         <a href="index.html" class="logo"><img src="images/logo-ramyeon.png" alt="" /></a>
         <nav>
-          <ul class="gnb">
-            <li class="gnb-list">
-              <a href="#">축제정보</a>
-              <ul class="depth">
-                <li><a href="#">축제소개</a></li>
-                <li><a href="#">히스토리</a></li>
+          <div class="gnb">
+            <span class="gnb-list">
+              <a href="info.html">축제정보</a>
+              <ul class="info">
+                <li class="sub-menu">축제소개</li>
+                <li class="sub-menu">히스토리</li>
               </ul>
-            </li>
-            <li class="gnb-list">
-              <a href="#">프로그램</a>
-              <ul class="depth">
-                <li><a href="#">프로그램</a></li>
-                <li><a href="#">참여가게</a></li>
-                <li><a href="#">이벤트</a></li>
+            </span>
+            <span class="gnb-list">
+              <a href="program1.html">프로그램</a>
+              <ul class="program">
+                <li class="sub-menu">프로그램</li>
+                <li class="sub-menu">참여가게</li>
+                <li class="sub-menu">이벤트</li>
               </ul>
-            </li>
-            <li class="gnb-list">
-              <a href="#">예약하기</a>
-              <ul class="depth">
-                <li><a href="#">부스신청</a></li>
-                <li><a href="#">히스토리</a></li>
+            </span>
+            <span class="gnb-list">
+              <a href="booking_choose.html" class="booking-ment">사전 예약시 5,000원 쿠폰 증정</a>
+              <a href="booking_choose.html">예약하기</a>
+              <ul class="booking">
+                <li class="sub-menu">사전예약</li>
+                <li class="sub-menu">부스신청</li>
+                <li class="sub-menu">공장견학</li>
               </ul>
-            </li>
-            <li class="gnb-list">
-              <a href="#">커뮤니티</a>
-              <ul class="depth">
-                <li><a href="#">오시는길</a></li>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">갤러리</a></li>
+            </span>
+            <span class="gnb-list">
+              <a href="community.html">커뮤니티</a>
+              <ul class="community">
+                <li class="sub-menu">오시는길</li>
+                <li class="sub-menu">공지사항</li>
+                <li class="sub-menu">갤러리</li>
               </ul>
-            </li>
-          </ul>
+            </span>
+          </div>
+          <div class="depth"></div>
         </nav>
         <div class="sns">
           <a href="#"><img src="images/logo_youtube.png" alt="유튜브" /></a>
@@ -132,7 +135,7 @@
       <!-- 축제소개 -->
       <div class="item festival">
         <h1 class="title inner">축제소개</h1>
-        <div class="info-box inner">
+        <div class="info-box inner introduce">
           <div class="infoPoster">
             <img src="images/main-poster.jpg" alt="라면축제포스터" />
           </div>
@@ -144,13 +147,17 @@
               <li>주최 | 구미시</li>
             </ul>
             <p>
-              구미라면축제는 <span>라면</span>을 테마로 한 특별한 문화 행사로 경상북도 구미시에서 열리는 축제이다. 이
-              축제는 <span>라면</span>을 사랑하는 사람들에게 특별한 경험을 선사하며, 다양한 <span>라면 요리</span>와
-              <span>이색적인 프로그램</span>을 통해 관람객들에게 즐거운 시간을 제공한다. 또한, 구미시의 대표 맛집을
-              비롯해 <span>전국의 이색 라면 맛집</span>이 참여하여 창의적인 요리를 선보인다. 다양한 프로그램도 마련되어
-              있어, <span>'나만의 라면 만들기'</span> 프로그램이나 라면을 주제로 한 <span>'MSG팝업 무대'</span>,
-              청년들이 주도하는 <span>'뉴-타운 라면빠'</span> 등 참여형 활동을 즐길 수 있다.
-              <span>라면 요리 경연대회</span>,<span> 스트릿댄스 공연</span>, <span>라면 푸드파이터</span>
+              구미라면축제는 <span class="scrollText">라면</span>을 테마로 한 특별한 문화 행사로 경상북도 구미시에서
+              열리는 축제이다. 이 축제는 <span class="scrollText">라면</span>을 사랑하는 사람들에게 특별한 경험을
+              선사하며, 다양한 <span class="scrollText">라면 요리</span>와
+              <span class="scrollText">이색적인 프로그램</span>을 통해 관람객들에게 즐거운 시간을 제공한다. 또한,
+              구미시의 대표 맛집을 비롯해 <span class="scrollText">전국의 이색 라면 맛집</span>이 참여하여 창의적인
+              요리를 선보인다. 다양한 프로그램도 마련되어 있어,
+              <span class="scrollText">'나만의 라면 만들기'</span> 프로그램이나 라면을 주제로 한
+              <span class="scrollText">'MSG팝업 무대'</span>, 청년들이 주도하는
+              <span class="scrollText">'뉴-타운 라면빠'</span> 등 참여형 활동을 즐길 수 있다.
+              <span class="scrollText">라면 요리 경연대회</span>,<span class="scrollText"> 스트릿댄스 공연</span>,
+              <span class="scrollText">라면 푸드파이터</span>
               등 다양한 부대 프로그램도 방문객들에게 큰 인기를 끌고 있다.
             </p>
           </div>
@@ -162,7 +169,7 @@
         <div class="info-box inner">
           <!-- 2024 -->
           <div class="posterline"></div>
-          <div class="poster">
+          <div class="poster noodle2024">
             <div class="historyPoster">
               <img src="images/poster2024.jpg" alt="2024라면축제포스터" />
             </div>
@@ -194,7 +201,7 @@
           </div>
           <!-- 2023 -->
           <div class="posterline"></div>
-          <div class="poster">
+          <div class="poster noodle2023">
             <div class="historyPoster">
               <img src="images/poster2023.jpg" alt="2023라면축제포스터" />
             </div>
@@ -222,7 +229,7 @@
           </div>
           <!-- 2022 -->
           <div class="posterline"></div>
-          <div class="poster">
+          <div class="poster noodle2022">
             <div class="historyPoster">
               <img src="images/poster2022.jpg" alt="2022라면축제포스터" />
             </div>
