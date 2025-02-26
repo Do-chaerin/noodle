@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
   const btn = this.document.querySelectorAll(".notice-title");
   const txtbox = this.document.querySelectorAll(".notice-txt");
-  const btntxt = this.document.querySelectorAll("span");
+  const btntxt = this.document.querySelectorAll(".notice-title span");
   btn.forEach((btn, index) => {
     btn.addEventListener("click", () => {
       showtxt(index);

@@ -222,10 +222,10 @@ nav .gnb-list:hover .community {
 
   /* 배너 */
   .banner {
-    display: none;
+    display: none !important;
   }
   .banner_tb {
-    display: block;
+    display: block !important;
   }
 }
 @media screen and (max-width: 390px) {
@@ -235,10 +235,10 @@ nav .gnb-list:hover .community {
   }
   /* 배너 */
   .banner_tb {
-    display: none;
+    display: none !important;
   }
   .banner_mb {
-    display: block;
+    display: block !important;
   }
   /* 탭 */
   .web {
