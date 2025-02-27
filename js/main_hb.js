@@ -79,7 +79,7 @@ window.addEventListener("load", () => {
   });
   const closeBtn = document.querySelector(".close");
   closeBtn.addEventListener("click", () => {
-    const popup = document.querySelector(".wrapper");
+    const popup = document.querySelector(".popupwrapper");
     popup.style.display = "none";
   });
   //관광정보
