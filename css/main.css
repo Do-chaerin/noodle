@@ -630,11 +630,15 @@ body .progress_inner input[type="radio"] {
   .swiper {
     width: 50%;
   }
+  .blog-slider__item {
+    flex-direction: row;
+  }
 }
 @media (max-width: 765px) {
   .swiper {
     width: 70%;
   }
+  
   .blog-slider {
     max-width: 680px;
     height: 400px;
@@ -763,7 +767,7 @@ body .progress_inner input[type="radio"] {
     }
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .slide-box {
     height: 500px;
   }
