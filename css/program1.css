@@ -39,7 +39,7 @@ main .inner {
   margin-top: 6px;
   margin-bottom: 6px;
   padding-top: 8px;
-  padding-bottom: 150px;
+  padding-bottom: 170px;
   text-align: center;
   background-color: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -248,14 +248,21 @@ main .inner {
 
 .jumpanimation {
   animation-name: bounce1;
-  animation-duration: 700ms;
+  animation-duration: 1000ms;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.79, 0.04, 0.8, 0.6);
   animation-iteration-count: infinite;
 }
 .jumpanimation1 {
+  animation-name: bounce3;
+  animation-duration: 2000ms;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.79, 0.04, 0.8, 0.6);
+  animation-iteration-count: infinite;
+}
+.jumpanimation3 {
   animation-name: bounce2;
-  animation-duration: 3000ms;
+  animation-duration: 1000ms;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.9, 0.7, 0.8, 0.6);
   animation-iteration-count: infinite;
@@ -292,10 +299,9 @@ main .inner {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 25px;
   width: 540px;
-  margin: auto;
-  min-width: ;
+  margin: auto; 
   height: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .recipe-container h1,
@@ -306,6 +312,7 @@ main .inner {
   text-align: center;
   color: var(--gumi--main);
   z-index: 11;
+  margin-bottom: 20px;
 }
 .h1-0 {
   width: 200px !important;
@@ -455,10 +462,25 @@ swiper-slide img {
   height: 50px;
   background: url(/images/geen/qr-recipe.png) no-repeat;
 }
+.chat1 {
+  width: 40vw;
+  height: 50%;
+  margin: auto;
+  position: relative;
+  top: 0px;
+  right: 100px;  
+}
+.jumpanimation3{
+  animation-name: bounce2;
+  animation-duration: 1000ms;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.79, 0.04, 0.8, 0.6);
+  animation-iteration-count: infinite;
+}
 
 @keyframes bounce {
   0% {
-    transform: translate3d(0px, -00px, 0px);
+    transform: translate3d(px, -0px, 0px);
 
     height: 40px;
   }
@@ -493,7 +515,7 @@ swiper-slide img {
 }
 @keyframes bounce2 {
   0% {
-    transform: translate3d(-25%, -100px, 200px);
+    transform: translate3d(-10%, -320px, 200px);
 
     height: 40px;
   }
@@ -503,7 +525,24 @@ swiper-slide img {
   }
 
   100% {
-    transform: translate3d(50%, -100px, 500px);
+    transform: translate3d(50%, -320px, 500px);
+
+    height: 40px;
+  }
+}
+@keyframes bounce3 {
+  0% {
+    transform: translate3d(-50%, -220px, 200px);
+
+    height: 40px;
+  }
+
+  90% {
+    height: 40px;
+  }
+
+  100% {
+    transform: translate3d(90%, -220px, 500px);
 
     height: 40px;
   }
@@ -535,6 +574,28 @@ swiper-slide img {
   border-radius: 30px;
   background: linear-gradient(95deg, var(--gumi--sub-green), var(--gumi--sub-yellow));
 }
+@keyframes bounce2 {
+  0% {
+    transform: translate3d(83%,-950px, 200px);
+
+    height: 40px;
+  }
+
+  30% {transform: translate3d(-23%, -630px, 200px);
+    height: 40px;
+  }
+  
+  60% {transform: translate3d(83%, -590px, 200px);
+    height: 40px;
+  }
+
+
+  100% {
+    transform: translate3d(-23%, -290px, 200px);
+
+    height: 40px;
+  }
+}
 }
 @media screen and (max-width: 1120px) {
  
@@ -565,7 +626,7 @@ swiper-slide img {
   .program_imgWrap {
     margin: auto;
     margin-top: 0px;
-    padding-bottom: 200px;
+    padding-bottom: 220px;
     padding-top: 0px;
   }
   .program_imgWrap h3, .innInner > h3, .evEnt > h3{
@@ -596,20 +657,17 @@ swiper-slide img {
   height: 50%;
   margin: auto;
   position: relative;
-  top: 400px;
+  top: 500px;
   right: 100px;  
 }
 }
-@media screen and (max-width: 740px) {
-  
+
+@media screen and (max-width: 690px) {
+  .program_imgWrap > h3 > span, .innInner > h3 > span, .evEnt > h3 > span {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 630px) {
- 
-}
-@media screen and (max-width: 560px) {
-  
-}
-@media screen and (max-width: 420px) {
-
+@media screen and (max-width: 390px) {
+    
 }
