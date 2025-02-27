@@ -357,6 +357,10 @@ button {
     height: 250px;
     margin: 0 auto; /* 중앙 정렬 */
   }
+  .booking-de {
+    font-size: 12px;
+  }
+
   .booking-img img {
     width: 80%;
   }
@@ -365,7 +369,12 @@ button {
     width: 80%;
     padding: 15px;
   }
-
+  button {
+    width: 90%;
+    font-size: 13px;
+    padding: 10px;
+    margin: 20px auto; /* 중앙 정렬 */
+  }
   /* 공장 견학 섹션 */
   .container2 {
     max-width: 95%;
