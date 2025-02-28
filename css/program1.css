@@ -19,7 +19,7 @@ main .inner {
 .item {
   display: none;
 }
-.web{
+.web {
   background-color: #fff;
 }
 
@@ -93,9 +93,9 @@ main .inner {
   object-fit: cover;
 }
 .leaflet2 {
-  width: 393px; 
-  height: 418px; 
-  display: none;  
+  width: 393px;
+  height: 418px;
+  display: none;
 }
 
 /* 이미지 */
@@ -273,12 +273,12 @@ main .inner {
   margin: auto;
   position: relative;
   top: 0px;
-  right: 100px;  
+  right: 100px;
 }
 /*참여가게  */
 /* 스와이프 */
 .swipe_inner {
-  width: 100%; 
+  width: 100%;
   margin: auto;
   background-color: #f0f0f0;
   /* border-bottom: 2px solid var(--gumi--sub-yellow); */
@@ -299,13 +299,14 @@ main .inner {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 25px;
   width: 540px;
-  margin: auto; 
+  margin: auto;
   height: 100%;
   padding-bottom: 100px;
 }
 
 .recipe-container h1,
-.leaflet h2, .leaflet2 h2 {
+.leaflet h2,
+.leaflet2 h2 {
   width: 100%;
   font-size: 2rem;
   font-weight: 600;
@@ -332,7 +333,7 @@ main .inner {
   --swiper-scrollbar-drag-bg-color: var(--gumi--main);
   --swiper-scrollbar-size: 5px;
 }
-.h1-3{
+.h1-3 {
   margin: -130px 0 20px;
 }
 .post {
@@ -468,9 +469,9 @@ swiper-slide img {
   margin: auto;
   position: relative;
   top: 0px;
-  right: 100px;  
+  right: 100px;
 }
-.jumpanimation3{
+.jumpanimation3 {
   animation-name: bounce2;
   animation-duration: 1000ms;
   animation-direction: alternate;
@@ -559,62 +560,62 @@ swiper-slide img {
     gap: 20px;
     transform: translateY(-100px);
   }
-.program_imgWrap > h3 > span,
-.innInner > h3 > span,
-.evEnt > h3 > span {
-  position: absolute; /* h3의 경계 내에서 위치 */
-  top: 20%;
-  left: 60%;
-  width: 62%;
-  height: 30%;
-  color: #fff;
-  margin-top: 30px;
-  padding: 20px;
-  text-align: center;
-  border-radius: 30px;
-  background: linear-gradient(95deg, var(--gumi--sub-green), var(--gumi--sub-yellow));
-}
-@keyframes bounce2 {
-  0% {
-    transform: translate3d(83%,-950px, 200px);
-
-    height: 40px;
+  .program_imgWrap > h3 > span,
+  .innInner > h3 > span,
+  .evEnt > h3 > span {
+    position: absolute; /* h3의 경계 내에서 위치 */
+    top: 20%;
+    left: 60%;
+    width: 62%;
+    height: 30%;
+    color: #fff;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(95deg, var(--gumi--sub-green), var(--gumi--sub-yellow));
   }
+  @keyframes bounce2 {
+    0% {
+      transform: translate3d(83%, -950px, 200px);
 
-  30% {transform: translate3d(-23%, -630px, 200px);
-    height: 40px;
+      height: 40px;
+    }
+
+    30% {
+      transform: translate3d(-23%, -630px, 200px);
+      height: 40px;
+    }
+
+    60% {
+      transform: translate3d(83%, -590px, 200px);
+      height: 40px;
+    }
+
+    100% {
+      transform: translate3d(-23%, -290px, 200px);
+
+      height: 40px;
+    }
   }
-  
-  60% {transform: translate3d(83%, -590px, 200px);
-    height: 40px;
-  }
-
-
-  100% {
-    transform: translate3d(-23%, -290px, 200px);
-
-    height: 40px;
-  }
-}
 }
 @media screen and (max-width: 1120px) {
- 
   .chat {
     bottom: 1600px;
   }
 }
-@media screen and (max-width: 970px){
+@media screen and (max-width: 970px) {
   nav .gnb {
     position: relative;
     top: 0;
     left: 10%;
     gap: 15px;
   }
-  .fixtop{
+  .fixtop {
     right: 60px;
   }
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
   nav .gnb {
     position: relative;
     top: 0;
@@ -629,45 +630,96 @@ swiper-slide img {
     padding-bottom: 220px;
     padding-top: 0px;
   }
-  .program_imgWrap h3, .innInner > h3, .evEnt > h3{
+  .program_imgWrap h3,
+  .innInner > h3,
+  .evEnt > h3 {
     width: 200px;
     height: 120px;
   }
   .program_imgWrap > h3 > span,
-.innInner > h3 > span,
-.evEnt > h3 > span {
-  position: absolute; /* h3의 경계 내에서 위치 */
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 55%;
-  height: 30%;
-  padding: 9px;
-  
-}
-.leaflet {
-  display: none;
-}
-.leaflet2 {
-  display: block;
-  margin:  auto  ;
-}
-.chat {
-  width: 40vw;
-  height: 50%;
-  margin: auto;
-  position: relative;
-  top: 500px;
-  right: 100px;  
-}
+  .innInner > h3 > span,
+  .evEnt > h3 > span {
+    position: absolute; /* h3의 경계 내에서 위치 */
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 30%;
+    padding: 9px;
+  }
+  .leaflet {
+    display: none;
+  }
+  .leaflet2 {
+    display: block;
+    margin: auto;
+  }
+  .chat {
+    width: 40vw;
+    height: 50%;
+    margin: auto;
+    position: relative;
+    top: 500px;
+    right: 100px;
+  }
 }
 
 @media screen and (max-width: 690px) {
-  .program_imgWrap > h3 > span, .innInner > h3 > span, .evEnt > h3 > span {
+  .program_imgWrap > h3 > span,
+  .innInner > h3 > span,
+  .evEnt > h3 > span {
     display: none;
   }
 }
 
-@media screen and (max-width: 390px) {
-    
+@media screen and (max-width: 550px) {
+  .recipe-container {
+    width: 380px;
+  }
+  .tab {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 420px){
+  .leaflet2 {
+    width: 85%;
+    height: 85% !important;
+    margin: -110px auto;
+    padding-bottom: 0px;
+  }
+  .leaflet2 img{
+    width: 100%;
+
+  }
+}
+@media screen and (max-width: 385px) {
+  .program_imgWrap {
+    padding-bottom: 160px;
+  }
+  
+
+  @keyframes bounce2 {
+    0% {
+      transform: translate3d(170%, -950px, 200px);
+
+      height: 40px;
+    }
+
+    30% {
+      transform: translate3d(-38%, -630px, 200px);
+      height: 40px;
+    }
+
+    60% {
+      transform: translate3d(170%, -590px, 200px);
+      height: 40px;
+    }
+
+    100% {
+      transform: translate3d(-38%, -290px, 200px);
+
+      height: 40px;
+    }
+  }
 }
