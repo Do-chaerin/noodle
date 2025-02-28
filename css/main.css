@@ -53,7 +53,7 @@ body {
 .trip img {
   width: 100%;
 }
-.cursor{
+.cursor {
   width: 30px;
   height: 30px;
   position: fixed;
@@ -811,7 +811,9 @@ body .progress_inner input[type="radio"] {
       opacity: 0;
     }
   }
-  .trip-ment {
+  .trip-ment,
+  .trip,
+  .cursor {
     display: none;
   }
 }
