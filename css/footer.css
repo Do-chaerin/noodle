@@ -17,19 +17,17 @@ footer {
 .ft_logo img {
   width: 100%;
 }
-.ft_info , .ft_info1 {
+.ft_info {
   width: fit-content;
   padding-bottom: 20px;
 }
-.ft_info p ,.ft_info1 p {
+.ft_info p {
   font-family: "SBAggroL";
   font-size: 0.7rem;
   line-height: 2;
   color: #eeeeee;
 }
-.ft_info1{
-  display: none;
-}
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px / 1 FontAwesome;
@@ -74,13 +72,13 @@ footer {
   border-radius: 30px;
   color: var(--gumi--sub-yellow);
 }
-.ment p{
+.ment p {
   align-items: center;
 }
-.ment span{
+.ment span {
   color: var(--gumi--main);
 }
-.ment2{
+.ment2 {
   display: none;
 }
 .sponsorLogo {
@@ -103,7 +101,19 @@ footer {
     gap: 25px;
   }
 }
-
+@media screen and (max-width: 600px) {
+  .character {
+    display: none;
+  }
+}
+@media screen and (max-width: 460px) {
+  .ft_info p {
+    font-size: 0.6rem;
+  }
+  .copyright {
+    font-size: 0.5rem;
+  }
+}
 @media screen and (max-width: 400px) {
   footer {
     height: 250px;
@@ -112,19 +122,10 @@ footer {
     max-width: 200px;
   }
   .ft_info p {
-    font-size: 0.6rem;
-  }
-  .ft_info1 p {
-    font-size: 0.6rem;
-  }
-  .copyright {
-    font-size: 0.5rem;
+    font-size: 0.58rem;
   }
   .footer_r {
     bottom: 12px;
-  }
-  .character {
-    display: none;
   }
   .sponsorLogo {
     height: 20px;
